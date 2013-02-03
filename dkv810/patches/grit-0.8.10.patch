@@ -1,0 +1,115 @@
+diff -rupN grit-0.8.10/libgrit/grit_core.cpp grit-0.8.10-vue/libgrit/grit_core.cpp
+--- grit-0.8.10/libgrit/grit_core.cpp	2012-04-09 21:41:47 +0100
++++ grit-0.8.10-vue/libgrit/grit_core.cpp	2012-12-15 18:58:34 +0000
+@@ -561,7 +561,7 @@ bool grit_validate_area(GritRec *gr)
+ 			blockH= gr->mtileHeight();
+ 		}
+ 		else
+-			blockW= blockH= 256;
++			blockW= blockH= 512;
+ 
+ 		if(aw%blockW != 0)
+ 		{
+diff -rupN grit-0.8.10/libgrit/grit_prep.cpp grit-0.8.10-vue/libgrit/grit_prep.cpp
+--- grit-0.8.10/libgrit/grit_prep.cpp	2012-04-09 21:41:47 +0100
++++ grit-0.8.10-vue/libgrit/grit_prep.cpp	2012-12-15 18:58:34 +0000
+@@ -375,17 +375,17 @@ bool grit_prep_map(GritRec *gr)
+ 
+ 	CLDIB *workDib= gr->_dib;
+ 
+-	// --- if SBB-mode, tile to 256x256. ---
++	// --- if SBB-mode, tile to 512x512. ---
+ 	if(gr->mapLayout == GRIT_MAP_REG)
+ 	{
+-		lprintf(LOG_STATUS, "  tiling to Screenblock size (256x256p).\n");
++		lprintf(LOG_STATUS, "  tiling to Screenblock size (512x512p).\n");
+ 
+-		int blockW= 256, blockH= 256;
++		int blockW= 512, blockH= 512;
+ 		if(gr->bColMajor)
+ 		{
+ 			blockW= dib_get_width(workDib);
+ 			blockH= dib_get_height(workDib);
+-			dib_redim(workDib, 256, blockH, 0);
++			dib_redim(workDib, 512, blockH, 0);
+ 		}
+ 
+ 		if(!dib_redim(workDib, blockW, blockH, 0))
+diff -rupN grit-0.8.10/libgrit/grit_xp.cpp grit-0.8.10-vue/libgrit/grit_xp.cpp
+--- grit-0.8.10/libgrit/grit_xp.cpp	2012-04-09 21:41:47 +0100
++++ grit-0.8.10-vue/libgrit/grit_xp.cpp	2012-12-15 18:58:34 +0000
+@@ -410,7 +410,7 @@ bool grit_xp_gas(GritRec *gr)
+ 	bool bAppend= gr->bAppend;
+ 
+ 	// Prep begin tag
+-	sprintf(tag, "@{{BLOCK(%s)",gr->symName);
++	sprintf(tag, "#{{BLOCK(%s)",gr->symName);
+ 
+ 	// Open 'output' file
+ 	strcpy(fpath, gr->dstPath);
+@@ -442,7 +442,7 @@ bool grit_xp_gas(GritRec *gr)
+ 
+ 	fprintf(fout, "%s\n\n", tag);
+ 
+-	grit_preface(gr, fout, "@");
++	grit_preface(gr, fout, "#");
+ 
+ 
+ 	if(gr->bRiff)	// Single GRF item
+@@ -467,7 +467,7 @@ bool grit_xp_gas(GritRec *gr)
+ 		}
+ 	}
+ 
+-	sprintf(tag, "@}}BLOCK(%s)",gr->symName);
++	sprintf(tag, "#}}BLOCK(%s)",gr->symName);
+ 	fprintf(fout, "%s\n", tag);
+ 
+ 	// --- End grit-block ---
+diff -rupN grit-0.8.10/libgrit/pathfun.cpp grit-0.8.10-vue/libgrit/pathfun.cpp
+--- grit-0.8.10/libgrit/pathfun.cpp	2012-04-09 21:41:47 +0100
++++ grit-0.8.10-vue/libgrit/pathfun.cpp	2012-12-23 14:37:52 +0000
+@@ -767,12 +767,12 @@ bool xp_array_gas(FILE *fp, const char *
+ 
+ 	fputs("\t.section .rodata\n\t.align\t2\n", fp);
+ 	// NOTE: no EOL break
+-	fprintf(fp, "\t.global %s\t\t@ %d unsigned chars\n%s:", 
++	fprintf(fp, "\t.global _%s\t\t# %d unsigned chars\n_%s:", 
+ 		symname, ALIGN4(len), symname);
+ 	
+ 	xp_data_gas(fp, data, len, chunk);
+ 
+-	fputs("\n\n", fp);
++	fprintf(fp, "\n\t.size\t_%s, .-_%s\n\n", symname, symname);
+ 
+ 	return true;
+ }
+@@ -838,7 +838,7 @@ bool im_data_gas(FILE* fp, const char* n
+ 
+     while(!retval)
+     {
+-        int r = fscanf(fp, " @{{BLOCK(%[^)])", read);
++		int r = fscanf(fp, " #{{BLOCK(%[^)])", read);
+         if(r == EOF) { return false; } // couldn't find the block
+         if(r > 0)
+         {
+diff -rupN grit-0.8.10/srcgrit/grit_main.cpp grit-0.8.10-vue/srcgrit/grit_main.cpp
+--- grit-0.8.10/srcgrit/grit_main.cpp	2012-04-09 21:41:47 +0100
++++ grit-0.8.10-vue/srcgrit/grit_main.cpp	2012-12-15 18:58:34 +0000
+@@ -1150,7 +1150,7 @@ int run_main(int argc, char **argv)
+ 		if(gr == NULL)
+ 			throw "Couldn't allocate GritRec memory.\n";
+ 
+-		lprintf(LOG_STATUS, "---%s ---\n", appIdent);
++		lprintf(LOG_STATUS, "--- %s ---\n", appIdent);
+ 
+ 		// --- Run according to share-mode ---
+ 		args_set_mode(gr->shared, args, fpaths);
+@@ -1189,7 +1189,7 @@ int main(int argc, char **argv)
+ {
+ 	if( argc < 2 || !strcmp(argv[1], "-?") || !strcmp(argv[1], "--help") )
+ 	{
+-		fprintf(stdout, "---%s ---\n", appIdent);
++		fprintf(stdout, "--- %s ---\n", appIdent);
+ 		fputs(appHelpText, stdout);
+ 		return EXIT_SUCCESS;
+ 	}

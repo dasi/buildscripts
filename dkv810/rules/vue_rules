@@ -1,0 +1,18 @@
+ifeq ($(strip $(DEVKITPRO)),)
+$(error "Please set DEVKITPRO in your environment. export DEVKITPRO=<path to>devkitPro)
+endif
+
+include $(DEVKITV810)/base_rules
+
+LIBVUE	:=	$(VUECODE)/libvue
+
+#---------------------------------------------------------------------------------
+%.vb: %.elf
+	@$(OBJCOPY) -O binary $< $@
+	@echo built ... $(notdir $@)
+	@vuefix $@ "-t$(TITLE)"
+
+#----------------------------------------------------------------------
+%.elf:
+	@echo Linking cartridge
+	@$(LD) $(LDFLAGS) $(OFILES) $(LIBPATHS) $(LIBS) -o $@

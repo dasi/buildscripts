@@ -4,6 +4,7 @@
 #	devkitARM release 42
 #	devkitPPC release 27
 #	devkitPSP release 17
+#	devkitV810 release 0
 #---------------------------------------------------------------------------------
 
 if [ 1 -eq 1 ] ; then
@@ -38,6 +39,8 @@ GBATOOLS_VER=1.0.0
 GRIT_VER=0.8.10
 NDSTOOL_VER=1.50.1
 GENERAL_TOOLS_VER=1.0.0
+PCFXTOOLS_VER=1.0.0
+VUETOOLS_VER=1.0.0
 DLDITOOL_VER=1.24.0
 GXTEXCONV_VER=0.1.9
 GCDSPSUITE_VER=1.4.0
@@ -209,6 +212,10 @@ fi
 
 if [ $VERSION -eq 3 ]; then
 	targetarchives="pspsdk-src-${PSPSDK_VER}.tar.bz2"
+fi
+
+if [ $VERSION -eq 4 ]; then
+	hostarchives="pcfxtools-$PCFXTOOLS_VER.tar.bz2 grit-$GRIT_VER.tar.bz2 vuetools-$VUETOOLS_VER.tar.bz2"
 fi
 
 if [ ! -z "$BUILD_DKPRO_SRCDIR" ] ; then
