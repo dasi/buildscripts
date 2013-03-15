@@ -1,124 +1,124 @@
-diff -rupN binutils-2.20/bfd/Makefile.am binutils-2.20-v810/bfd/Makefile.am
---- binutils-2.20/bfd/Makefile.am	2009-10-16 12:47:44 +0100
-+++ binutils-2.20-v810/bfd/Makefile.am	2012-10-26 15:32:46 +0100
-@@ -129,6 +129,7 @@ ALL_MACHINES = \
- 	cpu-tic4x.lo \
- 	cpu-tic54x.lo \
+diff -Nbaur binutils-2.23.1/bfd/Makefile.am binutils-2.23.1-v810/bfd/Makefile.am
+--- binutils-2.23.1/bfd/Makefile.am	2012-11-13 14:17:38 +0000
++++ binutils-2.23.1-v810/bfd/Makefile.am	2013-03-09 17:59:20 +0000
+@@ -140,6 +140,7 @@
  	cpu-tic80.lo \
+ 	cpu-tilegx.lo \
+ 	cpu-tilepro.lo \
 +	cpu-v810.lo \
  	cpu-v850.lo \
  	cpu-vax.lo \
  	cpu-w65.lo \
-@@ -200,6 +201,7 @@ ALL_MACHINES_CFILES = \
- 	cpu-tic4x.c \
- 	cpu-tic54x.c \
+@@ -221,6 +222,7 @@
  	cpu-tic80.c \
+ 	cpu-tilegx.c \
+ 	cpu-tilepro.c \
 +	cpu-v810.c \
  	cpu-v850.c \
  	cpu-vax.c \
  	cpu-w65.c \
-@@ -314,6 +316,7 @@ BFD32_BACKENDS = \
- 	elf32-sh64.lo \
- 	elf32-sparc.lo \
- 	elf32-spu.lo \
+@@ -342,6 +344,7 @@
+ 	elf32-tic6x.lo \
+ 	elf32-tilegx.lo \
+ 	elf32-tilepro.lo \
 +	elf32-v810.lo \
  	elf32-v850.lo \
  	elf32-vax.lo \
  	elf32-xc16x.lo \
-@@ -497,6 +500,7 @@ BFD32_BACKENDS_CFILES = \
- 	elf32-sh64.c \
- 	elf32-sparc.c \
- 	elf32-spu.c \
+@@ -530,6 +533,7 @@
+ 	elf32-tic6x.c \
+ 	elf32-tilegx.c \
+ 	elf32-tilepro.c \
 +	elf32-v810.c \
  	elf32-v850.c \
  	elf32-vax.c \
  	elf32-xc16x.c \
-diff -rupN binutils-2.20/bfd/Makefile.in binutils-2.20-v810/bfd/Makefile.in
---- binutils-2.20/bfd/Makefile.in	2009-10-16 12:47:48 +0100
-+++ binutils-2.20-v810/bfd/Makefile.in	2012-10-26 15:32:46 +0100
-@@ -424,6 +424,7 @@ ALL_MACHINES = \
- 	cpu-tic4x.lo \
- 	cpu-tic54x.lo \
+diff -Nbaur binutils-2.23.1/bfd/Makefile.in binutils-2.23.1-v810/bfd/Makefile.in
+--- binutils-2.23.1/bfd/Makefile.in	2012-11-13 14:17:43 +0000
++++ binutils-2.23.1-v810/bfd/Makefile.in	2013-03-09 17:59:20 +0000
+@@ -439,6 +439,7 @@
  	cpu-tic80.lo \
+ 	cpu-tilegx.lo \
+ 	cpu-tilepro.lo \
 +	cpu-v810.lo \
  	cpu-v850.lo \
  	cpu-vax.lo \
  	cpu-w65.lo \
-@@ -495,6 +496,7 @@ ALL_MACHINES_CFILES = \
- 	cpu-tic4x.c \
- 	cpu-tic54x.c \
+@@ -520,6 +521,7 @@
  	cpu-tic80.c \
+ 	cpu-tilegx.c \
+ 	cpu-tilepro.c \
 +	cpu-v810.c \
  	cpu-v850.c \
  	cpu-vax.c \
  	cpu-w65.c \
-@@ -610,6 +612,7 @@ BFD32_BACKENDS = \
- 	elf32-sh64.lo \
- 	elf32-sparc.lo \
- 	elf32-spu.lo \
+@@ -642,6 +644,7 @@
+ 	elf32-tic6x.lo \
+ 	elf32-tilegx.lo \
+ 	elf32-tilepro.lo \
 +	elf32-v810.lo \
  	elf32-v850.lo \
  	elf32-vax.lo \
  	elf32-xc16x.lo \
-@@ -793,6 +796,7 @@ BFD32_BACKENDS_CFILES = \
- 	elf32-sh64.c \
- 	elf32-sparc.c \
- 	elf32-spu.c \
+@@ -830,6 +833,7 @@
+ 	elf32-tic6x.c \
+ 	elf32-tilegx.c \
+ 	elf32-tilepro.c \
 +	elf32-v810.c \
  	elf32-v850.c \
  	elf32-vax.c \
  	elf32-xc16x.c \
-@@ -1280,6 +1284,7 @@ distclean-compile:
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpu-tic4x.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpu-tic54x.Plo@am__quote@
+@@ -1343,6 +1347,7 @@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpu-tic80.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpu-tilegx.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpu-tilepro.Plo@am__quote@
 +@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpu-v810.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpu-v850.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpu-vax.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpu-w65.Plo@am__quote@
-@@ -1354,6 +1359,7 @@ distclean-compile:
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/elf32-sh64.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/elf32-sparc.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/elf32-spu.Plo@am__quote@
+@@ -1425,6 +1430,7 @@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/elf32-tic6x.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/elf32-tilegx.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/elf32-tilepro.Plo@am__quote@
 +@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/elf32-v810.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/elf32-v850.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/elf32-vax.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/elf32-xc16x.Plo@am__quote@
-diff -rupN binutils-2.20/bfd/archures.c binutils-2.20-v810/bfd/archures.c
---- binutils-2.20/bfd/archures.c	2009-09-10 12:47:11 +0100
-+++ binutils-2.20-v810/bfd/archures.c	2012-10-26 15:32:46 +0100
-@@ -304,6 +304,9 @@ DESCRIPTION
- .#define bfd_mach_tic4x         40
+diff -Nbaur binutils-2.23.1/bfd/archures.c binutils-2.23.1-v810/bfd/archures.c
+--- binutils-2.23.1/bfd/archures.c	2012-09-04 13:53:41 +0100
++++ binutils-2.23.1-v810/bfd/archures.c	2013-03-09 17:59:20 +0000
+@@ -322,6 +322,9 @@
  .  bfd_arch_tic54x,    {* Texas Instruments TMS320C54X *}
+ .  bfd_arch_tic6x,     {* Texas Instruments TMS320C6X *}
  .  bfd_arch_tic80,     {* TI TMS320c80 (MVP) *}
 +.  bfd_arch_v810,      {* NEC V810 *}
 +.#define bfd_mach_v810          0
-+.#define bfd_mach_v830  	3
++.#define bfd_mach_v830          3
  .  bfd_arch_v850,      {* NEC V850 *}
  .#define bfd_mach_v850          1
  .#define bfd_mach_v850e 	'E'
-@@ -522,6 +525,7 @@ extern const bfd_arch_info_type bfd_tic3
- extern const bfd_arch_info_type bfd_tic4x_arch;
- extern const bfd_arch_info_type bfd_tic54x_arch;
+@@ -577,6 +580,7 @@
  extern const bfd_arch_info_type bfd_tic80_arch;
+ extern const bfd_arch_info_type bfd_tilegx_arch;
+ extern const bfd_arch_info_type bfd_tilepro_arch;
 +extern const bfd_arch_info_type bfd_v810_arch;
  extern const bfd_arch_info_type bfd_v850_arch;
  extern const bfd_arch_info_type bfd_vax_arch;
  extern const bfd_arch_info_type bfd_w65_arch;
-@@ -595,6 +599,7 @@ static const bfd_arch_info_type * const 
-     &bfd_tic4x_arch,
-     &bfd_tic54x_arch,
+@@ -660,6 +664,7 @@
      &bfd_tic80_arch,
+     &bfd_tilegx_arch,
+     &bfd_tilepro_arch,
 +    &bfd_v810_arch,
      &bfd_v850_arch,
      &bfd_vax_arch,
      &bfd_w65_arch,
-diff -rupN binutils-2.20/bfd/bfd-in2.h binutils-2.20-v810/bfd/bfd-in2.h
---- binutils-2.20/bfd/bfd-in2.h	2009-09-10 12:47:11 +0100
-+++ binutils-2.20-v810/bfd/bfd-in2.h	2012-10-26 15:32:46 +0100
-@@ -1971,6 +1971,9 @@ enum bfd_architecture
- #define bfd_mach_tic4x         40
+diff -Nbaur binutils-2.23.1/bfd/bfd-in2.h binutils-2.23.1-v810/bfd/bfd-in2.h
+--- binutils-2.23.1/bfd/bfd-in2.h	2012-09-04 13:53:41 +0100
++++ binutils-2.23.1-v810/bfd/bfd-in2.h	2013-03-10 21:36:47 +0000
+@@ -2051,6 +2051,9 @@
    bfd_arch_tic54x,    /* Texas Instruments TMS320C54X */
+   bfd_arch_tic6x,     /* Texas Instruments TMS320C6X */
    bfd_arch_tic80,     /* TI TMS320c80 (MVP) */
 +  bfd_arch_v810,      /* NEC V810 */
 +#define bfd_mach_v810          0
@@ -126,89 +126,89 @@ diff -rupN binutils-2.20/bfd/bfd-in2.h binutils-2.20-v810/bfd/bfd-in2.h
    bfd_arch_v850,      /* NEC V850 */
  #define bfd_mach_v850          1
  #define bfd_mach_v850e         'E'
-@@ -3529,6 +3532,28 @@ add3, load, and store instructions.  */
-   BFD_RELOC_M32R_GOTPC_HI_SLO,
+@@ -3737,6 +3740,27 @@
    BFD_RELOC_M32R_GOTPC_LO,
  
-+
-+/* This is a 9-bit reloc */
+ /* This is a 9-bit reloc  */
 +  BFD_RELOC_V810_9_PCREL,
 +
-+/* This is a 26-bit reloc */
++/* This is a 26-bit reloc  */
 +  BFD_RELOC_V810_26_PCREL,
 +
-+/* This is a 16 bit offset from the short data area pointer. */
++/* This is a 16 bit offset from the short data area pointer.  */
 +  BFD_RELOC_V810_SDA_16_16_OFFSET,
 +
-+/* This is a 16 bit offset (of which only 15 bits are used) from the
-+short data area pointer. */
-+  BFD_RELOC_V810_SDA_15_16_OFFSET,
-+
-+/* This is a 16 bit offset from the zero data area pointer. */
++/* This is a 16 bit offset from the zero data area pointer.  */
 +  BFD_RELOC_V810_ZDA_16_16_OFFSET,
 +
-+/* This is a 16 bit offset (of which only 15 bits are used) from the
-+zero data area pointer. */
-+  BFD_RELOC_V810_ZDA_15_16_OFFSET,
++/* Used for relaxing indirect function calls.  */
++  BFD_RELOC_V810_LONGCALL,
 +
++/* Used for relaxing indirect jumps.  */
++  BFD_RELOC_V810_LONGJUMP,
 +
- /* This is a 9-bit reloc  */
++/* Used to maintain alignment whilst relaxing.  */
++  BFD_RELOC_V810_ALIGN,
++
++/* This is a 9-bit reloc  */
    BFD_RELOC_V850_9_PCREL,
  
-diff -rupN binutils-2.20/bfd/config.bfd binutils-2.20-v810/bfd/config.bfd
---- binutils-2.20/bfd/config.bfd	2009-08-06 18:38:00 +0100
-+++ binutils-2.20-v810/bfd/config.bfd	2012-10-26 15:32:46 +0100
-@@ -104,6 +104,7 @@ sparc*)		 targ_archs=bfd_sparc_arch ;;
+ /* This is a 22-bit reloc  */
+diff -Nbaur binutils-2.23.1/bfd/config.bfd binutils-2.23.1-v810/bfd/config.bfd
+--- binutils-2.23.1/bfd/config.bfd	2012-09-04 15:14:59 +0100
++++ binutils-2.23.1-v810/bfd/config.bfd	2013-03-09 17:59:20 +0000
+@@ -103,6 +103,7 @@
  spu*)            targ_archs=bfd_spu_arch ;;
- strongarm*)	 targ_archs=bfd_arm_arch ;;
- thumb*)		 targ_archs=bfd_arm_arch ;;
+ tilegx*)	 targ_archs=bfd_tilegx_arch ;;
+ tilepro*)	 targ_archs=bfd_tilepro_arch ;;
 +v810*)		 targ_archs=bfd_v810_arch ;;
  v850*)		 targ_archs=bfd_v850_arch ;;
  x86_64*)	 targ_archs=bfd_i386_arch ;;
- xscale*)	 targ_archs=bfd_arm_arch ;;
-@@ -1465,6 +1466,13 @@ case "${targ}" in
-     targ_underscore=yes
+ xtensa*)	 targ_archs=bfd_xtensa_arch ;;
+@@ -1560,6 +1561,14 @@
+     targ_defvec=bfd_elf32_tilepro_vec
      ;;
  
 +  v810-*-*)
 +    targ_defvec=bfd_elf32_v810_vec
 +    ;;
-+  v830e-*-*)
++
++  v830-*-*)
 +    targ_defvec=bfd_elf32_v830_vec
 +    ;;
 +
-   v850-*-*)
+   v850*-*-*)
      targ_defvec=bfd_elf32_v850_vec
      ;;
-diff -rupN binutils-2.20/bfd/configure binutils-2.20-v810/bfd/configure
---- binutils-2.20/bfd/configure	2009-10-16 12:47:47 +0100
-+++ binutils-2.20-v810/bfd/configure	2012-10-26 15:32:46 +0100
-@@ -14895,6 +14895,7 @@ do
-     bfd_elf32_tradbigmips_vec)  tb="$tb elf32-mips.lo elfxx-mips.lo elf-vxworks.lo elf32.lo $elf ecofflink.lo" ;;
-     bfd_elf32_tradlittlemips_vec) tb="$tb elf32-mips.lo elfxx-mips.lo elf-vxworks.lo elf32.lo $elf ecofflink.lo" ;;
+diff -Nbaur binutils-2.23.1/bfd/configure binutils-2.23.1-v810/bfd/configure
+--- binutils-2.23.1/bfd/configure	2012-11-13 14:17:40 +0000
++++ binutils-2.23.1-v810/bfd/configure	2013-03-09 17:59:20 +0000
+@@ -15331,6 +15331,7 @@
+     bfd_elf32_tradlittlemips_vec | bfd_elf32_tradlittlemips_freebsd_vec)
+ 				tb="$tb elf32-mips.lo elfxx-mips.lo elf-vxworks.lo elf32.lo $elf ecofflink.lo" ;;
      bfd_elf32_us_cris_vec)	tb="$tb elf32-cris.lo elf32.lo $elf" ;;
 +    bfd_elf32_v810_vec)		tb="$tb elf32-v810.lo elf32.lo $elf" ;;
      bfd_elf32_v850_vec)		tb="$tb elf32-v850.lo elf32.lo $elf" ;;
      bfd_elf32_vax_vec)		tb="$tb elf32-vax.lo elf32.lo $elf" ;;
      bfd_elf32_xstormy16_vec)	tb="$tb elf32-xstormy16.lo elf32.lo $elf" ;;
-diff -rupN binutils-2.20/bfd/configure.in binutils-2.20-v810/bfd/configure.in
---- binutils-2.20/bfd/configure.in	2009-10-16 12:47:44 +0100
-+++ binutils-2.20-v810/bfd/configure.in	2012-10-26 15:32:46 +0100
-@@ -783,6 +783,7 @@ do
-     bfd_elf32_tradbigmips_vec)  tb="$tb elf32-mips.lo elfxx-mips.lo elf-vxworks.lo elf32.lo $elf ecofflink.lo" ;;
-     bfd_elf32_tradlittlemips_vec) tb="$tb elf32-mips.lo elfxx-mips.lo elf-vxworks.lo elf32.lo $elf ecofflink.lo" ;;
+diff -Nbaur binutils-2.23.1/bfd/configure.in binutils-2.23.1-v810/bfd/configure.in
+--- binutils-2.23.1/bfd/configure.in	2012-11-13 14:17:38 +0000
++++ binutils-2.23.1-v810/bfd/configure.in	2013-03-09 17:59:20 +0000
+@@ -823,6 +823,7 @@
+     bfd_elf32_tradlittlemips_vec | bfd_elf32_tradlittlemips_freebsd_vec)
+ 				tb="$tb elf32-mips.lo elfxx-mips.lo elf-vxworks.lo elf32.lo $elf ecofflink.lo" ;;
      bfd_elf32_us_cris_vec)	tb="$tb elf32-cris.lo elf32.lo $elf" ;;
 +    bfd_elf32_v810_vec)		tb="$tb elf32-v810.lo elf32.lo $elf" ;;
      bfd_elf32_v850_vec)		tb="$tb elf32-v850.lo elf32.lo $elf" ;;
      bfd_elf32_vax_vec)		tb="$tb elf32-vax.lo elf32.lo $elf" ;;
      bfd_elf32_xstormy16_vec)	tb="$tb elf32-xstormy16.lo elf32.lo $elf" ;;
-diff -rupN binutils-2.20/bfd/cpu-v810.c binutils-2.20-v810/bfd/cpu-v810.c
---- binutils-2.20/bfd/cpu-v810.c	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/bfd/cpu-v810.c	2012-10-26 15:32:46 +0100
+diff -Nbaur binutils-2.23.1/bfd/cpu-v810.c binutils-2.23.1-v810/bfd/cpu-v810.c
+--- binutils-2.23.1/bfd/cpu-v810.c	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/bfd/cpu-v810.c	2013-03-10 21:40:12 +0000
 @@ -0,0 +1,42 @@
-+/* BFD support for the NEC V810 processor
-+   Copyright 1996, 1997, 1998, 2000, 2001, 2002, 2003, 2005, 2007
-+   Free Software Foundation, Inc.
++/* BFD support for the NEC V850 processor
++   Copyright 1996, 1997, 1998, 2000, 2001, 2002, 2003, 2005, 2007,
++   2010  Free Software Foundation, Inc.
 +
 +   This file is part of BFD, the Binary File Descriptor library.
 +
@@ -234,7 +234,7 @@ diff -rupN binutils-2.20/bfd/cpu-v810.c binutils-2.20-v810/bfd/cpu-v810.c
 +
 +#define N(number, print, default, next)  \
 +{  32, 32, 8, bfd_arch_v810, number, "v810", print, 2, default, \
-+     bfd_default_compatible, bfd_default_scan, next }
++   bfd_default_compatible, bfd_default_scan, bfd_arch_default_fill, next }
 +
 +#define NEXT NULL
 +
@@ -248,13 +248,14 @@ diff -rupN binutils-2.20/bfd/cpu-v810.c binutils-2.20-v810/bfd/cpu-v810.c
 +
 +const bfd_arch_info_type bfd_v810_arch =
 +  N (bfd_mach_v810, "v810", TRUE, NEXT);
-diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
---- binutils-2.20/bfd/elf32-v810.c	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/bfd/elf32-v810.c	2012-10-26 15:32:46 +0100
-@@ -0,0 +1,1680 @@
+diff -Nbaur binutils-2.23.1/bfd/elf32-v810.c binutils-2.23.1-v810/bfd/elf32-v810.c
+--- binutils-2.23.1/bfd/elf32-v810.c	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/bfd/elf32-v810.c	2013-03-10 21:52:00 +0000
+@@ -0,0 +1,2529 @@
 +/* V810-specific support for 32-bit ELF
 +   Copyright 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-+   2006, 2007, 2008, 2009  Free Software Foundation, Inc.
++   2006, 2007, 2008, 2009, 2010, 2011, 2012
++   Free Software Foundation, Inc.
 +
 +   This file is part of BFD, the Binary File Descriptor library.
 +
@@ -285,9 +286,6 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +#include "elf/v810.h"
 +#include "libiberty.h"
 +
-+/* Sign-extend a 24-bit number.  */
-+#define SEXT24(x)	((((x) & 0xffffff) ^ 0x800000) - 0x800000)
-+
 +static reloc_howto_type v810_elf_howto_table[];
 +
 +/* Look through the relocs for a section during the first phase, and
@@ -301,7 +299,6 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +		       const Elf_Internal_Rela *relocs)
 +{
 +  bfd_boolean ret = TRUE;
-+  bfd *dynobj;
 +  Elf_Internal_Shdr *symtab_hdr;
 +  struct elf_link_hash_entry **sym_hashes;
 +  const Elf_Internal_Rela *rel;
@@ -318,7 +315,6 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +		      sec, abfd);
 +#endif
 +
-+  dynobj = elf_hash_table (info)->dynobj;
 +  symtab_hdr = &elf_tdata (abfd)->symtab_hdr;
 +  sym_hashes = elf_sym_hashes (abfd);
 +
@@ -346,8 +342,8 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +	case R_V810_NONE:
 +	case R_V810_9_PCREL:
 +	case R_V810_26_PCREL:
-+	case R_V810_HI16_S:
 +	case R_V810_HI16:
++	case R_V810_HI16_S:
 +	case R_V810_LO16:
 +	case R_V810_32:
 +	case R_V810_16:
@@ -371,15 +367,14 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +          break;
 +
 +	case R_V810_SDA_16_16_OFFSET:
-+	case R_V810_SDA_15_16_OFFSET:
 +	  other = V810_OTHER_SDA;
 +	  common = ".scommon";
 +	  goto small_data_common;
 +
 +	case R_V810_ZDA_16_16_OFFSET:
-+	case R_V810_ZDA_15_16_OFFSET:
 +	  other = V810_OTHER_ZDA;
 +	  common = ".zcommon";
++	  goto small_data_common;
 +	  /* fall through */
 +
 +#define V810_OTHER_MASK (V810_OTHER_SDA | V810_OTHER_ZDA)
@@ -502,8 +497,6 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +{
 +  hi16s_location *match = NULL;
 +  hi16s_location *entry;
-+  hi16s_location *previous = NULL;
-+  hi16s_location *prev;
 +  bfd_byte *addr;
 +
 +  /* Search the table.  Record the most recent entry that matches.  */
@@ -512,11 +505,8 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +      if (entry->addend == addend
 +	  && (match == NULL || match->counter < entry->counter))
 +	{
-+	  previous = prev;
 +	  match    = entry;
 +	}
-+
-+      prev = entry;
 +    }
 +
 +  if (match == NULL)
@@ -535,8 +525,8 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +  return addr;
 +}
 +
-+/* Calculate the final operand value for a R_V850_LO16 or
-+   R_V850_LO16_SPLIT_OFFSET.  *INSN is the current operand value and
++/* Calculate the final operand value for a R_V810_LO16 or
++   R_V810_LO16_SPLIT_OFFSET.  *INSN is the current operand value and
 +   ADDEND is the sum of the relocation symbol and offset.  Store the
 +   operand value in *INSN and return true on success.
 +
@@ -551,15 +541,15 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +   will store 0 in the value fields for the MOVHI and MOVEA instructions
 +   and addend will be the address of fred, but for these instructions:
 +
-+       movhi hi( fred + 0x123456), r0, r1
-+       movea lo( fred + 0x123456), r1, r1
++       movhi hi( fred + 0x123456 ), r0, r1
++       movea lo( fred + 0x123456 ), r1, r1
 +
 +   the value stored in the MOVHI instruction will be 0x12 and the value
 +   stored in the MOVEA instruction will be 0x3456.  If however the
 +   instructions were:
 +
-+       movhi hi( fred + 0x10ffff), r0, r1
-+       movea lo( fred + 0x10ffff), r1, r1
++       movhi hi( fred + 0x10ffff ), r0, r1
++       movea lo( fred + 0x10ffff ), r1, r1
 +
 +   then the value stored in the MOVHI instruction would be 0x11 (not
 +   0x10) and the value stored in the MOVEA instruction would be 0xffff.
@@ -568,8 +558,8 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +   adds 0xffffffff (sign extension!) producing 0x10ffff.  Similarly if
 +   the instructions were:
 +
-+       movhi hi( fred - 1), r0, r1
-+       movea lo( fred - 1), r1, r1
++       movhi hi( fred - 1 ), r0, r1
++       movea lo( fred - 1 ), r1, r1
 +
 +   then 0 is stored in the MOVHI instruction and -1 is stored in the
 +   MOVEA instruction.
@@ -581,8 +571,8 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +   clear, the assembler will not have added 1 to the previous HI16S reloc
 +   to compensate for this effect.  For example:
 +
-+      movhi hi( fred + 0x123456), r0, r1
-+      movea lo( fred + 0x123456), r1, r1
++      movhi hi( fred + 0x123456 ), r0, r1
++      movea lo( fred + 0x123456 ), r1, r1
 +
 +   The value stored in HI16S reloc is 0x12, the value stored in the LO16
 +   reloc is 0x3456.  If we assume that the address of fred is 0x00007000
@@ -602,8 +592,8 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +   Note that if the 15th bit was set in the value stored in the LO16
 +   reloc, then we do not have to do anything:
 +
-+      movhi hi( fred + 0x10ffff), r0, r1
-+      movea lo( fred + 0x10ffff), r1, r1
++      movhi hi( fred + 0x10ffff ), r0, r1
++      movea lo( fred + 0x10ffff ), r1, r1
 +
 +      HI16S:  0x0011 + (0x00007000 >> 16)    = 0x11
 +      LO16:   0xffff + (0x00007000 & 0xffff) = 0x6fff
@@ -623,8 +613,8 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +
 +   So, for example if fred is at address 0xf000:
 +
-+     movhi hi( fred + 0xffff), r0, r1    [bit 15 of the offset is set]
-+     movea lo( fred + 0xffff), r1, r1
++     movhi hi( fred + 0xffff ), r0, r1    [bit 15 of the offset is set]
++     movea lo( fred + 0xffff ), r1, r1
 +
 +     HI16S: 0x0001 + (0x0000f000 >> 16)    = 0x0001
 +     LO16:  0xffff + (0x0000f000 & 0xffff) = 0xefff   (carry into bit 16 is lost)
@@ -637,8 +627,8 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +   Similarly, if the 15th bit remains clear, but overflow occurs into
 +   the 16th bit then (assuming the address of fred is 0xf000):
 +
-+     movhi hi( fred + 0x7000), r0, r1    [bit 15 of the offset is clear]
-+     movea lo( fred + 0x7000), r1, r1
++     movhi hi( fred + 0x7000 ), r0, r1    [bit 15 of the offset is clear]
++     movea lo( fred + 0x7000 ), r1, r1
 +
 +     HI16S: 0x0000 + (0x0000f000 >> 16)    = 0x0000
 +     LO16:  0x7000 + (0x0000f000 & 0xffff) = 0x6fff  (carry into bit 16 is lost)
@@ -652,8 +642,8 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +   15th bit changes its value from being set to being clear, as the HI16S
 +   reloc will have already added in 1 to the high part for us:
 +
-+     movhi hi( fred + 0xffff), r0, r1     [bit 15 of the offset is set]
-+     movea lo( fred + 0xffff), r1, r1
++     movhi hi( fred + 0xffff ), r0, r1     [bit 15 of the offset is set]
++     movea lo( fred + 0xffff ), r1, r1
 +
 +     HI16S: 0x0001 + (0x00007000 >> 16)
 +     LO16:  0xffff + (0x00007000 & 0xffff) = 0x6fff  (carry into bit 16 is lost)
@@ -666,8 +656,8 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +   but if the 15th bit goes from being clear to being set, then we must
 +   once again handle overflow:
 +
-+     movhi hi( fred + 0x7000), r0, r1     [bit 15 of the offset is clear]
-+     movea lo( fred + 0x7000), r1, r1
++     movhi hi( fred + 0x7000 ), r0, r1     [bit 15 of the offset is clear]
++     movea lo( fred + 0x7000 ), r1, r1
 +
 +     HI16S: 0x0000 + (0x0000ffff >> 16)
 +     LO16:  0x7000 + (0x0000ffff & 0xffff) = 0x6fff  (carry into bit 16)
@@ -704,7 +694,7 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +	}
 +      else
 +	{
-+	  fprintf (stderr, _("FAILED to find previous HI16 reloc\n"));
++	  (*_bfd_error_handler) (_("FAILED to find previous HI16 reloc"));
 +	  return FALSE;
 +	}
 +    }
@@ -727,7 +717,6 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +			     bfd_byte *address)
 +{
 +  unsigned long insn;
-+
 +  bfd_signed_vma saddend = (bfd_signed_vma) addend;
 +
 +  switch (r_type)
@@ -740,14 +729,14 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +      return bfd_reloc_ok;
 +
 +    case R_V810_26_PCREL:
-+      if (saddend > 0x1ffffff || saddend < -0x2000000)	//if (saddend > 0x1fffff || saddend < -0x200000)
++      if (saddend > 0x1ffffff || saddend < -0x2000000)
 +	return bfd_reloc_overflow;
 +
 +      if ((addend % 2) != 0)
 +	return bfd_reloc_dangerous;
 +
 +      insn  = bfd_get_32 (abfd, address);
-+      insn &= ~0xfffe03ff; //insn &= ~0xfffe003f;
++      insn &= ~0xfffe03ff;
 +      insn |= (((addend & 0xfffe) << 16) | ((addend & 0x3ff0000) >> 16));
 +      bfd_put_32 (abfd, (bfd_vma) insn, address);
 +      return bfd_reloc_ok;
@@ -760,8 +749,8 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +	return bfd_reloc_dangerous;
 +
 +      insn  = bfd_get_16 (abfd, address);
-+      insn &= ~ 0x01ff; //insn &= ~ 0xf870;
-+      insn |= (addend & 0x1ff); //insn |= ((addend & 0x1f0) << 7) | ((addend & 0x0e) << 3);
++      insn &= ~ 0x01ff;
++      insn |= (addend & 0x1ff);
 +      break;
 +
 +    case R_V810_HI16:
@@ -778,7 +767,7 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +      addend = (addend >> 16) + ((addend & 0x8000) != 0);
 +
 +      /* This relocation cannot overflow.  */
-+      if (addend > 0x7fff)
++      if (addend > 0xffff)
 +	addend = 0;
 +
 +      insn = addend;
@@ -812,22 +801,6 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +	return bfd_reloc_overflow;
 +
 +      insn = addend;
-+      break;
-+
-+    case R_V810_SDA_15_16_OFFSET:
-+    case R_V810_ZDA_15_16_OFFSET:
-+      insn = bfd_get_16 (abfd, address);
-+      addend += (insn & 0xfffe);
-+
-+      saddend = (bfd_signed_vma) addend;
-+
-+      if (saddend > 0x7ffe || saddend < -0x8000)
-+	return bfd_reloc_overflow;
-+
-+      if (addend & 1)
-+        return bfd_reloc_dangerous;
-+
-+      insn = (addend &~ (bfd_vma) 1) | (insn & 1);
 +      break;
 +
 +    case R_V810_GNU_VTINHERIT:
@@ -900,8 +873,26 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +  return bfd_reloc_ok;
 +}
 +
++/* This function is used for relocs which are only used
++   for relaxing, which the linker should otherwise ignore.  */
++
++static bfd_reloc_status_type
++v810_elf_ignore_reloc (bfd *abfd ATTRIBUTE_UNUSED,
++		       arelent *reloc_entry,
++		       asymbol *symbol ATTRIBUTE_UNUSED,
++		       void * data ATTRIBUTE_UNUSED,
++		       asection *input_section,
++		       bfd *output_bfd,
++		       char **error_message ATTRIBUTE_UNUSED)
++{
++  if (output_bfd != NULL)
++    reloc_entry->address += input_section->output_offset;
++
++  return bfd_reloc_ok;
++}
 +/* Note: It is REQUIRED that the 'type' value of each entry
-+   in this array match the index of the entry in the array.  */
++   in this array match the index of the entry in the array.
++   SeeAlso: RELOC_NUBMER in include/elf/v810.h  */
 +static reloc_howto_type v810_elf_howto_table[] =
 +{
 +  /* This reloc does nothing.  */
@@ -921,9 +912,9 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +
 +  /* A PC relative 9 bit branch.  */
 +  HOWTO (R_V810_9_PCREL,		/* Type.  */
-+	 2,				/* Rightshift.  */
-+	 2,				/* Size (0 = byte, 1 = short, 2 = long).  */
-+	 26,				/* Bitsize.  */
++	 0,				/* Rightshift.  */
++	 1,				/* Size (0 = byte, 1 = short, 2 = long).  */
++	 9,				/* Bitsize.  */
 +	 TRUE,				/* PC_relative.  */
 +	 0,				/* Bitpos.  */
 +	 complain_overflow_bitfield,	/* Complain_on_overflow.  */
@@ -934,13 +925,13 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +	 0x00ffffff,			/* Dst_mask.  */
 +	 TRUE),				/* PCrel_offset.  */
 +
-+  /* A PC relative 22 bit branch.  */
++  /* A PC relative 26 bit branch.  */
 +  HOWTO (R_V810_26_PCREL,		/* Type.  */
-+	 2,				/* Rightshift.  */
++	 0,				/* Rightshift.  */
 +	 2,				/* Size (0 = byte, 1 = short, 2 = long).  */
 +	 26,				/* Bitsize.  */
 +	 TRUE,				/* PC_relative.  */
-+	 7,				/* Bitpos.  */
++	 0,				/* Bitpos.  */
 +	 complain_overflow_signed,	/* Complain_on_overflow.  */
 +	 v810_elf_reloc,		/* Special_function.  */
 +	 "R_V810_26_PCREL",		/* Name.  */
@@ -1054,21 +1045,6 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +	 0xffff,			/* Dst_mask.  */
 +	 FALSE),			/* PCrel_offset.  */
 +
-+  /* 15 bit offset from the short data area pointer.  */
-+  HOWTO (R_V810_SDA_15_16_OFFSET,	/* Type.  */
-+	 1,				/* Rightshift.  */
-+	 1,				/* Size (0 = byte, 1 = short, 2 = long).  */
-+	 16,				/* Bitsize.  */
-+	 FALSE,				/* PC_relative.  */
-+	 1,				/* Bitpos.  */
-+	 complain_overflow_dont,	/* Complain_on_overflow.  */
-+	 v810_elf_reloc,		/* Special_function.  */
-+	 "R_V810_SDA_15_16_OFFSET",	/* Name.  */
-+	 FALSE,				/* Partial_inplace.  */
-+	 0xfffe,			/* Src_mask.  */
-+	 0xfffe,			/* Dst_mask.  */
-+	 FALSE),			/* PCrel_offset.  */
-+
 +  /* 16 bit offset from the zero data area pointer.  */
 +  HOWTO (R_V810_ZDA_16_16_OFFSET,	/* Type.  */
 +	 0,				/* Rightshift.  */
@@ -1084,50 +1060,82 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +	 0xffff,			/* Dst_mask.  */
 +	 FALSE),			/* PCrel_offset.  */
 +
-+  /* 15 bit offset from the zero data area pointer.  */
-+  HOWTO (R_V810_ZDA_15_16_OFFSET,	/* Type.  */
-+	 1,				/* Rightshift.  */
-+	 1,				/* Size (0 = byte, 1 = short, 2 = long).  */
-+	 16,				/* Bitsize.  */
-+	 FALSE,				/* PC_relative.  */
-+	 1,				/* Bitpos.  */
-+	 complain_overflow_dont,	/* Complain_on_overflow.  */
-+	 v810_elf_reloc,		/* Special_function.  */
-+	 "R_V810_ZDA_15_16_OFFSET",	/* Name.  */
-+	 FALSE,				/* Partial_inplace.  */
-+	 0xfffe,			/* Src_mask.  */
-+	 0xfffe,			/* Dst_mask.  */
-+	 FALSE),			/* PCrel_offset.  */
 +
 +  /* GNU extension to record C++ vtable hierarchy */
 +  HOWTO (R_V810_GNU_VTINHERIT, /* Type.  */
-+         0,                     /* Rightshift.  */
-+         2,                     /* Size (0 = byte, 1 = short, 2 = long).  */
-+         0,                     /* Bitsize.  */
-+         FALSE,                 /* PC_relative.  */
-+         0,                     /* Bitpos.  */
-+         complain_overflow_dont, /* Complain_on_overflow.  */
-+         NULL,                  /* Special_function.  */
-+         "R_V810_GNU_VTINHERIT", /* Name.  */
-+         FALSE,                 /* Partial_inplace.  */
-+         0,                     /* Src_mask.  */
-+         0,                     /* Dst_mask.  */
-+         FALSE),                /* PCrel_offset.  */
++	 0,                     /* Rightshift.  */
++	 2,                     /* Size (0 = byte, 1 = short, 2 = long).  */
++	 0,                     /* Bitsize.  */
++	 FALSE,                 /* PC_relative.  */
++	 0,                     /* Bitpos.  */
++	 complain_overflow_dont, /* Complain_on_overflow.  */
++	 NULL,                  /* Special_function.  */
++	 "R_V810_GNU_VTINHERIT", /* Name.  */
++	 FALSE,                 /* Partial_inplace.  */
++	 0,                     /* Src_mask.  */
++	 0,                     /* Dst_mask.  */
++	 FALSE),                /* PCrel_offset.  */
 +
-+  /* GNU extension to record C++ vtable member usage */
++  /* GNU extension to record C++ vtable member usage.  */
 +  HOWTO (R_V810_GNU_VTENTRY,     /* Type.  */
-+         0,                     /* Rightshift.  */
-+         2,                     /* Size (0 = byte, 1 = short, 2 = long).  */
-+         0,                     /* Bitsize.  */
-+         FALSE,                 /* PC_relative.  */
-+         0,                     /* Bitpos.  */
-+         complain_overflow_dont, /* Complain_on_overflow.  */
-+         _bfd_elf_rel_vtable_reloc_fn,  /* Special_function.  */
-+         "R_V810_GNU_VTENTRY",   /* Name.  */
-+         FALSE,                 /* Partial_inplace.  */
-+         0,                     /* Src_mask.  */
-+         0,                     /* Dst_mask.  */
-+         FALSE),                /* PCrel_offset.  */
++	 0,                     /* Rightshift.  */
++	 2,                     /* Size (0 = byte, 1 = short, 2 = long).  */
++	 0,                     /* Bitsize.  */
++	 FALSE,                 /* PC_relative.  */
++	 0,                     /* Bitpos.  */
++	 complain_overflow_dont, /* Complain_on_overflow.  */
++	 _bfd_elf_rel_vtable_reloc_fn,  /* Special_function.  */
++	 "R_V810_GNU_VTENTRY",   /* Name.  */
++	 FALSE,                 /* Partial_inplace.  */
++	 0,                     /* Src_mask.  */
++	 0,                     /* Dst_mask.  */
++	 FALSE),                /* PCrel_offset.  */
++
++  /* Indicates a .longcall pseudo-op.  The compiler will generate a .longcall
++     pseudo-op when it finds a function call which can be relaxed.  */
++  HOWTO (R_V810_LONGCALL,     /* Type.  */
++	 0,                     /* Rightshift.  */
++	 2,                     /* Size (0 = byte, 1 = short, 2 = long).  */
++	 32,                    /* Bitsize.  */
++	 TRUE,                  /* PC_relative.  */
++	 0,                     /* Bitpos.  */
++	 complain_overflow_signed, /* Complain_on_overflow.  */
++	 v810_elf_ignore_reloc, /* Special_function.  */
++	 "R_V810_LONGCALL",     /* Name.  */
++	 FALSE,                 /* Partial_inplace.  */
++	 0,                     /* Src_mask.  */
++	 0,                     /* Dst_mask.  */
++	 TRUE),                 /* PCrel_offset.  */
++
++  /* Indicates a .longjump pseudo-op.  The compiler will generate a
++     .longjump pseudo-op when it finds a branch which can be relaxed.  */
++  HOWTO (R_V810_LONGJUMP,     /* Type.  */
++	 0,                     /* Rightshift.  */
++	 2,                     /* Size (0 = byte, 1 = short, 2 = long).  */
++	 32,                    /* Bitsize.  */
++	 TRUE,                  /* PC_relative.  */
++	 0,                     /* Bitpos.  */
++	 complain_overflow_signed, /* Complain_on_overflow.  */
++	 v810_elf_ignore_reloc, /* Special_function.  */
++	 "R_V810_LONGJUMP",     /* Name.  */
++	 FALSE,                 /* Partial_inplace.  */
++	 0,                     /* Src_mask.  */
++	 0,                     /* Dst_mask.  */
++	 TRUE),                 /* PCrel_offset.  */
++
++  HOWTO (R_V810_ALIGN,        /* Type.  */
++	 0,                     /* Rightshift.  */
++	 1,                     /* Size (0 = byte, 1 = short, 2 = long).  */
++	 0,                     /* Bitsize.  */
++	 FALSE,                 /* PC_relative.  */
++	 0,                     /* Bitpos.  */
++	 complain_overflow_unsigned, /* Complain_on_overflow.  */
++	 v810_elf_ignore_reloc, /* Special_function.  */
++	 "R_V810_ALIGN",        /* Name.  */
++	 FALSE,                 /* Partial_inplace.  */
++	 0,                     /* Src_mask.  */
++	 0,                     /* Dst_mask.  */
++	 TRUE),                 /* PCrel_offset.  */
 +
 +};
 +
@@ -1143,23 +1151,22 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +
 +static const struct v810_elf_reloc_map v810_elf_reloc_map[] =
 +{
-+  { BFD_RELOC_NONE,		           R_V810_NONE                   },
-+  { BFD_RELOC_V810_9_PCREL,	           R_V810_9_PCREL                },
-+  { BFD_RELOC_V810_26_PCREL,	           R_V810_26_PCREL               },
-+  { BFD_RELOC_HI16_S,		           R_V810_HI16_S                 },
-+  { BFD_RELOC_HI16,		           R_V810_HI16                   },
-+  { BFD_RELOC_LO16,		           R_V810_LO16                   },
-+  { BFD_RELOC_32,		           R_V810_32                     },
-+  { BFD_RELOC_16,		           R_V810_16                     },
-+  { BFD_RELOC_8,		           R_V810_8                      },
++  { BFD_RELOC_NONE,                        R_V810_NONE                   },
++  { BFD_RELOC_V810_9_PCREL,                R_V810_9_PCREL                },
++  { BFD_RELOC_V810_26_PCREL,               R_V810_26_PCREL               },
++  { BFD_RELOC_HI16_S,                      R_V810_HI16_S                 },
++  { BFD_RELOC_HI16,                        R_V810_HI16                   },
++  { BFD_RELOC_LO16,                        R_V810_LO16                   },
++  { BFD_RELOC_32,                          R_V810_32                     },
++  { BFD_RELOC_16,                          R_V810_16                     },
++  { BFD_RELOC_8,                           R_V810_8                      },
 +  { BFD_RELOC_V810_SDA_16_16_OFFSET,       R_V810_SDA_16_16_OFFSET       },
-+  { BFD_RELOC_V810_SDA_15_16_OFFSET,       R_V810_SDA_15_16_OFFSET       },
 +  { BFD_RELOC_V810_ZDA_16_16_OFFSET,       R_V810_ZDA_16_16_OFFSET       },
-+  { BFD_RELOC_V810_ZDA_15_16_OFFSET,       R_V810_ZDA_15_16_OFFSET       },
 +  { BFD_RELOC_VTABLE_INHERIT,              R_V810_GNU_VTINHERIT          },
 +  { BFD_RELOC_VTABLE_ENTRY,                R_V810_GNU_VTENTRY            },
-+//  { BFD_RELOC_V850_ALIGN,                  R_V850_ALIGN                  },
-+
++  { BFD_RELOC_V810_LONGCALL,               R_V810_LONGCALL               },
++  { BFD_RELOC_V810_LONGJUMP,               R_V810_LONGJUMP               },
++  { BFD_RELOC_V810_ALIGN,                  R_V810_ALIGN                  },
 +};
 +
 +/* Map a bfd relocation into the appropriate howto structure.  */
@@ -1270,7 +1277,6 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +      value -= (input_section->output_section->vma
 +		+ input_section->output_offset
 +		+ offset);
-+
 +      break;
 +
 +    case R_V810_HI16_S:
@@ -1281,15 +1287,13 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +    case R_V810_8:
 +      break;
 +
-+    case R_V810_ZDA_15_16_OFFSET:
 +    case R_V810_ZDA_16_16_OFFSET:
 +      if (sym_sec == NULL)
 +	return bfd_reloc_undefined;
 +
-+      /*value -= sym_sec->output_section->vma;*/
++      value -= sym_sec->output_section->vma;
 +      break;
 +
-+    case R_V810_SDA_15_16_OFFSET:
 +    case R_V810_SDA_16_16_OFFSET:
 +      {
 +	unsigned long                gp;
@@ -1316,6 +1320,9 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +    case R_V810_NONE:
 +    case R_V810_GNU_VTINHERIT:
 +    case R_V810_GNU_VTENTRY:
++    case R_V810_LONGCALL:
++    case R_V810_LONGJUMP:
++    case R_V810_ALIGN:
 +      return bfd_reloc_ok;
 +
 +    default:
@@ -1403,16 +1410,9 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +				   unresolved_reloc, warned);
 +	}
 +
-+      if (sec != NULL && elf_discarded_section (sec))
-+	{
-+	  /* For relocs against symbols from removed linkonce sections,
-+	     or sections discarded by a linker script, we just want the
-+	     section contents zeroed.  Avoid any special processing.  */
-+	  _bfd_clear_contents (howto, input_bfd, contents + rel->r_offset);
-+	  rel->r_info = 0;
-+	  rel->r_addend = 0;
-+	  continue;
-+	}
++      if (sec != NULL && discarded_section (sec))
++	RELOC_AGAINST_DISCARDED_SECTION (info, input_bfd, input_section,
++					 rel, 1, relend, howto, 0, contents);
 +
 +      if (info->relocatable)
 +	continue;
@@ -1627,7 +1627,7 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +
 +  _bfd_elf_print_private_bfd_data (abfd, ptr);
 +
-+  /* xgettext:c-format */
++  /* xgettext:c-format.  */
 +  fprintf (file, _("private flags = %lx: "), elf_elfheader (abfd)->e_flags);
 +
 +  switch (elf_elfheader (abfd)->e_flags & EF_V810_ARCH)
@@ -1691,7 +1691,7 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +     FIXME: Should we alter the st_shndx field as well ?  */
 +
 +  if (indx < elf_numsections (abfd))
-+    switch (elf_elfsections(abfd)[indx]->sh_type)
++    switch (elf_elfsections (abfd)[indx]->sh_type)
 +      {
 +      case SHT_V810_SCOMMON:
 +	indx = SHN_V810_SCOMMON;
@@ -1766,7 +1766,7 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +     FIXME: Should we alter the st_shndx field as well ?  */
 +
 +  if (indx < elf_numsections (abfd))
-+    switch (elf_elfsections(abfd)[indx]->sh_type)
++    switch (elf_elfsections (abfd)[indx]->sh_type)
 +      {
 +      case SHT_V810_SCOMMON:
 +	indx = SHN_V810_SCOMMON;
@@ -1872,6 +1872,857 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +  return TRUE;
 +}
 +
++/* Delete some bytes from a section while relaxing.  */
++
++static bfd_boolean
++v810_elf_relax_delete_bytes (bfd *abfd,
++			     asection *sec,
++			     bfd_vma addr,
++			     bfd_vma toaddr,
++			     int count)
++{
++  Elf_Internal_Shdr *symtab_hdr;
++  Elf32_External_Sym *extsyms;
++  Elf32_External_Sym *esym;
++  Elf32_External_Sym *esymend;
++  int sym_index;
++  unsigned int sec_shndx;
++  bfd_byte *contents;
++  Elf_Internal_Rela *irel;
++  Elf_Internal_Rela *irelend;
++  struct elf_link_hash_entry *sym_hash;
++  Elf_Internal_Shdr *shndx_hdr;
++  Elf_External_Sym_Shndx *shndx;
++
++  symtab_hdr = &elf_tdata (abfd)->symtab_hdr;
++  extsyms = (Elf32_External_Sym *) symtab_hdr->contents;
++
++  sec_shndx = _bfd_elf_section_from_bfd_section (abfd, sec);
++
++  contents = elf_section_data (sec)->this_hdr.contents;
++
++  /* The deletion must stop at the next ALIGN reloc for an alignment
++     power larger than the number of bytes we are deleting.  */
++
++  /* Actually delete the bytes.  */
++#if (DEBUG_RELAX & 2)
++  fprintf (stderr, "relax_delete: contents: sec: %s  %p .. %p %x\n",
++	   sec->name, addr, toaddr, count );
++#endif
++  memmove (contents + addr, contents + addr + count,
++	   toaddr - addr - count);
++  memset (contents + toaddr-count, 0, count);
++
++  /* Adjust all the relocs.  */
++  irel = elf_section_data (sec)->relocs;
++  irelend = irel + sec->reloc_count;
++  shndx_hdr = &elf_tdata (abfd)->symtab_shndx_hdr;
++  shndx = (Elf_External_Sym_Shndx *) shndx_hdr->contents;
++
++  for (; irel < irelend; irel++)
++    {
++      bfd_vma raddr, paddr, symval;
++      Elf_Internal_Sym isym;
++
++      /* Get the new reloc address.  */
++      raddr = irel->r_offset;
++      if ((raddr >= (addr + count) && raddr < toaddr))
++	irel->r_offset -= count;
++
++      if (raddr >= addr && raddr < addr + count)
++	{
++	  irel->r_info = ELF32_R_INFO (ELF32_R_SYM (irel->r_info),
++				       (int) R_V810_NONE);
++	  continue;
++	}
++
++      if (ELF32_R_TYPE (irel->r_info) == (int) R_V810_ALIGN)
++	continue;
++
++      bfd_elf32_swap_symbol_in (abfd,
++				extsyms + ELF32_R_SYM (irel->r_info),
++				shndx ? shndx + ELF32_R_SYM (irel->r_info) : NULL,
++				& isym);
++
++      if (isym.st_shndx != sec_shndx)
++	continue;
++
++      /* Get the value of the symbol referred to by the reloc.  */
++      if (ELF32_R_SYM (irel->r_info) < symtab_hdr->sh_info)
++	{
++	  symval = isym.st_value;
++#if (DEBUG_RELAX & 2)
++	  {
++	    char * name = bfd_elf_string_from_elf_section
++	                   (abfd, symtab_hdr->sh_link, isym.st_name);
++	    fprintf (stderr,
++	       "relax_delete: local: sec: %s, sym: %s (%d), value: %x + %x + %x addend %x\n",
++	       sec->name, name, isym.st_name,
++	       sec->output_section->vma, sec->output_offset,
++	       isym.st_value, irel->r_addend);
++	  }
++#endif
++	}
++      else
++	{
++	  unsigned long indx;
++	  struct elf_link_hash_entry * h;
++
++	  /* An external symbol.  */
++	  indx = ELF32_R_SYM (irel->r_info) - symtab_hdr->sh_info;
++
++	  h = elf_sym_hashes (abfd) [indx];
++	  BFD_ASSERT (h != NULL);
++
++	  symval = h->root.u.def.value;
++#if (DEBUG_RELAX & 2)
++	  fprintf (stderr,
++		   "relax_delete: defined: sec: %s, name: %s, value: %x + %x + %x addend %x\n",
++		   sec->name, h->root.root.string, h->root.u.def.value,
++		   sec->output_section->vma, sec->output_offset, irel->r_addend);
++#endif
++	}
++
++      paddr = symval + irel->r_addend;
++
++      if ( (symval >= addr + count && symval < toaddr)
++	  && (paddr < addr + count || paddr >= toaddr))
++	irel->r_addend += count;
++      else if (    (symval < addr + count || symval >= toaddr)
++	        && (paddr >= addr + count && paddr < toaddr))
++	irel->r_addend -= count;
++    }
++
++  /* Adjust the local symbols defined in this section.  */
++  esym = extsyms;
++  esymend = esym + symtab_hdr->sh_info;
++
++  for (; esym < esymend; esym++, shndx = (shndx ? shndx + 1 : NULL))
++    {
++      Elf_Internal_Sym isym;
++
++      bfd_elf32_swap_symbol_in (abfd, esym, shndx, & isym);
++
++      if (isym.st_shndx == sec_shndx
++	  && isym.st_value >= addr + count
++	  && isym.st_value < toaddr)
++	{
++	  isym.st_value -= count;
++
++	  if (isym.st_value + isym.st_size >= toaddr)
++	    isym.st_size += count;
++
++	  bfd_elf32_swap_symbol_out (abfd, & isym, esym, shndx);
++	}
++      else if (isym.st_shndx == sec_shndx
++	       && isym.st_value < addr + count)
++	{
++	  if (isym.st_value+isym.st_size >= addr + count
++	      && isym.st_value+isym.st_size < toaddr)
++	    isym.st_size -= count;
++
++	  if (isym.st_value >= addr
++	      && isym.st_value <  addr + count)
++	    isym.st_value = addr;
++
++	  bfd_elf32_swap_symbol_out (abfd, & isym, esym, shndx);
++	}
++    }
++
++  /* Now adjust the global symbols defined in this section.  */
++  esym = extsyms + symtab_hdr->sh_info;
++  esymend = extsyms + (symtab_hdr->sh_size / sizeof (Elf32_External_Sym));
++
++  for (sym_index = 0; esym < esymend; esym ++, sym_index ++)
++    {
++      Elf_Internal_Sym isym;
++
++      bfd_elf32_swap_symbol_in (abfd, esym, shndx, & isym);
++      sym_hash = elf_sym_hashes (abfd) [sym_index];
++
++      if (isym.st_shndx == sec_shndx
++	  && ((sym_hash)->root.type == bfd_link_hash_defined
++	      || (sym_hash)->root.type == bfd_link_hash_defweak)
++	  && (sym_hash)->root.u.def.section == sec
++	  && (sym_hash)->root.u.def.value >= addr + count
++	  && (sym_hash)->root.u.def.value < toaddr)
++	{
++	  if ((sym_hash)->root.u.def.value + isym.st_size >= toaddr)
++	    {
++	      isym.st_size += count;
++	      bfd_elf32_swap_symbol_out (abfd, & isym, esym, shndx);
++	    }
++
++	  (sym_hash)->root.u.def.value -= count;
++	}
++      else if (isym.st_shndx == sec_shndx
++	       && ((sym_hash)->root.type == bfd_link_hash_defined
++		   || (sym_hash)->root.type == bfd_link_hash_defweak)
++	       && (sym_hash)->root.u.def.section == sec
++	       && (sym_hash)->root.u.def.value < addr + count)
++	{
++	  if ((sym_hash)->root.u.def.value+isym.st_size >= addr + count
++	      && (sym_hash)->root.u.def.value+isym.st_size < toaddr)
++	    isym.st_size -= count;
++
++	  if ((sym_hash)->root.u.def.value >= addr
++	      && (sym_hash)->root.u.def.value < addr + count)
++	    (sym_hash)->root.u.def.value = addr;
++
++	  bfd_elf32_swap_symbol_out (abfd, & isym, esym, shndx);
++	}
++
++      if (shndx)
++	++ shndx;
++    }
++
++  return TRUE;
++}
++
++#define NOP_OPCODE 	(0x9a00)
++#define MOVHI	    	0xbc00				/* 4byte.  */
++#define MOVHI_MASK  	0xfc00
++#define MOVHI_R1(insn)	((insn) & 0x1f)			/* 4byte.  */
++#define MOVHI_R2(insn)	((insn) >> 5)
++#define MOVEA	    	0xa000				/* 2byte.  */
++#define MOVEA_MASK  	0xfc00
++#define MOVEA_R1(insn)	((insn) & 0x1f)
++#define MOVEA_R2(insn)	((insn) >> 5)
++#define JAL_4	    	0x0004ac00				/* 4byte.  */
++#define JAL_4_MASK 	0xFFFFFFFF
++#define ADD_I       	0x4400					/* 2byte.  */
++#define ADD_I_MASK  	0xfc00
++#define ADD_I5(insn)	((((insn) & 0x001f) << 11) >> 11)	/* 2byte.  */
++#define ADD_R2(insn)	((insn) >> 5)
++#define JMP_R	    	0x1800					/* 2byte.  */
++#define JMP_R_MASK 	0xFFE0
++#define JMP_R1(insn)	((insn) & 0x1f)
++
++static bfd_boolean
++v810_elf_relax_section (bfd *abfd,
++			asection *sec,
++			struct bfd_link_info *link_info,
++			bfd_boolean *again)
++{
++  Elf_Internal_Shdr *symtab_hdr;
++  Elf_Internal_Rela *internal_relocs;
++  Elf_Internal_Rela *irel;
++  Elf_Internal_Rela *irelend;
++  Elf_Internal_Rela *irelalign = NULL;
++  Elf_Internal_Sym *isymbuf = NULL;
++  bfd_byte *contents = NULL;
++  bfd_vma addr = 0;
++  bfd_vma toaddr;
++  int align_pad_size = 0;
++  bfd_boolean result = TRUE;
++
++  *again = FALSE;
++
++  if (link_info->relocatable
++      || (sec->flags & SEC_RELOC) == 0
++      || sec->reloc_count == 0)
++    return TRUE;
++
++  symtab_hdr = & elf_tdata (abfd)->symtab_hdr;
++
++  internal_relocs = (_bfd_elf_link_read_relocs
++		     (abfd, sec, NULL, NULL, link_info->keep_memory));
++  if (internal_relocs == NULL)
++    goto error_return;
++
++  irelend = internal_relocs + sec->reloc_count;
++
++  while (addr < sec->size)
++    {
++      toaddr = sec->size;
++
++      for (irel = internal_relocs; irel < irelend; irel ++)
++	if (ELF32_R_TYPE (irel->r_info) == (int) R_V810_ALIGN
++	    && irel->r_offset > addr
++	    && irel->r_offset < toaddr)
++	  toaddr = irel->r_offset;
++
++#ifdef DEBUG_RELAX
++      fprintf (stderr, "relax region 0x%x to 0x%x align pad %d\n",
++	       addr, toaddr, align_pad_size);
++#endif
++      if (irelalign)
++	{
++	  bfd_vma alignto;
++	  bfd_vma alignmoveto;
++
++	  alignmoveto = BFD_ALIGN (addr - align_pad_size, 1 << irelalign->r_addend);
++	  alignto = BFD_ALIGN (addr, 1 << irelalign->r_addend);
++
++	  if (alignmoveto < alignto)
++	    {
++	      unsigned int i;
++
++	      align_pad_size = alignto - alignmoveto;
++#ifdef DEBUG_RELAX
++	      fprintf (stderr, "relax move region 0x%x to 0x%x delete size 0x%x\n",
++		       alignmoveto, toaddr, align_pad_size);
++#endif
++	      if (!v810_elf_relax_delete_bytes (abfd, sec, alignmoveto,
++						toaddr, align_pad_size))
++		goto error_return;
++
++	      for (i  = BFD_ALIGN (toaddr - align_pad_size, 1);
++		   (i + 1) < toaddr; i += 2)
++		bfd_put_16 (abfd, NOP_OPCODE, contents + i);
++
++	      addr = alignmoveto;
++	    }
++	  else
++	    align_pad_size = 0;
++	}
++
++      for (irel = internal_relocs; irel < irelend; irel++)
++	{
++	  bfd_vma laddr;
++	  bfd_vma addend;
++	  bfd_vma symval;
++	  int insn[5];
++	  int no_match = -1;
++	  Elf_Internal_Rela *hi_irelfn;
++	  Elf_Internal_Rela *lo_irelfn;
++	  Elf_Internal_Rela *irelcall;
++	  bfd_signed_vma foff;
++
++	  if (! (irel->r_offset >= addr && irel->r_offset < toaddr
++		 && (ELF32_R_TYPE (irel->r_info) == (int) R_V810_LONGCALL
++		     || ELF32_R_TYPE (irel->r_info) == (int) R_V810_LONGJUMP)))
++	    continue;
++
++#ifdef DEBUG_RELAX
++	  fprintf (stderr, "relax check r_info 0x%x r_offset 0x%x r_addend 0x%x\n",
++		   irel->r_info,
++		   irel->r_offset,
++		   irel->r_addend );
++#endif
++
++	  /* Get the section contents.  */
++	  if (contents == NULL)
++	    {
++	      if (elf_section_data (sec)->this_hdr.contents != NULL)
++		contents = elf_section_data (sec)->this_hdr.contents;
++	      else
++		{
++		  if (! bfd_malloc_and_get_section (abfd, sec, &contents))
++		    goto error_return;
++		}
++	    }
++
++	  /* Read this BFD's local symbols if we haven't done so already.  */
++	  if (isymbuf == NULL && symtab_hdr->sh_info != 0)
++	    {
++	      isymbuf = (Elf_Internal_Sym *) symtab_hdr->contents;
++	      if (isymbuf == NULL)
++		isymbuf = bfd_elf_get_elf_syms (abfd, symtab_hdr,
++						symtab_hdr->sh_info, 0,
++						NULL, NULL, NULL);
++	      if (isymbuf == NULL)
++		goto error_return;
++	    }
++
++	  laddr = irel->r_offset;
++
++	  if (ELF32_R_TYPE (irel->r_info) == (int) R_V810_LONGCALL)
++	    {
++	      /* Check code for -mlong-calls output. */
++	      if (laddr + 16 <= (bfd_vma) sec->size)
++		{
++		  insn[0] = bfd_get_16 (abfd, contents + laddr);
++		  insn[1] = bfd_get_16 (abfd, contents + laddr + 4);
++		  insn[2] = bfd_get_32 (abfd, contents + laddr + 8);
++		  insn[3] = bfd_get_16 (abfd, contents + laddr + 12);
++		  insn[4] = bfd_get_16 (abfd, contents + laddr + 14);
++
++		  if ((insn[0] & MOVHI_MASK) != MOVHI
++		       || MOVHI_R1 (insn[0]) != 0)
++		    no_match = 0;
++
++		  if (no_match < 0
++		      && ((insn[1] & MOVEA_MASK) != MOVEA
++			   || MOVHI_R2 (insn[0]) != MOVEA_R1 (insn[1])))
++		    no_match = 1;
++
++		  if (no_match < 0
++		      && (insn[2] & JAL_4_MASK) != JAL_4)
++		    no_match = 2;
++
++		  if (no_match < 0
++		      && ((insn[3] & ADD_I_MASK) != ADD_I
++			   || ADD_I5 (insn[3]) != 4))
++		    no_match = 3;
++
++		  if (no_match < 0
++		      && ((insn[4] & JMP_R_MASK) != JMP_R
++			   || MOVEA_R2 (insn[1]) != JMP_R1 (insn[4])))
++		    no_match = 4;
++		}
++	      else
++		{
++		  ((*_bfd_error_handler)
++		   ("%s: 0x%lx: warning: R_V810_LONGCALL points to unrecognized insns",
++		    bfd_get_filename (abfd), (unsigned long) irel->r_offset));
++
++		  continue;
++		}
++
++	      if (no_match >= 0)
++		{
++		  ((*_bfd_error_handler)
++		   ("%s: 0x%lx: warning: R_V810_LONGCALL points to unrecognized insn 0x%x",
++		    bfd_get_filename (abfd), (unsigned long) irel->r_offset+no_match, insn[no_match]));
++
++		  continue;
++		}
++
++	      /* Get the reloc for the address from which the register is
++	         being loaded.  This reloc will tell us which function is
++	         actually being called.  */
++	      for (hi_irelfn = internal_relocs; hi_irelfn < irelend; hi_irelfn ++)
++		if (hi_irelfn->r_offset == laddr + 2
++		    && ELF32_R_TYPE (hi_irelfn->r_info)
++		        == (int) R_V810_HI16_S)
++		  break;
++
++	      for (lo_irelfn = internal_relocs; lo_irelfn < irelend; lo_irelfn ++)
++		if (lo_irelfn->r_offset == laddr + 6
++		    && ELF32_R_TYPE (lo_irelfn->r_info)
++		        == (int) R_V810_LO16)
++		  break;
++
++	      for (irelcall = internal_relocs; irelcall < irelend; irelcall ++)
++		if (irelcall->r_offset == laddr + 8
++		    && ELF32_R_TYPE (irelcall->r_info)
++                        == (int) R_V810_26_PCREL)
++		  break;
++
++	      if (   hi_irelfn == irelend
++		  || lo_irelfn == irelend
++		  || irelcall  == irelend)
++		{
++		  ((*_bfd_error_handler)
++		   ("%s: 0x%lx: warning: R_V810_LONGCALL points to unrecognized reloc",
++		    bfd_get_filename (abfd), (unsigned long) irel->r_offset ));
++
++		  continue;
++		}
++
++	      if (ELF32_R_SYM (irelcall->r_info) < symtab_hdr->sh_info)
++		{
++		  Elf_Internal_Sym *  isym;
++
++		  /* A local symbol.  */
++		  isym = isymbuf + ELF32_R_SYM (irelcall->r_info);
++
++		  symval = isym->st_value;
++		}
++	      else
++		{
++		  unsigned long indx;
++		  struct elf_link_hash_entry * h;
++
++		  /* An external symbol.  */
++		  indx = ELF32_R_SYM (irelcall->r_info) - symtab_hdr->sh_info;
++		  h = elf_sym_hashes (abfd)[indx];
++		  BFD_ASSERT (h != NULL);
++
++		  if (   h->root.type != bfd_link_hash_defined
++		      && h->root.type != bfd_link_hash_defweak)
++		    /* This appears to be a reference to an undefined
++		       symbol.  Just ignore it--it will be caught by the
++		       regular reloc processing.  */
++		    continue;
++
++		  symval = h->root.u.def.value;
++		}
++
++	      if (symval + irelcall->r_addend != irelcall->r_offset + 4)
++		{
++		  ((*_bfd_error_handler)
++		   ("%s: 0x%lx: warning: R_V810_LONGCALL points to unrecognized reloc 0x%lx",
++		    bfd_get_filename (abfd), (unsigned long) irel->r_offset, irelcall->r_offset ));
++
++		  continue;
++		}
++
++	      /* Get the value of the symbol referred to by the reloc.  */
++	      if (ELF32_R_SYM (hi_irelfn->r_info) < symtab_hdr->sh_info)
++		{
++		  Elf_Internal_Sym *isym;
++		  asection *sym_sec;
++
++		  /* A local symbol.  */
++		  isym = isymbuf + ELF32_R_SYM (hi_irelfn->r_info);
++
++		  if (isym->st_shndx == SHN_UNDEF)
++		    sym_sec = bfd_und_section_ptr;
++		  else if (isym->st_shndx == SHN_ABS)
++		    sym_sec = bfd_abs_section_ptr;
++		  else if (isym->st_shndx == SHN_COMMON)
++		    sym_sec = bfd_com_section_ptr;
++		  else
++		    sym_sec = bfd_section_from_elf_index (abfd, isym->st_shndx);
++		  symval = (isym->st_value
++			    + sym_sec->output_section->vma
++			    + sym_sec->output_offset);
++		}
++	      else
++		{
++		  unsigned long indx;
++		  struct elf_link_hash_entry *h;
++
++		  /* An external symbol.  */
++		  indx = ELF32_R_SYM (hi_irelfn->r_info) - symtab_hdr->sh_info;
++		  h = elf_sym_hashes (abfd)[indx];
++		  BFD_ASSERT (h != NULL);
++
++		  if (   h->root.type != bfd_link_hash_defined
++		      && h->root.type != bfd_link_hash_defweak)
++		    /* This appears to be a reference to an undefined
++		       symbol.  Just ignore it--it will be caught by the
++		       regular reloc processing.  */
++		    continue;
++
++		  symval = (h->root.u.def.value
++			    + h->root.u.def.section->output_section->vma
++			    + h->root.u.def.section->output_offset);
++		}
++
++	      addend = irel->r_addend;
++
++	      foff = (symval + addend
++		      - (irel->r_offset
++			 + sec->output_section->vma
++			 + sec->output_offset
++			 + 4));
++#ifdef DEBUG_RELAX
++	      fprintf (stderr, "relax longcall r_offset 0x%x ptr 0x%x symbol 0x%x addend 0x%x distance 0x%x\n",
++		       irel->r_offset,
++		       (irel->r_offset
++			+ sec->output_section->vma
++			+ sec->output_offset),
++		       symval, addend, foff);
++#endif
++
++	      if (foff < -0x1000000 || foff >= 0x1000000)
++		/* After all that work, we can't shorten this function call.  */
++		continue;
++
++	      /* For simplicity of coding, we are going to modify the section
++	         contents, the section relocs, and the BFD symbol table.  We
++	         must tell the rest of the code not to free up this
++	         information.  It would be possible to instead create a table
++	         of changes which have to be made, as is done in coff-mips.c;
++	         that would be more work, but would require less memory when
++	         the linker is run.  */
++	      elf_section_data (sec)->relocs = internal_relocs;
++	      elf_section_data (sec)->this_hdr.contents = contents;
++	      symtab_hdr->contents = (bfd_byte *) isymbuf;
++
++	      /* Replace the long call with a jal.  */
++	      irel->r_info = ELF32_R_INFO (ELF32_R_SYM (hi_irelfn->r_info), R_V810_26_PCREL);
++
++	      addend = 0;
++
++	      if (ELF32_R_SYM (hi_irelfn->r_info) < symtab_hdr->sh_info)
++		/* If this needs to be changed because of future relaxing,
++		   it will be handled here like other internal IND12W
++		   relocs.  */
++		bfd_put_32 (abfd,
++			    0x0000ac00 | ((addend << 16) & 0xffff) | ((addend >> 16) & 0x3ff),
++			    contents + irel->r_offset);
++	      else
++		/* We can't fully resolve this yet, because the external
++		   symbol value may be changed by future relaxing.
++		   We let the final link phase handle it.  */
++		bfd_put_32 (abfd, 0x0000ac00, contents + irel->r_offset);
++
++	      hi_irelfn->r_info =
++		ELF32_R_INFO (ELF32_R_SYM (hi_irelfn->r_info), R_V810_NONE);
++	      lo_irelfn->r_info =
++		ELF32_R_INFO (ELF32_R_SYM (lo_irelfn->r_info), R_V810_NONE);
++	      irelcall->r_info =
++		ELF32_R_INFO (ELF32_R_SYM (irelcall->r_info), R_V810_NONE);
++
++	      if (! v810_elf_relax_delete_bytes (abfd, sec,
++						 irel->r_offset + 4, toaddr, 12))
++		goto error_return;
++
++	      align_pad_size += 12;
++	    }
++	  else if (ELF32_R_TYPE (irel->r_info) == (int) R_V810_LONGJUMP)
++	    {
++	      /* Check code for -mlong-jumps output.  */
++	      if (laddr + 10 <= (bfd_vma) sec->size)
++		{
++		  insn[0] = bfd_get_16 (abfd, contents + laddr);
++		  insn[1] = bfd_get_16 (abfd, contents + laddr + 4);
++		  insn[2] = bfd_get_16 (abfd, contents + laddr + 8);
++
++		  if ((insn[0] & MOVHI_MASK) != MOVHI
++		       || MOVHI_R1 (insn[0]) != 0)
++		    no_match = 0;
++
++		  if (no_match < 0
++		      && ((insn[1] & MOVEA_MASK) != MOVEA
++			   || MOVHI_R2 (insn[0]) != MOVEA_R1 (insn[1])))
++		    no_match = 1;
++
++		  if (no_match < 0
++		      && ((insn[2] & JMP_R_MASK) != JMP_R
++			   || MOVEA_R2 (insn[1]) != JMP_R1 (insn[2])))
++		    no_match = 4;
++		}
++	      else
++		{
++		  ((*_bfd_error_handler)
++		   ("%s: 0x%lx: warning: R_V810_LONGJUMP points to unrecognized insns",
++		    bfd_get_filename (abfd), (unsigned long) irel->r_offset));
++
++		  continue;
++		}
++
++	      if (no_match >= 0)
++		{
++		  ((*_bfd_error_handler)
++		   ("%s: 0x%lx: warning: R_V810_LONGJUMP points to unrecognized insn 0x%x",
++		    bfd_get_filename (abfd), (unsigned long) irel->r_offset+no_match, insn[no_match]));
++
++		  continue;
++		}
++
++	      /* Get the reloc for the address from which the register is
++	         being loaded.  This reloc will tell us which function is
++	         actually being called.  */
++	      for (hi_irelfn = internal_relocs; hi_irelfn < irelend; hi_irelfn ++)
++		if (hi_irelfn->r_offset == laddr + 2
++		    && ELF32_R_TYPE (hi_irelfn->r_info) == (int) R_V810_HI16_S)
++		  break;
++
++	      for (lo_irelfn = internal_relocs; lo_irelfn < irelend; lo_irelfn ++)
++		if (lo_irelfn->r_offset == laddr + 6
++		    && ELF32_R_TYPE (lo_irelfn->r_info) == (int) R_V810_LO16)
++		  break;
++
++	      if (   hi_irelfn == irelend
++		  || lo_irelfn == irelend)
++		{
++		  ((*_bfd_error_handler)
++		   ("%s: 0x%lx: warning: R_V810_LONGJUMP points to unrecognized reloc",
++		    bfd_get_filename (abfd), (unsigned long) irel->r_offset ));
++
++		  continue;
++		}
++
++	      /* Get the value of the symbol referred to by the reloc.  */
++	      if (ELF32_R_SYM (hi_irelfn->r_info) < symtab_hdr->sh_info)
++		{
++		  Elf_Internal_Sym *  isym;
++		  asection *          sym_sec;
++
++		  /* A local symbol.  */
++		  isym = isymbuf + ELF32_R_SYM (hi_irelfn->r_info);
++
++		  if (isym->st_shndx == SHN_UNDEF)
++		    sym_sec = bfd_und_section_ptr;
++		  else if (isym->st_shndx == SHN_ABS)
++		    sym_sec = bfd_abs_section_ptr;
++		  else if (isym->st_shndx == SHN_COMMON)
++		    sym_sec = bfd_com_section_ptr;
++		  else
++		    sym_sec = bfd_section_from_elf_index (abfd, isym->st_shndx);
++		  symval = (isym->st_value
++			    + sym_sec->output_section->vma
++			    + sym_sec->output_offset);
++#ifdef DEBUG_RELAX
++		  {
++		    char * name = bfd_elf_string_from_elf_section
++		      (abfd, symtab_hdr->sh_link, isym->st_name);
++
++		    fprintf (stderr, "relax long jump local: sec: %s, sym: %s (%d), value: %x + %x + %x addend %x\n",
++			     sym_sec->name, name, isym->st_name,
++			     sym_sec->output_section->vma,
++			     sym_sec->output_offset,
++			     isym->st_value, irel->r_addend);
++		  }
++#endif
++		}
++	      else
++		{
++		  unsigned long indx;
++		  struct elf_link_hash_entry * h;
++
++		  /* An external symbol.  */
++		  indx = ELF32_R_SYM (irel->r_info) - symtab_hdr->sh_info;
++		  h = elf_sym_hashes (abfd)[indx];
++		  BFD_ASSERT (h != NULL);
++
++		  if (   h->root.type != bfd_link_hash_defined
++		      && h->root.type != bfd_link_hash_defweak)
++		    /* This appears to be a reference to an undefined
++		       symbol.  Just ignore it--it will be caught by the
++		       regular reloc processing.  */
++		    continue;
++
++		  symval = (h->root.u.def.value
++			    + h->root.u.def.section->output_section->vma
++			    + h->root.u.def.section->output_offset);
++#ifdef DEBUG_RELAX
++		  fprintf (stderr,
++			   "relax longjump defined: sec: %s, name: %s, value: %x + %x + %x addend %x\n",
++			   sec->name, h->root.root.string, h->root.u.def.value,
++			   sec->output_section->vma, sec->output_offset, irel->r_addend);
++#endif
++		}
++
++	      addend = irel->r_addend;
++
++	      foff = (symval + addend
++		      - (irel->r_offset
++			 + sec->output_section->vma
++			 + sec->output_offset
++			 + 4));
++#ifdef DEBUG_RELAX
++	      fprintf (stderr, "relax longjump r_offset 0x%x ptr 0x%x symbol 0x%x addend 0x%x distance 0x%x\n",
++		       irel->r_offset,
++		       (irel->r_offset
++			+ sec->output_section->vma
++			+ sec->output_offset),
++		       symval, addend, foff);
++#endif
++	      if (foff < -0x1000000 || foff >= 0x1000000)
++		/* After all that work, we can't shorten this function call.  */
++		continue;
++
++	      /* For simplicity of coding, we are going to modify the section
++	         contents, the section relocs, and the BFD symbol table.  We
++	         must tell the rest of the code not to free up this
++	         information.  It would be possible to instead create a table
++	         of changes which have to be made, as is done in coff-mips.c;
++	         that would be more work, but would require less memory when
++	         the linker is run.  */
++	      elf_section_data (sec)->relocs = internal_relocs;
++	      elf_section_data (sec)->this_hdr.contents = contents;
++	      symtab_hdr->contents = (bfd_byte *) isymbuf;
++
++	      if (foff < -0x100 || foff >= 0x100)
++		{
++		  /* Replace the long jump with a jr.  */
++
++		  irel->r_info =
++		    ELF32_R_INFO (ELF32_R_SYM (irel->r_info), R_V810_26_PCREL);
++
++		  irel->r_addend = addend;
++		  addend = 0;
++
++		  if (ELF32_R_SYM (hi_irelfn->r_info) < symtab_hdr->sh_info)
++		    /* If this needs to be changed because of future relaxing,
++		       it will be handled here like other internal IND12W
++		       relocs.  */
++		    bfd_put_32 (abfd,
++				0x0000a800 | ((addend << 16) & 0xffff0000) | ((addend >> 16) & 0x3ff),
++				contents + irel->r_offset);
++		  else
++		    /* We can't fully resolve this yet, because the external
++		       symbol value may be changed by future relaxing.
++		       We let the final link phase handle it.  */
++		    bfd_put_32 (abfd, 0x0000a800, contents + irel->r_offset);
++
++		  hi_irelfn->r_info =
++			ELF32_R_INFO (ELF32_R_SYM (hi_irelfn->r_info), R_V810_NONE);
++		  lo_irelfn->r_info =
++			ELF32_R_INFO (ELF32_R_SYM (lo_irelfn->r_info), R_V810_NONE);
++		  if (!v810_elf_relax_delete_bytes (abfd, sec,
++						    irel->r_offset + 4, toaddr, 6))
++		    goto error_return;
++
++		  align_pad_size += 6;
++		}
++	      else
++		{
++		  /* Replace the long jump with a br.  */
++
++		  irel->r_info =
++			ELF32_R_INFO (ELF32_R_SYM (irel->r_info), R_V810_9_PCREL);
++
++		  irel->r_addend = addend;
++		  addend = 0;
++
++		  if (ELF32_R_SYM (hi_irelfn->r_info) < symtab_hdr->sh_info)
++		    /* If this needs to be changed because of future relaxing,
++		       it will be handled here like other internal IND12W
++		       relocs.  */
++		    bfd_put_16 (abfd, 0x8a00 | (addend & 0x1ff),
++				contents + irel->r_offset);
++		  else
++		    /* We can't fully resolve this yet, because the external
++		       symbol value may be changed by future relaxing.
++		       We let the final link phase handle it.  */
++		    bfd_put_16 (abfd, 0x8a00, contents + irel->r_offset);
++
++		  hi_irelfn->r_info =
++			ELF32_R_INFO (ELF32_R_SYM (hi_irelfn->r_info), R_V810_NONE);
++		  lo_irelfn->r_info =
++			ELF32_R_INFO (ELF32_R_SYM (lo_irelfn->r_info), R_V810_NONE);
++		  if (!v810_elf_relax_delete_bytes (abfd, sec,
++						    irel->r_offset + 2, toaddr, 8))
++		    goto error_return;
++
++		  align_pad_size += 8;
++		}
++	    }
++	}
++
++      irelalign = NULL;
++      for (irel = internal_relocs; irel < irelend; irel++)
++	{
++	  if (ELF32_R_TYPE (irel->r_info) == (int) R_V810_ALIGN
++	      && irel->r_offset == toaddr)
++	    {
++	      irel->r_offset -= align_pad_size;
++
++	      if (irelalign == NULL || irelalign->r_addend > irel->r_addend)
++		irelalign = irel;
++	    }
++	}
++
++      addr = toaddr;
++    }
++
++  if (!irelalign)
++    {
++#ifdef DEBUG_RELAX
++      fprintf (stderr, "relax pad %d shorten %d -> %d\n",
++	       align_pad_size,
++	       sec->size,
++	       sec->size - align_pad_size);
++#endif
++      sec->size -= align_pad_size;
++    }
++
++ finish:
++  if (internal_relocs != NULL
++      && elf_section_data (sec)->relocs != internal_relocs)
++    free (internal_relocs);
++
++  if (contents != NULL
++      && elf_section_data (sec)->this_hdr.contents != (unsigned char *) contents)
++    free (contents);
++
++  if (isymbuf != NULL
++      && symtab_hdr->contents != (bfd_byte *) isymbuf)
++    free (isymbuf);
++
++  return result;
++
++ error_return:
++  result = FALSE;
++  goto finish;
++}
 +
 +static const struct bfd_elf_special_section v810_elf_special_sections[] =
 +{
@@ -1898,8 +2749,6 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +#define TARGET_LITTLE_NAME			"elf32-v810"
 +#define ELF_ARCH				bfd_arch_v810
 +#define ELF_MACHINE_CODE			EM_V810
-+//#define ELF_MACHINE_ALT1			EM_CYGNUS_V810
-+//#define ELF_MACHINE_ALT2			EM_V800 /* This is the value used by the GreenHills toolchain.  */
 +#define ELF_MAXPAGESIZE				0x1000
 +
 +#define elf_info_to_howto			v810_elf_info_to_howto_rela
@@ -1923,35 +2772,36 @@ diff -rupN binutils-2.20/bfd/elf32-v810.c binutils-2.20-v810/bfd/elf32-v810.c
 +
 +#define bfd_elf32_bfd_is_local_label_name	v810_elf_is_local_label_name
 +#define bfd_elf32_bfd_reloc_type_lookup		v810_elf_reloc_type_lookup
-+#define bfd_elf32_bfd_reloc_name_lookup		v810_elf_reloc_name_lookup
++#define bfd_elf32_bfd_reloc_name_lookup	v810_elf_reloc_name_lookup
 +#define bfd_elf32_bfd_merge_private_bfd_data 	v810_elf_merge_private_bfd_data
 +#define bfd_elf32_bfd_set_private_flags		v810_elf_set_private_flags
 +#define bfd_elf32_bfd_print_private_bfd_data	v810_elf_print_private_bfd_data
-+//#define bfd_elf32_bfd_relax_section		v810_elf_relax_section
++#define bfd_elf32_bfd_relax_section		v810_elf_relax_section
 +
 +#define elf_symbol_leading_char			'_'
 +
 +#include "elf32-target.h"
-diff -rupN binutils-2.20/bfd/libbfd.h binutils-2.20-v810/bfd/libbfd.h
---- binutils-2.20/bfd/libbfd.h	2009-09-02 09:10:55 +0100
-+++ binutils-2.20-v810/bfd/libbfd.h	2012-10-26 15:32:46 +0100
-@@ -1536,6 +1536,12 @@ static const char *const bfd_reloc_code_
+diff -Nbaur binutils-2.23.1/bfd/libbfd.h binutils-2.23.1-v810/bfd/libbfd.h
+--- binutils-2.23.1/bfd/libbfd.h	2012-09-04 13:53:42 +0100
++++ binutils-2.23.1-v810/bfd/libbfd.h	2013-03-10 21:25:38 +0000
+@@ -1729,6 +1729,13 @@
    "BFD_RELOC_M32R_GOTPC_HI_ULO",
    "BFD_RELOC_M32R_GOTPC_HI_SLO",
    "BFD_RELOC_M32R_GOTPC_LO",
 +  "BFD_RELOC_V810_9_PCREL",
 +  "BFD_RELOC_V810_26_PCREL",
 +  "BFD_RELOC_V810_SDA_16_16_OFFSET",
-+  "BFD_RELOC_V810_SDA_15_16_OFFSET",
 +  "BFD_RELOC_V810_ZDA_16_16_OFFSET",
-+  "BFD_RELOC_V810_ZDA_15_16_OFFSET",
++  "BFD_RELOC_V810_LONGCALL",
++  "BFD_RELOC_V810_LONGJUMP",
++  "BFD_RELOC_V810_ALIGN",
    "BFD_RELOC_V850_9_PCREL",
    "BFD_RELOC_V850_22_PCREL",
    "BFD_RELOC_V850_SDA_16_16_OFFSET",
-diff -rupN binutils-2.20/bfd/reloc.c binutils-2.20-v810/bfd/reloc.c
---- binutils-2.20/bfd/reloc.c	2009-09-10 12:47:13 +0100
-+++ binutils-2.20-v810/bfd/reloc.c	2012-10-26 15:32:46 +0100
-@@ -3612,6 +3612,34 @@ ENUMX
+diff -Nbaur binutils-2.23.1/bfd/reloc.c binutils-2.23.1-v810/bfd/reloc.c
+--- binutils-2.23.1/bfd/reloc.c	2012-09-04 13:53:42 +0100
++++ binutils-2.23.1-v810/bfd/reloc.c	2013-03-10 21:30:21 +0000
+@@ -3815,6 +3815,35 @@
  ENUMDOC
    For PIC.
  
@@ -1969,62 +2819,63 @@ diff -rupN binutils-2.20/bfd/reloc.c binutils-2.20-v810/bfd/reloc.c
 +ENUMDOC
 +  This is a 16 bit offset from the short data area pointer.
 +ENUM
-+  BFD_RELOC_V810_SDA_15_16_OFFSET
-+ENUMDOC
-+  This is a 16 bit offset (of which only 15 bits are used) from the
-+  short data area pointer.
-+ENUM
 +  BFD_RELOC_V810_ZDA_16_16_OFFSET
 +ENUMDOC
 +  This is a 16 bit offset from the zero data area pointer.
 +ENUM
-+  BFD_RELOC_V810_ZDA_15_16_OFFSET
++  BFD_RELOC_V810_LONGCALL
 +ENUMDOC
-+  This is a 16 bit offset (of which only 15 bits are used) from the
-+  zero data area pointer.
-+COMMENT
++  Used for relaxing indirect function calls.
++ENUM
++  BFD_RELOC_V810_LONGJUMP
++ENUMDOC
++  Used for relaxing indirect jumps.
++ENUM
++  BFD_RELOC_V810_ALIGN
++ENUMDOC
++  Used to maintain alignment whilst relaxing.
  
  ENUM
    BFD_RELOC_V850_9_PCREL
-diff -rupN binutils-2.20/bfd/targets.c binutils-2.20-v810/bfd/targets.c
---- binutils-2.20/bfd/targets.c	2009-09-10 12:47:13 +0100
-+++ binutils-2.20-v810/bfd/targets.c	2012-10-26 15:32:47 +0100
-@@ -665,6 +665,7 @@ extern const bfd_target bfd_elf32_spu_ve
- extern const bfd_target bfd_elf32_tradbigmips_vec;
- extern const bfd_target bfd_elf32_tradlittlemips_vec;
+diff -Nbaur binutils-2.23.1/bfd/targets.c binutils-2.23.1-v810/bfd/targets.c
+--- binutils-2.23.1/bfd/targets.c	2012-09-04 13:53:42 +0100
++++ binutils-2.23.1-v810/bfd/targets.c	2013-03-09 17:59:20 +0000
+@@ -719,6 +719,7 @@
+ extern const bfd_target bfd_elf32_tradbigmips_freebsd_vec;
+ extern const bfd_target bfd_elf32_tradlittlemips_freebsd_vec;
  extern const bfd_target bfd_elf32_us_cris_vec;
 +extern const bfd_target bfd_elf32_v810_vec;
  extern const bfd_target bfd_elf32_v850_vec;
  extern const bfd_target bfd_elf32_vax_vec;
  extern const bfd_target bfd_elf32_xc16x_vec;
-@@ -1006,6 +1007,7 @@ static const bfd_target * const _bfd_tar
- 	&bfd_elf32_tradbigmips_vec,
- 	&bfd_elf32_tradlittlemips_vec,
+@@ -1095,6 +1096,7 @@
+ 	&bfd_elf32_tradbigmips_freebsd_vec,
+ 	&bfd_elf32_tradlittlemips_freebsd_vec,
  	&bfd_elf32_us_cris_vec,
 +	&bfd_elf32_v810_vec,
  	&bfd_elf32_v850_vec,
  	&bfd_elf32_vax_vec,
  	&bfd_elf32_xc16x_vec,
-diff -rupN binutils-2.20/binutils/readelf.c binutils-2.20-v810/binutils/readelf.c
---- binutils-2.20/binutils/readelf.c	2009-09-22 16:40:59 +0100
-+++ binutils-2.20-v810/binutils/readelf.c	2012-10-26 15:32:47 +0100
-@@ -135,6 +135,7 @@
- #include "elf/sh.h"
- #include "elf/sparc.h"
- #include "elf/spu.h"
+diff -Nbaur binutils-2.23.1/binutils/readelf.c binutils-2.23.1-v810/binutils/readelf.c
+--- binutils-2.23.1/binutils/readelf.c	2012-11-05 16:27:35 +0000
++++ binutils-2.23.1-v810/binutils/readelf.c	2013-03-09 17:59:21 +0000
+@@ -146,6 +146,7 @@
+ #include "elf/tic6x.h"
+ #include "elf/tilegx.h"
+ #include "elf/tilepro.h"
 +#include "elf/v810.h"
  #include "elf/v850.h"
  #include "elf/vax.h"
  #include "elf/x86-64.h"
-@@ -612,6 +613,7 @@ guess_is_rela (unsigned int e_machine)
-     case EM_SPARC32PLUS:
-     case EM_SPARCV9:
-     case EM_SPU:
+@@ -616,6 +617,7 @@
+     case EM_TI_C6000:
+     case EM_TILEGX:
+     case EM_TILEPRO:
 +    case EM_V810:
      case EM_V850:
      case EM_CYGNUS_V850:
      case EM_VAX:
-@@ -1031,6 +1033,10 @@ dump_relocations (FILE * file,
+@@ -1040,6 +1042,10 @@
  	  rtype = elf_spu_reloc_type (type);
  	  break;
  
@@ -2035,16 +2886,16 @@ diff -rupN binutils-2.20/binutils/readelf.c binutils-2.20-v810/binutils/readelf.
  	case EM_V850:
  	case EM_CYGNUS_V850:
  	  rtype = v850_reloc_type (type);
-@@ -1822,6 +1828,7 @@ get_machine_name (unsigned e_machine)
+@@ -1891,6 +1897,7 @@
      case EM_D30V:		return "d30v";
      case EM_CYGNUS_M32R:
      case EM_M32R:		return "Renesas M32R (formerly Mitsubishi M32r)";
-+    case EM_V810:		return "NEC v810";
++    case EM_V810:		return "NEC V810";
      case EM_CYGNUS_V850:
-     case EM_V850:		return "NEC v850";
+     case EM_V850:		return "Renesas V850";
      case EM_CYGNUS_MN10300:
-@@ -2207,6 +2214,21 @@ get_machine_flags (unsigned e_flags, uns
- 	    strcat (buf, ", relocatable-lib");
+@@ -2363,6 +2370,21 @@
+ 	    strcat (buf, _(", relocatable-lib"));
  	  break;
  
 +	case EM_V810:
@@ -2057,7 +2908,7 @@ diff -rupN binutils-2.20/binutils/readelf.c binutils-2.20-v810/binutils/readelf.
 +	      strcat (buf, ", v810");
 +	      break;
 +	    default:
-+	      strcat (buf, ", unknown v810 architecture variant");
++	      strcat (buf, _(", unknown v810 architecture variant"));
 +	      break;
 +	    }
 +	  break;
@@ -2065,133 +2916,107 @@ diff -rupN binutils-2.20/binutils/readelf.c binutils-2.20-v810/binutils/readelf.
  	case EM_V850:
  	case EM_CYGNUS_V850:
  	  switch (e_flags & EF_V850_ARCH)
-@@ -8064,6 +8086,8 @@ is_32bit_abs_reloc (unsigned int reloc_t
- 	|| reloc_type == 23; /* R_SPARC_UA32.  */
-     case EM_SPU:
-       return reloc_type == 6; /* R_SPU_ADDR32 */
+@@ -9939,6 +9961,8 @@
+       return reloc_type == 2; /* R_TILEGX_32.  */
+     case EM_TILEPRO:
+       return reloc_type == 1; /* R_TILEPRO_32.  */
 +    case EM_V810:
 +      return reloc_type == 6; /* R_V810_32.  */
      case EM_CYGNUS_V850:
      case EM_V850:
        return reloc_type == 6; /* R_V850_ABS32.  */
-diff -rupN binutils-2.20/binutils/testsuite/binutils-all/objdump.exp binutils-2.20-v810/binutils/testsuite/binutils-all/objdump.exp
---- binutils-2.20/binutils/testsuite/binutils-all/objdump.exp	2009-09-09 09:13:24 +0100
-+++ binutils-2.20-v810/binutils/testsuite/binutils-all/objdump.exp	2012-10-26 15:32:47 +0100
-@@ -41,7 +41,7 @@ lappend cpus_expected d10v d30v fr30 fr5
- lappend cpus_expected m16c m32c m32r m68hc11 m68hc12 m68k m88k MCore
+diff -Nbaur binutils-2.23.1/binutils/testsuite/binutils-all/objdump.exp binutils-2.23.1-v810/binutils/testsuite/binutils-all/objdump.exp
+--- binutils-2.23.1/binutils/testsuite/binutils-all/objdump.exp	2012-09-04 13:53:44 +0100
++++ binutils-2.23.1-v810/binutils/testsuite/binutils-all/objdump.exp	2013-03-09 17:59:21 +0000
+@@ -42,7 +42,7 @@
  lappend cpus_expected mips mn10200 mn10300 ms1 msp ns32k pj powerpc pyramid
  lappend cpus_expected romp rs6000 s390 sh sparc
--lappend cpus_expected tahoe tic54x tic80 tms320c30 tms320c4x tms320c54x v850
-+lappend cpus_expected tahoe tic54x tic80 tms320c30 tms320c4x tms320c54x v810 v850
- lappend cpus_expected vax we32k x86-64 xscale xtensa z8k z8001 z8002
+ lappend cpus_expected tahoe tic54x tic80 tilegx tms320c30 tms320c4x tms320c54x
+-lappend cpus_expected v850 vax we32k x86-64 xscale xtensa z8k z8001 z8002
++lappend cpus_expected v810 v850 vax we32k x86-64 xscale xtensa z8k z8001 z8002
  
  # Make sure the target CPU shows up in the list.
-diff -rupN binutils-2.20/config/mt-v810 binutils-2.20-v810/config/mt-v810
---- binutils-2.20/config/mt-v810	2002-12-28 07:09:15 +0000
-+++ binutils-2.20-v810/config/mt-v810	2012-10-26 15:32:47 +0100
-@@ -1,3 +1,3 @@
--CC_FOR_TARGET = ca732 -ansi
--AS_FOR_TARGET = as732
--AR_FOR_TARGET = ar732
-+CC_FOR_TARGET = v810-ca -ansi
-+AS_FOR_TARGET = v810-as
-+AR_FOR_TARGET = v810-ar
-diff -rupN binutils-2.20/config.sub binutils-2.20-v810/config.sub
---- binutils-2.20/config.sub	2009-08-17 05:10:29 +0100
-+++ binutils-2.20-v810/config.sub	2012-10-26 15:32:47 +0100
-@@ -291,7 +291,7 @@ case $basic_machine in
- 	| sparcv8 | sparcv9 | sparcv9b | sparcv9v \
- 	| spu | strongarm \
- 	| tahoe | thumb | tic4x | tic80 | tron \
--	| v850 | v850e \
-+	| v810 | v850 | v850e \
+ lappend cpus_expected ${target_cpu}
+diff -Nbaur binutils-2.23.1/config.sub binutils-2.23.1-v810/config.sub
+--- binutils-2.23.1/config.sub	2012-04-25 16:53:25 +0100
++++ binutils-2.23.1-v810/config.sub	2013-03-09 17:59:21 +0000
+@@ -313,7 +313,7 @@
+ 	| spu \
+ 	| tahoe | tic4x | tic54x | tic55x | tic6x | tic80 | tron \
+ 	| ubicom32 \
+-	| v850 | v850e | v850e1 | v850e2 | v850es | v850e2v3 \
++	| v810 | v850 | v850e | v850e1 | v850e2 | v850es | v850e2v3 \
  	| we32k \
- 	| x86 | xc16x | xscale | xscalee[bl] | xstormy16 | xtensa \
+ 	| x86 | xc16x | xstormy16 | xtensa \
  	| z8k | z80)
-@@ -377,7 +377,7 @@ case $basic_machine in
- 	| tahoe-* | thumb-* \
- 	| tic30-* | tic4x-* | tic54x-* | tic55x-* | tic6x-* | tic80-* | tile-* \
+@@ -430,7 +430,7 @@
+ 	| tile*-* \
  	| tron-* \
--	| v850-* | v850e-* | vax-* \
-+	| v810-* | v850-* | v850e-* | vax-* \
+ 	| ubicom32-* \
+-	| v850-* | v850e-* | v850e1-* | v850es-* | v850e2-* | v850e2v3-* \
++	| v810-* | v850-* | v850e-* | v850e1-* | v850es-* | v850e2-* | v850e2v3-* \
+ 	| vax-* \
  	| we32k-* \
- 	| x86-* | x86_64-* | xc16x-* | xps100-* | xscale-* | xscalee[bl]-* \
- 	| xstormy16-* | xtensa*-* \
-diff -rupN binutils-2.20/configure binutils-2.20-v810/configure
---- binutils-2.20/configure	2009-09-02 08:05:02 +0100
-+++ binutils-2.20-v810/configure	2012-10-26 15:32:47 +0100
-@@ -3432,7 +3432,7 @@ case "${target}" in
-   sparc-*-solaris* | sparc64-*-solaris* | sparcv9-*-solaris*)
+ 	| x86-* | x86_64-* | xc16x-* | xps100-* \
+diff -Nbaur binutils-2.23.1/configure binutils-2.23.1-v810/configure
+--- binutils-2.23.1/configure	2012-06-28 12:50:52 +0100
++++ binutils-2.23.1-v810/configure	2013-03-09 17:59:21 +0000
+@@ -3615,7 +3615,7 @@
+     noconfigdirs="$noconfigdirs sim"
      ;;
    v810-*-*)
--    noconfigdirs="$noconfigdirs bfd binutils gas gcc gdb ld target-libstdc++-v3 opcodes target-libgloss ${libgcj}"
-+    noconfigdirs="$noconfigdirs target-libgloss ${libgcj}"
+-    noconfigdirs="$noconfigdirs bfd binutils gas gdb ld opcodes target-libgloss"
++    noconfigdirs="$noconfigdirs target-libgloss"
      ;;
-   v850-*-*)
-     noconfigdirs="$noconfigdirs target-libgloss ${libgcj}"
-diff -rupN binutils-2.20/gas/Makefile.am binutils-2.20-v810/gas/Makefile.am
---- binutils-2.20/gas/Makefile.am	2009-09-07 10:16:06 +0100
-+++ binutils-2.20-v810/gas/Makefile.am	2012-10-26 15:32:47 +0100
-@@ -90,6 +90,7 @@ CPU_TYPES = \
- 	tic30 \
- 	tic4x \
- 	tic54x \
-+	v810 \
- 	v850 \
- 	vax \
- 	xc16x \
-@@ -294,6 +295,7 @@ TARGET_CPU_CFILES = \
- 	config/tc-tic4x.c \
- 	config/tc-tic54x.c \
+   vax-*-*)
+     noconfigdirs="$noconfigdirs target-newlib target-libgloss"
+diff -Nbaur binutils-2.23.1/gas/Makefile.am binutils-2.23.1-v810/gas/Makefile.am
+--- binutils-2.23.1/gas/Makefile.am	2012-09-04 13:53:45 +0100
++++ binutils-2.23.1-v810/gas/Makefile.am	2013-03-09 17:59:21 +0000
+@@ -167,6 +167,7 @@
+ 	config/tc-tilegx.c \
+ 	config/tc-tilepro.c \
  	config/tc-vax.c \
 +	config/tc-v810.c \
  	config/tc-v850.c \
  	config/tc-xstormy16.c \
  	config/tc-xc16x.c \
-@@ -356,6 +358,7 @@ TARGET_CPU_HFILES = \
- 	config/tc-tic4x.h \
- 	config/tc-tic54x.h \
+@@ -236,6 +237,7 @@
+ 	config/tc-tilegx.h \
+ 	config/tc-tilepro.h \
  	config/tc-vax.h \
 +	config/tc-v810.h \
  	config/tc-v850.h \
  	config/tc-xstormy16.h \
  	config/tc-xc16x.h \
-diff -rupN binutils-2.20/gas/Makefile.in binutils-2.20-v810/gas/Makefile.in
---- binutils-2.20/gas/Makefile.in	2009-09-07 13:09:27 +0100
-+++ binutils-2.20-v810/gas/Makefile.in	2012-10-26 15:32:47 +0100
-@@ -356,6 +356,7 @@ CPU_TYPES = \
- 	tic30 \
- 	tic4x \
- 	tic54x \
-+	v810 \
- 	v850 \
- 	vax \
- 	xc16x \
-@@ -558,6 +559,7 @@ TARGET_CPU_CFILES = \
- 	config/tc-tic4x.c \
- 	config/tc-tic54x.c \
+diff -Nbaur binutils-2.23.1/gas/Makefile.in binutils-2.23.1-v810/gas/Makefile.in
+--- binutils-2.23.1/gas/Makefile.in	2012-09-04 13:53:45 +0100
++++ binutils-2.23.1-v810/gas/Makefile.in	2013-03-09 17:59:21 +0000
+@@ -435,6 +435,7 @@
+ 	config/tc-tilegx.c \
+ 	config/tc-tilepro.c \
  	config/tc-vax.c \
 +	config/tc-v810.c \
  	config/tc-v850.c \
  	config/tc-xstormy16.c \
  	config/tc-xc16x.c \
-@@ -620,6 +622,7 @@ TARGET_CPU_HFILES = \
- 	config/tc-tic4x.h \
- 	config/tc-tic54x.h \
+@@ -504,6 +505,7 @@
+ 	config/tc-tilegx.h \
+ 	config/tc-tilepro.h \
  	config/tc-vax.h \
 +	config/tc-v810.h \
  	config/tc-v850.h \
  	config/tc-xstormy16.h \
  	config/tc-xc16x.h \
-@@ -998,6 +1001,7 @@ distclean-compile:
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tc-tic30.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tc-tic4x.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tc-tic54x.Po@am__quote@
+@@ -854,6 +856,7 @@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tc-tic6x.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tc-tilegx.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tc-tilepro.Po@am__quote@
 +@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tc-v810.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tc-v850.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tc-vax.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tc-xc16x.Po@am__quote@
-@@ -1786,6 +1790,20 @@ tc-vax.obj: config/tc-vax.c
+@@ -1727,6 +1730,20 @@
  @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
  @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tc-vax.obj `if test -f 'config/tc-vax.c'; then $(CYGPATH_W) 'config/tc-vax.c'; else $(CYGPATH_W) '$(srcdir)/config/tc-vax.c'; fi`
  
@@ -2212,10 +3037,10 @@ diff -rupN binutils-2.20/gas/Makefile.in binutils-2.20-v810/gas/Makefile.in
  tc-v850.o: config/tc-v850.c
  @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tc-v850.o -MD -MP -MF $(DEPDIR)/tc-v850.Tpo -c -o tc-v850.o `test -f 'config/tc-v850.c' || echo '$(srcdir)/'`config/tc-v850.c
  @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/tc-v850.Tpo $(DEPDIR)/tc-v850.Po
-diff -rupN binutils-2.20/gas/app.c binutils-2.20-v810/gas/app.c
---- binutils-2.20/gas/app.c	2009-09-14 12:43:26 +0100
-+++ binutils-2.20-v810/gas/app.c	2012-10-26 15:32:47 +0100
-@@ -72,7 +72,7 @@ static const char symbol_chars[] =
+diff -Nbaur binutils-2.23.1/gas/app.c binutils-2.23.1-v810/gas/app.c
+--- binutils-2.23.1/gas/app.c	2012-06-07 13:47:23 +0100
++++ binutils-2.23.1-v810/gas/app.c	2013-03-09 17:59:21 +0000
+@@ -72,7 +72,7 @@
  #define	LEX_IS_COLON			9
  #define	LEX_IS_NEWLINE			10
  #define	LEX_IS_ONECHAR_QUOTE		11
@@ -2224,7 +3049,7 @@ diff -rupN binutils-2.20/gas/app.c binutils-2.20-v810/gas/app.c
  #define LEX_IS_DOUBLEDASH_1ST		12
  #endif
  #ifdef TC_M32R
-@@ -187,7 +187,7 @@ do_scrub_begin (int m68k_mri ATTRIBUTE_U
+@@ -187,7 +187,7 @@
      }
  #endif
  
@@ -2233,7 +3058,7 @@ diff -rupN binutils-2.20/gas/app.c binutils-2.20-v810/gas/app.c
    lex['-'] = LEX_IS_DOUBLEDASH_1ST;
  #endif
  #ifdef DOUBLEBAR_PARALLEL
-@@ -376,7 +376,7 @@ do_scrub_chars (int (*get) (char *, int)
+@@ -377,7 +377,7 @@
  	 11: After seeing a symbol character in state 0 (eg a label definition)
  	 -1: output string in out_string and go to the state in old_state
  	 -2: flush text until a '*' '/' is seen, then go to state old_state
@@ -2242,7 +3067,7 @@ diff -rupN binutils-2.20/gas/app.c binutils-2.20-v810/gas/app.c
  	 12: After seeing a dash, looking for a second dash as a start
  	     of comment.
  #endif
-@@ -1117,7 +1117,7 @@ do_scrub_chars (int (*get) (char *, int)
+@@ -1134,7 +1134,7 @@
  	  PUT (ch);
  	  break;
  
@@ -2251,13 +3076,13 @@ diff -rupN binutils-2.20/gas/app.c binutils-2.20-v810/gas/app.c
  	case LEX_IS_DOUBLEDASH_1ST:
  	  ch2 = GET ();
  	  if (ch2 != '-')
-diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v810.c
---- binutils-2.20/gas/config/tc-v810.c	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/gas/config/tc-v810.c	2012-10-27 10:25:33 +0100
-@@ -0,0 +1,2015 @@
+diff -Nbaur binutils-2.23.1/gas/config/tc-v810.c binutils-2.23.1-v810/gas/config/tc-v810.c
+--- binutils-2.23.1/gas/config/tc-v810.c	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/gas/config/tc-v810.c	2013-03-15 19:07:03 +0000
+@@ -0,0 +1,2100 @@
 +/* tc-v810.c -- Assembler code for the NEC V810
 +   Copyright 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-+   2006, 2007, 2009  Free Software Foundation, Inc.
++   2006, 2007, 2009, 2010, 2011  Free Software Foundation, Inc.
 +
 +   This file is part of GAS, the GNU Assembler.
 +
@@ -2296,13 +3121,14 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +static int machine = -1;
 +
 +/* Indicates the target processor(s) for the assemble.  */
-+static int processor_mask = -1;
++static int processor_mask = 0;
 +
 +/* Structure to hold information about predefined registers.  */
 +struct reg_name
 +{
 +  const char *name;
 +  int value;
++  unsigned int processors;
 +};
 +
 +/* Generic assembler global variables which must be defined by all
@@ -2329,14 +3155,16 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +const relax_typeS md_relax_table[] =
 +{
 +  /* Conditional branches.  */
-+  {0xff,     -0x100,    2, 1},
-+  {0x1fffff, -0x200000, 6, 0},
++#define SUBYPTE_COND_9_26	0
++  {0xfe,	 -0x100,        2, SUBYPTE_COND_9_26 + 1},
++  {0x1fffffe + 2, -0x2000000 + 2, 6, 0},
 +  /* Unconditional branches.  */
-+  {0xff,     -0x100,    2, 3},
-+  {0x1fffff, -0x200000, 4, 0},
++#define SUBYPTE_UNCOND_9_26	2
++  {0xfe,     -0x100,    2, SUBYPTE_UNCOND_9_26 + 1},
++  {0x1fffffe, -0x2000000, 4, 0},
 +};
 +
-+static int  v810_relax = 0;
++static int v810_relax = 0;
 +
 +/* Fixups.  */
 +#define MAX_INSN_FIXUPS   5
@@ -2690,9 +3518,42 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +
 +  switch (machine)
 +    {
-+    case 0:		  processor_mask = PROCESSOR_V810;   break;
-+    case bfd_mach_v830:   processor_mask = PROCESSOR_V830;   break;
++    case 0:                SET_PROCESSOR_MASK (processor_mask, PROCESSOR_V810);    break;
++    case bfd_mach_v830:    SET_PROCESSOR_MASK (processor_mask, PROCESSOR_V830);    break;
 +    }
++}
++
++static void
++v810_longcode (int type)
++{
++  expressionS ex;
++
++  if (! v810_relax)
++    {
++      if (type == 1)
++	as_warn (_(".longcall pseudo-op seen when not relaxing"));
++      else
++	as_warn (_(".longjump pseudo-op seen when not relaxing"));
++    }
++
++  expression (&ex);
++
++  if (ex.X_op != O_symbol || ex.X_add_number != 0)
++    {
++      as_bad (_("bad .longcall format"));
++      ignore_rest_of_line ();
++
++      return;
++    }
++
++  if (type == 1)
++    fix_new_exp (frag_now, frag_now_fix (), 4, & ex, 1,
++		 BFD_RELOC_V810_LONGCALL);
++  else
++    fix_new_exp (frag_now, frag_now_fix (), 4, & ex, 1,
++		 BFD_RELOC_V810_LONGJUMP);
++
++  demand_empty_rest_of_line ();
 +}
 +
 +/* The target specific pseudo-ops which we support.  */
@@ -2711,6 +3572,8 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +  { "scomm",		v810_comm,		SCOMMON_SECTION 	},
 +  { "v810",		set_machine,		0			},
 +  { "v830",		set_machine,		bfd_mach_v830		},
++  { "longcall",		v810_longcode,		1			},
++  { "longjump",		v810_longcode,		2			},
 +  { NULL,		NULL,			0			}
 +};
 +
@@ -2720,45 +3583,44 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +/* This table is sorted.  Suitable for searching by a binary search.  */
 +static const struct reg_name pre_defined_registers[] =
 +{
-+  { "ep",  30 },		/* ep - element ptr.  */
-+  { "gp",   4 },		/* gp - global ptr.  */
-+  { "hp",   2 },		/* hp - handler stack ptr.  */
-+  { "lp",  31 },		/* lp - link ptr.  */
-+  { "r0",   0 },
-+  { "r1",   1 },
-+  { "r10", 10 },
-+  { "r11", 11 },
-+  { "r12", 12 },
-+  { "r13", 13 },
-+  { "r14", 14 },
-+  { "r15", 15 },
-+  { "r16", 16 },
-+  { "r17", 17 },
-+  { "r18", 18 },
-+  { "r19", 19 },
-+  { "r2",   2 },
-+  { "r20", 20 },
-+  { "r21", 21 },
-+  { "r22", 22 },
-+  { "r23", 23 },
-+  { "r24", 24 },
-+  { "r25", 25 },
-+  { "r26", 26 },
-+  { "r27", 27 },
-+  { "r28", 28 },
-+  { "r29", 29 },
-+  { "r3",   3 },
-+  { "r30", 30 },
-+  { "r31", 31 },
-+  { "r4",   4 },
-+  { "r5",   5 },
-+  { "r6",   6 },
-+  { "r7",   7 },
-+  { "r8",   8 },
-+  { "r9",   9 },
-+  { "sp",   3 },		/* sp - stack ptr.  */
-+  { "tp",   5 },		/* tp - text ptr.  */
-+  { "zero", 0 },
++  { "gp",   4, PROCESSOR_ALL },		/* gp - global ptr.  */
++  { "hp",   2, PROCESSOR_ALL },		/* hp - handler stack ptr.  */
++  { "lp",  31, PROCESSOR_ALL },		/* lp - link ptr.  */
++  { "r0",   0, PROCESSOR_ALL },
++  { "r1",   1, PROCESSOR_ALL },
++  { "r10", 10, PROCESSOR_ALL },
++  { "r11", 11, PROCESSOR_ALL },
++  { "r12", 12, PROCESSOR_ALL },
++  { "r13", 13, PROCESSOR_ALL },
++  { "r14", 14, PROCESSOR_ALL },
++  { "r15", 15, PROCESSOR_ALL },
++  { "r16", 16, PROCESSOR_ALL },
++  { "r17", 17, PROCESSOR_ALL },
++  { "r18", 18, PROCESSOR_ALL },
++  { "r19", 19, PROCESSOR_ALL },
++  { "r2",   2, PROCESSOR_ALL },
++  { "r20", 20, PROCESSOR_ALL },
++  { "r21", 21, PROCESSOR_ALL },
++  { "r22", 22, PROCESSOR_ALL },
++  { "r23", 23, PROCESSOR_ALL },
++  { "r24", 24, PROCESSOR_ALL },
++  { "r25", 25, PROCESSOR_ALL },
++  { "r26", 26, PROCESSOR_ALL },
++  { "r27", 27, PROCESSOR_ALL },
++  { "r28", 28, PROCESSOR_ALL },
++  { "r29", 29, PROCESSOR_ALL },
++  { "r3",   3, PROCESSOR_ALL },
++  { "r30", 30, PROCESSOR_ALL },
++  { "r31", 31, PROCESSOR_ALL },
++  { "r4",   4, PROCESSOR_ALL },
++  { "r5",   5, PROCESSOR_ALL },
++  { "r6",   6, PROCESSOR_ALL },
++  { "r7",   7, PROCESSOR_ALL },
++  { "r8",   8, PROCESSOR_ALL },
++  { "r9",   9, PROCESSOR_ALL },
++  { "sp",   3, PROCESSOR_ALL },		/* sp - stack ptr.  */
++  { "tp",   5, PROCESSOR_ALL },		/* tp - text ptr.  */
++  { "zero", 0, PROCESSOR_ALL },
 +};
 +
 +#define REG_NAME_CNT						\
@@ -2766,86 +3628,77 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +
 +static const struct reg_name system_registers[] =
 +{
-+  { "adtre", 25 },
-+  { "chcw",  24 },
-+  { "ecr",    4 },
-+  { "eipc",   0 },
-+  { "eipsw",  1 },
-+  { "fepc",   2 },
-+  { "fepsw",  3 },
-+  { "pir",    6 },
-+  { "psw",    5 },
-+  { "sr0",    0 },
-+  { "sr1",    1 },
-+  { "sr10",  10 },
-+  { "sr11",  11 },
-+  { "sr12",  12 },
-+  { "sr13",  13 },
-+  { "sr14",  14 },
-+  { "sr15",  15 },
-+  { "sr16",  16 },
-+  { "sr17",  17 },
-+  { "sr18",  18 },
-+  { "sr19",  19 },
-+  { "sr2",    2 },
-+  { "sr20",  20 },
-+  { "sr21",  21 },
-+  { "sr22",  22 },
-+  { "sr23",  23 },
-+  { "sr24",  24 },
-+  { "sr25",  25 },
-+  { "sr26",  26 },
-+  { "sr27",  27 },
-+  { "sr28",  28 },
-+  { "sr29",  29 },
-+  { "sr3",    3 },
-+  { "sr30",  30 },
-+  { "sr31",  31 },
-+  { "sr4",    4 },
-+  { "sr5",    5 },
-+  { "sr6",    6 },
-+  { "sr7",    7 },
-+  { "sr8",    8 },
-+  { "sr9",    9 },
-+  { "tkcw",   7 },
++  { "adtre", 25, PROCESSOR_ALL },
++  { "chcw",  24, PROCESSOR_ALL },
++  { "ecr",    4, PROCESSOR_ALL },
++  { "eipc",   0, PROCESSOR_ALL },
++  { "eipsw",  1, PROCESSOR_ALL },
++  { "fepc",   2, PROCESSOR_ALL },
++  { "fepsw",  3, PROCESSOR_ALL },
++  { "pir",    6, PROCESSOR_ALL },
++  { "psw",    5, PROCESSOR_ALL },
++  { "sr0",    0, PROCESSOR_ALL },
++  { "sr1",    1, PROCESSOR_ALL },
++  { "sr10",  10, PROCESSOR_ALL },
++  { "sr11",  11, PROCESSOR_ALL },
++  { "sr12",  12, PROCESSOR_ALL },
++  { "sr13",  13, PROCESSOR_ALL },
++  { "sr14",  14, PROCESSOR_ALL },
++  { "sr15",  15, PROCESSOR_ALL },
++  { "sr16",  16, PROCESSOR_ALL },
++  { "sr17",  17, PROCESSOR_ALL },
++  { "sr18",  18, PROCESSOR_ALL },
++  { "sr19",  19, PROCESSOR_ALL },
++  { "sr2",    2, PROCESSOR_ALL },
++  { "sr20",  20, PROCESSOR_ALL },
++  { "sr21",  21, PROCESSOR_ALL },
++  { "sr22",  22, PROCESSOR_ALL },
++  { "sr23",  23, PROCESSOR_ALL },
++  { "sr24",  24, PROCESSOR_ALL },
++  { "sr25",  25, PROCESSOR_ALL },
++  { "sr26",  26, PROCESSOR_ALL },
++  { "sr27",  27, PROCESSOR_ALL },
++  { "sr28",  28, PROCESSOR_ALL },
++  { "sr29",  29, PROCESSOR_ALL },
++  { "sr3",    3, PROCESSOR_ALL },
++  { "sr30",  30, PROCESSOR_ALL },
++  { "sr31",  31, PROCESSOR_ALL },
++  { "sr4",    4, PROCESSOR_ALL },
++  { "sr5",    5, PROCESSOR_ALL },
++  { "sr6",    6, PROCESSOR_ALL },
++  { "sr7",    7, PROCESSOR_ALL },
++  { "sr8",    8, PROCESSOR_ALL },
++  { "sr9",    9, PROCESSOR_ALL },
++  { "tkcw",   7, PROCESSOR_ALL },
 +};
 +
 +#define SYSREG_NAME_CNT						\
 +  (sizeof (system_registers) / sizeof (struct reg_name))
 +
-+static const struct reg_name system_list_registers[] =
-+{
-+  {"PS",      5 },
-+  {"SR",      0 + 1}
-+};
-+
-+#define SYSREGLIST_NAME_CNT					\
-+  (sizeof (system_list_registers) / sizeof (struct reg_name))
-+
 +static const struct reg_name cc_names[] =
 +{
-+  { "c",  0x1 },
-+  { "e",  0x2 },
-+  { "ge", 0xe },
-+  { "gt", 0xf },
-+  { "h",  0xb },
-+  { "l",  0x1 },
-+  { "le", 0x7 },
-+  { "lt", 0x6 },
-+  { "n",  0x4 },
-+  { "nc", 0x9 },
-+  { "ne", 0xa },
-+  { "nh", 0x3 },
-+  { "nl", 0x9 },
-+  { "ns", 0xc },
-+  { "nv", 0x8 },
-+  { "nz", 0xa },
-+  { "p",  0xc },
-+  { "s",  0x4 },
-+  { "sa", 0xd },
-+  { "t",  0x5 },
-+  { "v",  0x0 },
-+  { "z",  0x2 },
++  { "c",  0x1, PROCESSOR_ALL },
++  { "e",  0x2, PROCESSOR_ALL },
++  { "ge", 0xe, PROCESSOR_ALL },
++  { "gt", 0xf, PROCESSOR_ALL },
++  { "h",  0xb, PROCESSOR_ALL },
++  { "l",  0x1, PROCESSOR_ALL },
++  { "le", 0x7, PROCESSOR_ALL },
++  { "lt", 0x6, PROCESSOR_ALL },
++  { "n",  0x4, PROCESSOR_ALL },
++  { "nc", 0x9, PROCESSOR_ALL },
++  { "ne", 0xa, PROCESSOR_ALL },
++  { "nh", 0x3, PROCESSOR_ALL },
++  { "nl", 0x9, PROCESSOR_ALL },
++  { "ns", 0xc, PROCESSOR_ALL },
++  { "nv", 0x8, PROCESSOR_ALL },
++  { "nz", 0xa, PROCESSOR_ALL },
++  { "p",  0xc, PROCESSOR_ALL },
++  { "s",  0x4, PROCESSOR_ALL },
++  { "f",  0xd, PROCESSOR_ALL },
++  { "t",  0x5, PROCESSOR_ALL },
++  { "v",  0x0, PROCESSOR_ALL },
++  { "z",  0x2, PROCESSOR_ALL },
 +};
 +
 +#define CC_NAME_CNT					\
@@ -2876,9 +3729,7 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +      else if (accept_numbers)
 +	{
 +	  int reg = S_GET_VALUE (symbolP);
-+
-+	  if (reg >= 0 && reg <= 31)
-+	    return reg;
++	  return reg;
 +	}
 +
 +      /* Otherwise drop through and try parsing name normally.  */
@@ -2896,7 +3747,9 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +      else if (cmp > 0)
 +	low = middle + 1;
 +      else
-+	return regs[middle].value;
++	return ((regs[middle].processors & processor_mask)
++		? regs[middle].value
++		: -1);
 +    }
 +  while (low <= high);
 +  return -1;
@@ -2931,25 +3784,24 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +  /* Put back the delimiting char.  */
 +  *input_line_pointer = c;
 +
++  expressionP->X_add_symbol = NULL;
++  expressionP->X_op_symbol  = NULL;
++
 +  /* Look to see if it's in the register table.  */
 +  if (reg_number >= 0)
 +    {
 +      expressionP->X_op		= O_register;
 +      expressionP->X_add_number = reg_number;
 +
-+      /* Make the rest nice.  */
-+      expressionP->X_add_symbol = NULL;
-+      expressionP->X_op_symbol  = NULL;
-+
 +      return TRUE;
 +    }
-+  else
-+    {
-+      /* Reset the line as if we had not done anything.  */
-+      input_line_pointer = start;
 +
-+      return FALSE;
-+    }
++  /* Reset the line as if we had not done anything.  */
++  input_line_pointer = start;
++
++  expressionP->X_op = O_illegal;
++
++  return FALSE;
 +}
 +
 +/* Summary of system_register_name().
@@ -2957,8 +3809,6 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +   in:  INPUT_LINE_POINTER points to 1st char of operand.
 +	EXPRESSIONP points to an expression structure to be filled in.
 +	ACCEPT_NUMBERS is true iff numerical register names may be used.
-+	ACCEPT_LIST_NAMES is true iff the special names PS and SR may be
-+	accepted.
 +
 +   out: An expressionS structure in expressionP.
 +  	The operand may have been a register: in this case, X_op == O_register,
@@ -2968,8 +3818,7 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +
 +static bfd_boolean
 +system_register_name (expressionS *expressionP,
-+		      bfd_boolean accept_numbers,
-+		      bfd_boolean accept_list_names)
++		      bfd_boolean accept_numbers)
 +{
 +  int reg_number;
 +  char *name;
@@ -2994,25 +3843,12 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +
 +      if (ISDIGIT (*input_line_pointer))
 +	{
-+	  reg_number = strtol (input_line_pointer, &input_line_pointer, 10);
-+
-+	  /* Make sure that the register number is allowable.  */
-+	  if (reg_number < 0
-+	      || (reg_number > 5
-+	      && reg_number < 16)
-+	      || reg_number > 20)
-+	    reg_number = -1;
-+	}
-+      else if (accept_list_names)
-+	{
-+	  c = get_symbol_end ();
-+	  reg_number = reg_name_search (system_list_registers,
-+					SYSREGLIST_NAME_CNT, name, FALSE);
-+
-+	  /* Put back the delimiting char.  */
-+	  *input_line_pointer = c;
++	  reg_number = strtol (input_line_pointer, &input_line_pointer, 0);
 +	}
 +    }
++
++  expressionP->X_add_symbol = NULL;
++  expressionP->X_op_symbol  = NULL;
 +
 +  /* Look to see if it's in the register table.  */
 +  if (reg_number >= 0)
@@ -3020,19 +3856,15 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +      expressionP->X_op		= O_register;
 +      expressionP->X_add_number = reg_number;
 +
-+      /* Make the rest nice.  */
-+      expressionP->X_add_symbol = NULL;
-+      expressionP->X_op_symbol  = NULL;
-+
 +      return TRUE;
 +    }
-+  else
-+    {
-+      /* Reset the line as if we had not done anything.  */
-+      input_line_pointer = start;
 +
-+      return FALSE;
-+    }
++  /* Reset the line as if we had not done anything.  */
++  input_line_pointer = start;
++
++  expressionP->X_op = O_illegal;
++
++  return FALSE;
 +}
 +
 +/* Summary of cc_name().
@@ -3046,7 +3878,8 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +  	its original state.  */
 +
 +static bfd_boolean
-+cc_name (expressionS *expressionP)
++cc_name (expressionS *expressionP,
++	 bfd_boolean accept_numbers)
 +{
 +  int reg_number;
 +  char *name;
@@ -3057,10 +3890,25 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +  start = name = input_line_pointer;
 +
 +  c = get_symbol_end ();
-+  reg_number = reg_name_search (cc_names, CC_NAME_CNT, name, FALSE);
++  reg_number = reg_name_search (cc_names, CC_NAME_CNT, name, accept_numbers);
 +
 +  /* Put back the delimiting char.  */
 +  *input_line_pointer = c;
++
++  if (reg_number < 0
++      && accept_numbers)
++    {
++      /* Reset input_line pointer.  */
++      input_line_pointer = start;
++
++      if (ISDIGIT (*input_line_pointer))
++	{
++	  reg_number = strtol (input_line_pointer, &input_line_pointer, 0);
++	}
++    }
++
++  expressionP->X_add_symbol = NULL;
++  expressionP->X_op_symbol  = NULL;
 +
 +  /* Look to see if it's in the register table.  */
 +  if (reg_number >= 0)
@@ -3068,29 +3916,17 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +      expressionP->X_op		= O_constant;
 +      expressionP->X_add_number = reg_number;
 +
-+      /* Make the rest nice.  */
-+      expressionP->X_add_symbol = NULL;
-+      expressionP->X_op_symbol  = NULL;
-+
 +      return TRUE;
 +    }
-+  else
-+    {
-+      /* Reset the line as if we had not done anything.  */
-+      input_line_pointer = start;
 +
-+      return FALSE;
-+    }
++  /* Reset the line as if we had not done anything.  */
++  input_line_pointer = start;
++
++  expressionP->X_op = O_illegal;
++  expressionP->X_add_number = 0;
++
++  return FALSE;
 +}
-+/*
-+static void
-+skip_white_space (void)
-+{
-+  while (*input_line_pointer == ' '
-+	 || *input_line_pointer == '\t')
-+    ++input_line_pointer;
-+}*/
-+
 +
 +const char *md_shortopts = "m:";
 +
@@ -3115,9 +3951,6 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +int
 +md_parse_option (int c, char *arg)
 +{
-+  if (c != 'm')
-+    return 0;
-+
 +  if (strcmp (arg, "warn-signed-overflow") == 0)
 +    warn_signed_overflows = TRUE;
 +
@@ -3127,12 +3960,12 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +  else if (strcmp (arg, "v810") == 0)
 +    {
 +      machine = 0;
-+      processor_mask = PROCESSOR_V810;
++      SET_PROCESSOR_MASK (processor_mask, PROCESSOR_V810);
 +    }
 +  else if (strcmp (arg, "v830") == 0)
 +    {
 +      machine = bfd_mach_v830;
-+      processor_mask = PROCESSOR_V830;
++      SET_PROCESSOR_MASK (processor_mask, PROCESSOR_V830);
 +    }
 +  else if (strcmp (arg, "relax") == 0)
 +    v810_relax = 1;
@@ -3161,13 +3994,6 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +		 asection *sec,
 +		 fragS *fragP)
 +{
-+  /* This code performs some nasty type punning between the
-+     fr_opcode field of the frag structure (a char *) and the
-+     fx_r_type field of the fix structure (a bfd_reloc_code_real_type)
-+     On a 64bit host this causes problems because these two fields
-+     are not the same size, but since we know that we are only
-+     ever storing small integers in the fields, it is safe to use
-+     a union to convert between them.  */
 +  union u
 +  {
 +    bfd_reloc_code_real_type fx_r_type;
@@ -3177,9 +4003,13 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +  subseg_change (sec, 0);
 +
 +  opcode_converter.fr_opcode = fragP->fr_opcode;
-+      
++
++  subseg_change (sec, 0);
++
 +  /* In range conditional or unconditional branch.  */
-+  if (fragP->fr_subtype == 0 || fragP->fr_subtype == 2)
++  if (fragP->fr_subtype == SUBYPTE_COND_9_26
++      || fragP->fr_subtype == SUBYPTE_UNCOND_9_26)
++
 +    {
 +      fix_new (fragP, fragP->fr_fix, 2, fragP->fr_symbol,
 +	       fragP->fr_offset, 1,
@@ -3187,13 +4017,13 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +      fragP->fr_fix += 2;
 +    }
 +  /* Out of range conditional branch.  Emit a branch around a jump.  */
-+  else if (fragP->fr_subtype == 1)
++  else if (fragP->fr_subtype == SUBYPTE_COND_9_26 + 1)
 +    {
 +      unsigned char *buffer =
 +	(unsigned char *) (fragP->fr_fix + fragP->fr_literal);
 +
 +      /* Reverse the condition of the first branch.  */
-+      buffer[1] ^= 0x10;
++      buffer[0] ^= 0x10;
 +      /* Mask off all the displacement bits.  */
 +      buffer[0] &= 0x00;
 +      buffer[1] &= 0xfe;
@@ -3205,17 +4035,15 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +	 target.  */
 +      md_number_to_chars ((char *) buffer + 2, 0x0000a800, 4);
 +      fix_new (fragP, fragP->fr_fix + 2, 4, fragP->fr_symbol,
-+	       fragP->fr_offset, 1,
-+	       BFD_RELOC_UNUSED + opcode_converter.fx_r_type + 1);
++	       fragP->fr_offset, 1, BFD_RELOC_V810_26_PCREL);
 +      fragP->fr_fix += 6;
 +    }
 +  /* Out of range unconditional branch.  Emit a jump.  */
-+  else if (fragP->fr_subtype == 3)
++  else if (fragP->fr_subtype == SUBYPTE_UNCOND_9_26 + 1)
 +    {
 +      md_number_to_chars (fragP->fr_fix + fragP->fr_literal, 0x0000a800, 4);
 +      fix_new (fragP, fragP->fr_fix, 4, fragP->fr_symbol,
-+	       fragP->fr_offset, 1,
-+	       BFD_RELOC_UNUSED + opcode_converter.fx_r_type + 1);
++	       fragP->fr_offset, 1, BFD_RELOC_V810_26_PCREL);
 +      fragP->fr_fix += 4;
 +    }
 +  else
@@ -3238,18 +4066,18 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +  if (strncmp (TARGET_CPU, "v830", 4) == 0)
 +    {
 +      if (machine == -1)
-+	machine = bfd_mach_v830;
++        machine = bfd_mach_v830;
 +
-+      if (processor_mask == -1)
-+	processor_mask = PROCESSOR_V830;
++      if (!processor_mask)
++        SET_PROCESSOR_MASK (processor_mask, PROCESSOR_V830);
 +    }
 +  else if (strncmp (TARGET_CPU, "v810", 4) == 0)
 +    {
 +      if (machine == -1)
 +	machine = 0;
 +
-+      if (processor_mask == -1)
-+	processor_mask = PROCESSOR_V810;
++      if (!processor_mask)
++	SET_PROCESSOR_MASK (processor_mask, PROCESSOR_V810);
 +    }
 +  else
 +    /* xgettext:c-format  */
@@ -3277,43 +4105,88 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +  bfd_set_arch_mach (stdoutput, TARGET_ARCH, machine);
 +}
 +
++
 +static bfd_reloc_code_real_type
-+handle_sdaoff (const struct v810_operand *operand)
++handle_hi016 (const struct v810_operand *operand, const char **errmsg)
++{
++  if (operand == NULL)
++    return BFD_RELOC_HI16;
++
++  if (operand->default_reloc == BFD_RELOC_HI16)
++    return BFD_RELOC_HI16;
++
++  if (operand->default_reloc == BFD_RELOC_HI16_S)
++    return BFD_RELOC_HI16;
++
++  if (operand->default_reloc == BFD_RELOC_16)
++    return BFD_RELOC_HI16;
++
++  *errmsg = _("hi0() relocation used on an instruction which does "
++	      "not support it");
++  return BFD_RELOC_64;  /* Used to indicate an error condition.  */
++}
++
++static bfd_reloc_code_real_type
++handle_hi16 (const struct v810_operand *operand, const char **errmsg)
++{
++  if (operand == NULL)
++    return BFD_RELOC_HI16_S;
++
++  if (operand->default_reloc == BFD_RELOC_HI16_S)
++    return BFD_RELOC_HI16_S;
++
++  if (operand->default_reloc == BFD_RELOC_HI16)
++    return BFD_RELOC_HI16_S;
++
++  if (operand->default_reloc == BFD_RELOC_16)
++    return BFD_RELOC_HI16_S;
++
++  *errmsg = _("hi() relocation used on an instruction which does "
++	      "not support it");
++  return BFD_RELOC_64;  /* Used to indicate an error condition.  */
++}
++
++static bfd_reloc_code_real_type
++handle_lo16 (const struct v810_operand *operand, const char **errmsg)
++{
++  if (operand == NULL)
++    return BFD_RELOC_LO16;
++
++  if (operand->default_reloc == BFD_RELOC_LO16)
++    return BFD_RELOC_LO16;
++
++  if (operand->default_reloc == BFD_RELOC_16)
++    return BFD_RELOC_LO16;
++
++  *errmsg = _("lo() relocation used on an instruction which does "
++	      "not support it");
++  return BFD_RELOC_64;  /* Used to indicate an error condition.  */
++}
++
++static bfd_reloc_code_real_type
++handle_sdaoff (const struct v810_operand *operand, const char **errmsg)
 +{
 +  if (operand == NULL)
 +    return BFD_RELOC_V810_SDA_16_16_OFFSET;
 +
-+  if (operand->bits == 15 && operand->shift == 17)
-+    return BFD_RELOC_V810_SDA_15_16_OFFSET;
++  if (operand->default_reloc == BFD_RELOC_16)
++    return BFD_RELOC_V810_SDA_16_16_OFFSET;
 +
-+  if (operand->bits != 16
-+      || operand->shift != 16)
-+    {
-+      as_bad (_("sdaoff() relocation used on an instruction which does not support it"));
-+      return BFD_RELOC_64;  /* Used to indicate an error condition.  */
-+    }
-+
-+  return BFD_RELOC_V810_SDA_16_16_OFFSET;
++  *errmsg = _("sdaoff() relocation used on an instruction which does not support it");
++  return BFD_RELOC_64;  /* Used to indicate an error condition.  */
 +}
 +
 +static bfd_reloc_code_real_type
-+handle_zdaoff (const struct v810_operand *operand)
++handle_zdaoff (const struct v810_operand *operand, const char **errmsg)
 +{
 +  if (operand == NULL)
 +    return BFD_RELOC_V810_ZDA_16_16_OFFSET;
 +
-+  if (operand->bits == 15 && operand->shift == 17)
-+    return BFD_RELOC_V810_ZDA_15_16_OFFSET;
++  if (operand->default_reloc == BFD_RELOC_16)
++    return BFD_RELOC_V810_ZDA_16_16_OFFSET;
 +
-+  if (operand->bits != 16
-+      || operand->shift != 16)
-+    {
-+      as_bad (_("zdaoff() relocation used on an instruction which does not support it"));
-+      /* Used to indicate an error condition.  */
-+      return BFD_RELOC_64;
-+    }
-+
-+  return BFD_RELOC_V810_ZDA_16_16_OFFSET;
++  *errmsg = _("zdaoff() relocation used on an instruction which does not support it");
++  return BFD_RELOC_64;  /* Used to indicate an error condition.  */
 +}
 +
 +/* Warning: The code in this function relies upon the definitions
@@ -3321,7 +4194,7 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +   matching the hard coded values contained herein.  */
 +
 +static bfd_reloc_code_real_type
-+v810_reloc_prefix (const struct v810_operand *operand)
++v810_reloc_prefix (const struct v810_operand *operand, const char **errmsg)
 +{
 +  bfd_boolean paren_skipped = FALSE;
 +
@@ -3339,12 +4212,11 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +      return reloc;							\
 +    }
 +
-+  CHECK_ ("hi0",    BFD_RELOC_HI16	   );
-+  CHECK_ ("hi",	    BFD_RELOC_HI16_S	   );
-+  CHECK_ ("lo",	    BFD_RELOC_LO16	   );
-+  CHECK_ ("sdaoff", handle_sdaoff (operand));
-+  CHECK_ ("zdaoff", handle_zdaoff (operand));
-+  CHECK_ ("hilo",   BFD_RELOC_32	   );
++  CHECK_ ("hi0",    handle_hi016(operand, errmsg)  );
++  CHECK_ ("hi",	    handle_hi16(operand, errmsg)   );
++  CHECK_ ("lo",	    handle_lo16 (operand, errmsg)  );
++  CHECK_ ("sdaoff", handle_sdaoff (operand, errmsg));
++  CHECK_ ("zdaoff", handle_zdaoff (operand, errmsg));
 +
 +  /* Restore skipped parenthesis.  */
 +  if (paren_skipped)
@@ -3359,9 +4231,7 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +v810_insert_operand (unsigned long insn,
 +		     const struct v810_operand *operand,
 +		     offsetT val,
-+		     char *file,
-+		     unsigned int line,
-+		     char *str)
++		     const char **errmsg)
 +{
 +  if (operand->insert)
 +    {
@@ -3372,35 +4242,30 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +	{
 +	  if ((operand->flags & V810_OPERAND_SIGNED)
 +	      && ! warn_signed_overflows
-+	      && strstr (message, "out of range") != NULL)
++              && v810_msg_is_out_of_range (message))
 +	    {
 +	      /* Skip warning...  */
 +	    }
 +	  else if ((operand->flags & V810_OPERAND_SIGNED) == 0
 +		   && ! warn_unsigned_overflows
-+		   && strstr (message, "out of range") != NULL)
++                  && v810_msg_is_out_of_range (message))
 +	    {
 +	      /* Skip warning...  */
 +	    }
-+	  else if (str)
-+	    {
-+	      if (file == (char *) NULL)
-+		as_warn ("%s: %s", str, message);
-+	      else
-+		as_warn_where (file, line, "%s: %s", str, message);
-+	    }
 +	  else
 +	    {
-+	      if (file == (char *) NULL)
-+		as_warn ("%s", message);
-+	      else
-+		as_warn_where (file, line, "%s", message);
++             if (errmsg != NULL)
++               *errmsg = message;
 +	    }
 +	}
 +    }
++  else if (operand->bits == -1)
++    {
++      abort ();
++    }
 +  else
 +    {
-+      if (operand->bits != 32)
++      if (operand->bits < 32)
 +	{
 +	  long min, max;
 +
@@ -3423,7 +4288,24 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +		min = 0;
 +	    }
 +
-+	  if (val < (offsetT) min || val > (offsetT) max)
++	  /* Some people write constants with the sign extension done by
++	     hand but only up to 32 bits.  This shouldn't really be valid,
++	     but, to permit this code to assemble on a 64-bit host, we
++	     sign extend the 32-bit value to 64 bits if so doing makes the
++	     value valid.  */
++	  if (val > max
++	      && (offsetT) (val - 0x80000000 - 0x80000000) >= min
++	      && (offsetT) (val - 0x80000000 - 0x80000000) <= max)
++	    val = val - 0x80000000 - 0x80000000;
++
++	  /* Similarly, people write expressions like ~(1<<15), and expect
++	     this to be OK for a 32-bit unsigned value.  */
++	  else if (val < min
++		   && (offsetT) (val + 0x80000000 + 0x80000000) >= min
++		   && (offsetT) (val + 0x80000000 + 0x80000000) <= max)
++	    val = val + 0x80000000 + 0x80000000;
++
++	  else if (val < (offsetT) min || val > (offsetT) max)
 +	    {
 +	      char buf [128];
 +
@@ -3436,17 +4318,17 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +		  && ! warn_unsigned_overflows)
 +		min = 0;
 +
-+	      if (str)
-+		sprintf (buf, "%s: ", str);
-+	      else
-+		buf[0] = 0;
-+	      strcat (buf, _("operand"));
-+
-+	      as_bad_value_out_of_range (buf, val, (offsetT) min, (offsetT) max, file, line);
++	      sprintf (buf, _("operand out of range (%d is not between %d and %d)"),
++		       (int) val, (int) min, (int) max);
++	      *errmsg = buf;
 +	    }
-+	}
 +
-+      insn |= (((long) val & ((1 << operand->bits) - 1)) << operand->shift);
++	  insn |= (((long) val & ((1 << operand->bits) - 1)) << operand->shift);
++	}
++      else
++	{
++	  insn |= (((long) val) << operand->shift);
++	}
 +    }
 +
 +  return insn;
@@ -3473,8 +4355,11 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +  unsigned extra_data_len = 0;
 +  unsigned long extra_data = 0;
 +  char *saved_input_line_pointer;
++  char most_match_errmsg[1024];
++  int most_match_count = -1;
 +
 +  strncpy (copy_of_instruction, str, sizeof (copy_of_instruction) - 1);
++  most_match_errmsg[0] = 0;
 +
 +  /* Get the opcode.  */
 +  for (s = str; *s != '\0' && ! ISSPACE (*s); s++)
@@ -3504,10 +4389,14 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +  for (;;)
 +    {
 +      const char *errmsg = NULL;
++      const char *warningmsg = NULL;
 +
 +      match = 0;
++      opindex_ptr = opcode->operands;
 +
-+      if ((opcode->processors & processor_mask) == 0)
++      if ((opcode->processors & processor_mask & PROCESSOR_MASK) == 0
++	  || (((opcode->processors & ~PROCESSOR_MASK) != 0)
++	      && ((opcode->processors & processor_mask & ~PROCESSOR_MASK) == 0)))
 +	{
 +	  errmsg = _("Target processor does not support this instruction.");
 +	  goto error;
@@ -3517,6 +4406,7 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +      fc = 0;
 +      next_opindex = 0;
 +      insn = opcode->opcode;
++      extra_data_len = 0;
 +      extra_data_after_insn = FALSE;
 +
 +      input_line_pointer = str = start_of_operands;
@@ -3538,7 +4428,13 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +
 +	  errmsg = NULL;
 +
-+	  while (*str == ' ' || *str == ',' || *str == '[' || *str == ']')
++	  while (*str == ' ')
++	    ++str;
++
++	  if (*str == ',' || *str == '[' || *str == ']')
++	    ++str;
++
++	  while (*str == ' ')
 +	    ++str;
 +
 +	  if (operand->flags & V810_OPERAND_RELAX)
@@ -3549,12 +4445,12 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +	  input_line_pointer = str;
 +
 +	  /* lo(), hi(), hi0(), etc...  */
-+	  if ((reloc = v810_reloc_prefix (operand)) != BFD_RELOC_UNUSED)
++	  if ((reloc = v810_reloc_prefix (operand, &errmsg)) != BFD_RELOC_UNUSED)
 +	    {
 +	      /* This is a fake reloc, used to indicate an error condition.  */
 +	      if (reloc == BFD_RELOC_64)
 +		{
-+		  match = 1;
++		  /* match = 1;  */
 +		  goto error;
 +		}
 +
@@ -3565,8 +4461,6 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +		  switch (reloc)
 +		    {
 +		    case BFD_RELOC_V810_ZDA_16_16_OFFSET:
-+		      /* To cope with "not1 7, zdaoff(0xfffff006)[r0]"
-+			 and the like.  */
 +		      /* Fall through.  */
 +
 +		    case BFD_RELOC_LO16:
@@ -3601,10 +4495,6 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +			  goto error;
 +			}
 +
-+		      extra_data_after_insn = TRUE;
-+		      extra_data_len	    = 4;
-+		      extra_data	    = ex.X_add_number;
-+		      ex.X_add_number       = 0;
 +		      break;
 +
 +		    default:
@@ -3621,19 +4511,20 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +		  fixups[fc].reloc   = reloc;
 +		  fc++;
 +		}
-+	      else
++	      else	/* ex.X_op != O_constant.  */
 +		{
-+		  if (reloc == BFD_RELOC_32)
++		  if ((reloc == BFD_RELOC_32)
++		      && operand->bits < 32)
 +		    {
-+		      if ((operand->flags & 0) == 0)
-+			{
-+			  errmsg = _("immediate operand is too large");
-+			  goto error;
-+			}
-+
-+		      extra_data_after_insn = TRUE;
-+		      extra_data_len	    = 4;
-+		      extra_data	    = ex.X_add_number;
++		      errmsg = _("immediate operand is too large");
++		      goto error;
++		    }
++		  else if ((reloc == BFD_RELOC_HI16
++			    || reloc == BFD_RELOC_HI16_S)
++			   && operand->bits < 16)
++		    {
++		      errmsg = _("immediate operand is too large");
++		      goto error;
 +		    }
 +
 +		  if (fc > MAX_INSN_FIXUPS)
@@ -3652,53 +4543,26 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +	      if ((operand->flags & V810_OPERAND_REG) != 0)
 +		{
 +		  if (!register_name (&ex))
-+		    errmsg = _("invalid register name");
-+		  else if ((operand->flags & 0)
-+			   && ex.X_add_number == 0)
 +		    {
-+		      errmsg = _("register r0 cannot be used here");
-+
-+		      /* Force an error message to be generated by
-+			 skipping over any following potential matches
-+			 for this opcode.  */
-+		      opcode += 3;
++		      errmsg = _("invalid register name");
 +		    }
 +		}
 +	      else if ((operand->flags & V810_OPERAND_SRG) != 0)
 +		{
-+		  if (!system_register_name (&ex, TRUE, FALSE))
-+		    errmsg = _("invalid system register name");
-+		}
-+	      else if ((operand->flags & 0) != 0)
-+		{
-+		  char *start = input_line_pointer;
-+		  char c = get_symbol_end ();
-+
-+		  if (strcmp (start, "ep") != 0 && strcmp (start, "r30") != 0)
++		  if (!system_register_name (&ex, TRUE))
 +		    {
-+		      /* Put things back the way we found them.  */
-+		      *input_line_pointer = c;
-+		      input_line_pointer = start;
-+		      errmsg = _("expected EP register");
-+		      goto error;
++		      errmsg = _("invalid system register name");
 +		    }
-+
-+		  *input_line_pointer = c;
-+		  str = input_line_pointer;
-+		  input_line_pointer = hold;
-+
-+		  while (*str == ' ' || *str == ','
-+			 || *str == '[' || *str == ']')
-+		    ++str;
-+		  continue;
 +		}
 +	      else if ((operand->flags & V810_OPERAND_CC) != 0)
 +		{
-+		  if (!cc_name (&ex))
-+		    errmsg = _("invalid condition code name");
++		  if (!cc_name (&ex, TRUE))
++		    {
++		      errmsg = _("invalid condition code name");
++		    }
 +		}
-+	      else if (register_name (&ex)
-+		       && (operand->flags & V810_OPERAND_REG) == 0)
++	      else if ((register_name (&ex)
++			&& (operand->flags & V810_OPERAND_REG) == 0))
 +		{
 +		  char c;
 +		  int exists = 0;
@@ -3729,7 +4593,7 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +			 field is missing) then report this.  */
 +		      if (opindex_ptr[1] != 0
 +			  && (v810_operands[opindex_ptr[1]].flags
-+			      & V810_OPERAND_REG))
++			       & V810_OPERAND_REG))
 +			errmsg = _("syntax error: value is missing before the register name");
 +		      else
 +			errmsg = _("syntax error: register not expected");
@@ -3743,36 +4607,34 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +				       &symbol_rootP, &symbol_lastP);
 +		    }
 +		}
-+	      else if (system_register_name (&ex, FALSE, FALSE)
++	      else if (system_register_name (&ex, FALSE)
 +		       && (operand->flags & V810_OPERAND_SRG) == 0)
-+		errmsg = _("syntax error: system register not expected");
-+
-+	      else if (cc_name (&ex)
++		{
++		  errmsg = _("syntax error: system register not expected");
++		}
++	      else if (cc_name (&ex, FALSE)
 +		       && (operand->flags & V810_OPERAND_CC) == 0)
-+		errmsg = _("syntax error: condition code not expected");
-+
++		{
++		  errmsg = _("syntax error: condition code not expected");
++		}
 +	      else
 +		{
 +		  expression (&ex);
-+
-+		  if (ex.X_op == O_constant && (operand->flags & V810_OPERAND_DISP) != 0)
-+		    {
-+		      ex.X_add_symbol = &abs_symbol;
-+		      ex.X_op = O_symbol;
-+		      ex.X_op_symbol = NULL;
-+		    }
-+
 +		  /* Special case:
-+		     If we are assembling a MOV instruction and the immediate
++		     If we are assembling a MOV/JARL/JR instruction and the immediate
 +		     value does not fit into the bits available then create a
-+		     fake error so that the next MOV instruction will be
++		     fake error so that the next MOV/JARL/JR instruction will be
 +		     selected.  This one has a 32 bit immediate field.  */
 +
-+		  if (((insn & 0xfc00) == 0x4000)
++		  if ((strcmp (opcode->name, "mov") == 0
++		       || strcmp (opcode->name, "jal") == 0
++		       || strcmp (opcode->name, "jr") == 0)
 +		      && ex.X_op == O_constant
 +		      && (ex.X_add_number < (-(1 << (operand->bits - 1)))
-+			  || ex.X_add_number > ((1 << operand->bits) - 1)))
-+		    errmsg = _("immediate operand is too large");
++			  || ex.X_add_number > ((1 << (operand->bits - 1)) - 1)))
++		    {
++		      errmsg = _("immediate operand is too large");
++		    }
 +		}
 +
 +	      if (errmsg)
@@ -3793,13 +4655,16 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +		      errmsg = _("invalid operand");
 +		      goto error;
 +		    }
-+		  insn = v810_insert_operand (insn, operand, ex.X_add_number,
-+					      NULL, 0, copy_of_instruction);
++
++		  insn = v810_insert_operand (insn, operand,
++					      ex.X_add_number,
++					      &warningmsg);
++
 +		  break;
 +
 +		case O_constant:
 +		  insn = v810_insert_operand (insn, operand, ex.X_add_number,
-+					      NULL, 0, copy_of_instruction);
++					      &warningmsg);
 +		  break;
 +
 +		default:
@@ -3822,11 +4687,23 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +		 || *str == ')')
 +	    ++str;
 +	}
-+      match = 1;
++
++      while (ISSPACE (*str))
++	++str;
++
++      if (*str == '\0')
++	match = 1;
 +
 +    error:
 +      if (match == 0)
 +	{
++	  if ((opindex_ptr - opcode->operands) >= most_match_count)
++	    {
++	      most_match_count = opindex_ptr - opcode->operands;
++	      if (errmsg != NULL)
++		strncpy (most_match_errmsg, errmsg, sizeof (most_match_errmsg)-1);
++	    }
++
 +	  next_opcode = opcode + 1;
 +	  if (next_opcode->name != NULL
 +	      && strcmp (next_opcode->name, opcode->name) == 0)
@@ -3841,7 +4718,11 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +	      continue;
 +	    }
 +
-+	  as_bad ("%s: %s", copy_of_instruction, errmsg);
++	  if (most_match_errmsg[0] == 0)
++	    /* xgettext:c-format.  */
++	    as_bad (_("junk at end of line: `%s'"), str);
++	  else
++	    as_bad ("%s: %s", copy_of_instruction, most_match_errmsg);
 +
 +	  if (*input_line_pointer == ']')
 +	    ++input_line_pointer;
@@ -3850,15 +4731,11 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +	  input_line_pointer = saved_input_line_pointer;
 +	  return;
 +	}
++
++      if (warningmsg != NULL)
++	as_warn ("%s", warningmsg);
 +      break;
 +    }
-+
-+  while (ISSPACE (*str))
-+    ++str;
-+
-+  if (*str != '\0')
-+    /* xgettext:c-format  */
-+    as_bad (_("junk at end of line: `%s'"), str);
 +
 +  input_line_pointer = str;
 +
@@ -3871,38 +4748,24 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +
 +  if (relaxable && fc > 0)
 +    {
-+      /* On a 64-bit host the size of an 'int' is not the same
-+	 as the size of a pointer, so we need a union to convert
-+	 the opindex field of the fr_cgen structure into a char *
-+	 so that it can be stored in the frag.  We do not have
-+	 to worry about loosing accuracy as we are not going to
-+	 be even close to the 32bit limit of the int.  */
-+      union
-+      {
-+	int opindex;
-+	char * ptr;
-+      }
-+      opindex_converter;
-+
-+      opindex_converter.opindex = fixups[0].opindex;
 +      insn_size = 2;
 +      fc = 0;
 +
-+      if (!strcmp (opcode->name, "br"))
++      if (strcmp (opcode->name, "br") == 0)
 +	{
-+	  f = frag_var (rs_machine_dependent, 4, 2, 2,
++	  f = frag_var (rs_machine_dependent, 4, 2, SUBYPTE_UNCOND_9_26,
 +			fixups[0].exp.X_add_symbol,
 +			fixups[0].exp.X_add_number,
-+			opindex_converter.ptr);
++			(char *)(size_t) fixups[0].opindex);
 +	  md_number_to_chars (f, insn, insn_size);
 +	  md_number_to_chars (f + 2, 0, 2);
 +	}
-+      else
++      else /* b<cond>, j<cond>.  */
 +	{
-+	  f = frag_var (rs_machine_dependent, 6, 4, 0,
++	  f = frag_var (rs_machine_dependent, 6, 4, SUBYPTE_COND_9_26,
 +			fixups[0].exp.X_add_symbol,
 +			fixups[0].exp.X_add_number,
-+			opindex_converter.ptr);
++			(char *)(size_t) fixups[0].opindex);
 +	  md_number_to_chars (f, insn, insn_size);
 +	  md_number_to_chars (f + 2, 0, 4);
 +	}
@@ -3960,11 +4823,16 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +	  if (size != 2 && size != 4)
 +	    abort ();
 +
-+	  address = (f - frag_now->fr_literal) + insn_size - size;
++	  if (extra_data_len == 0)
++	    {
++	      address = (f - frag_now->fr_literal) + insn_size - size;
++	    }
++	  else
++	    {
++	      address = (f - frag_now->fr_literal) + extra_data_len - size;
++	    }
 +
-+	  if (reloc == BFD_RELOC_32)
-+	    address += 2;
-+
++	  /* fprintf (stderr, "0x%x %d %ld\n", address, size, fixups[i].exp.X_add_number);  */
 +	  fixP = fix_new_exp (frag_now, address, size,
 +			      &fixups[i].exp,
 +			      reloc_howto->pc_relative,
@@ -3988,7 +4856,7 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +	  fix_new_exp (frag_now,
 +		       f - frag_now->fr_literal, 4,
 +		       & fixups[i].exp,
-+		       1 /* FIXME: V810_OPERAND_RELATIVE ??? */,
++		       (operand->flags & V810_PCREL) != 0,
 +		       (bfd_reloc_code_real_type) (fixups[i].opindex
 +						   + (int) BFD_RELOC_UNUSED));
 +	}
@@ -4009,7 +4877,19 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +  reloc->sym_ptr_ptr  = xmalloc (sizeof (asymbol *));
 +  *reloc->sym_ptr_ptr = symbol_get_bfdsym (fixp->fx_addsy);
 +  reloc->address      = fixp->fx_frag->fr_address + fixp->fx_where;
-+  reloc->howto        = bfd_reloc_type_lookup (stdoutput, fixp->fx_r_type);
++
++  if (   fixp->fx_r_type == BFD_RELOC_VTABLE_ENTRY
++      || fixp->fx_r_type == BFD_RELOC_VTABLE_INHERIT
++      || fixp->fx_r_type == BFD_RELOC_V810_LONGCALL
++      || fixp->fx_r_type == BFD_RELOC_V810_LONGJUMP
++      || fixp->fx_r_type == BFD_RELOC_V810_ALIGN)
++    reloc->addend = fixp->fx_offset;
++  else
++    {
++      reloc->addend = fixp->fx_addnumber;
++    }
++
++  reloc->howto = bfd_reloc_type_lookup (stdoutput, fixp->fx_r_type);
 +
 +  if (reloc->howto == NULL)
 +    {
@@ -4023,29 +4903,22 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +      return NULL;
 +    }
 +
-+  if (   fixp->fx_r_type == BFD_RELOC_VTABLE_ENTRY
-+      || fixp->fx_r_type == BFD_RELOC_VTABLE_INHERIT)
-+    reloc->addend = fixp->fx_offset;
-+  else
-+    reloc->addend = fixp->fx_addnumber;
-+
 +  return reloc;
 +}
-+/*
++
 +void
-+v850_handle_align (fragS * frag)
++v810_handle_align (fragS * frag)
 +{
-+  if (v850_relax
++  if (v810_relax
 +      && frag->fr_type == rs_align
 +      && frag->fr_address + frag->fr_fix > 0
 +      && frag->fr_offset > 1
 +      && now_seg != bss_section
-+      && now_seg != v850_seg_table[SBSS_SECTION].s
-+      && now_seg != v850_seg_table[TBSS_SECTION].s
-+      && now_seg != v850_seg_table[ZBSS_SECTION].s)
++      && now_seg != v810_seg_table[SBSS_SECTION].s
++      && now_seg != v810_seg_table[ZBSS_SECTION].s)
 +    fix_new (frag, frag->fr_fix, 2, & abs_symbol, frag->fr_offset, 0,
-+	     BFD_RELOC_V850_ALIGN);
-+}*/
++	     BFD_RELOC_V810_ALIGN);
++}
 +
 +/* Return current size of variable part of frag.  */
 +
@@ -4080,6 +4953,8 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +  char *where;
 +
 +  if (fixP->fx_r_type == BFD_RELOC_VTABLE_INHERIT
++      || fixP->fx_r_type == BFD_RELOC_V810_LONGCALL
++      || fixP->fx_r_type == BFD_RELOC_V810_LONGJUMP
 +      || fixP->fx_r_type == BFD_RELOC_VTABLE_ENTRY)
 +    {
 +      fixP->fx_done = 0;
@@ -4113,6 +4988,7 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +      int opindex;
 +      const struct v810_operand *operand;
 +      unsigned long insn;
++      const char *errmsg = NULL;
 +
 +      opindex = (int) fixP->fx_r_type - (int) BFD_RELOC_UNUSED;
 +      operand = &v810_operands[opindex];
@@ -4124,10 +5000,20 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +	 format!  */
 +      where = fixP->fx_frag->fr_literal + fixP->fx_where;
 +
-+      insn = bfd_getl32 ((unsigned char *) where);
++      if (fixP->fx_size > 2)
++	insn = bfd_getl32 ((unsigned char *) where);
++      else
++	insn = bfd_getl16 ((unsigned char *) where);
++
 +      insn = v810_insert_operand (insn, operand, (offsetT) value,
-+				  fixP->fx_file, fixP->fx_line, NULL);
-+      bfd_putl32 ((bfd_vma) insn, (unsigned char *) where);
++				  &errmsg);
++      if (errmsg)
++	as_warn_where (fixP->fx_file, fixP->fx_line, "%s", errmsg);
++
++      if (fixP->fx_size > 2)
++	bfd_putl32 ((bfd_vma) insn, (unsigned char *) where);
++      else
++	bfd_putl16 ((bfd_vma) insn, (unsigned char *) where);
 +
 +      if (fixP->fx_done)
 +	/* Nothing else to do here.  */
@@ -4136,17 +5022,17 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +      /* Determine a BFD reloc value based on the operand information.
 +	 We are only prepared to turn a few of the operands into relocs.  */
 +
-+      if (operand->bits == 26)
-+	fixP->fx_r_type = BFD_RELOC_V810_26_PCREL;
-+      else if (operand->bits == 9)
-+	fixP->fx_r_type = BFD_RELOC_V810_9_PCREL;
-+      else
++      if (operand->default_reloc == BFD_RELOC_NONE)
 +	{
 +	  as_bad_where (fixP->fx_file, fixP->fx_line,
 +			_("unresolved expression that must be resolved"));
 +	  fixP->fx_done = 1;
 +	  return;
 +	}
++
++      {
++	fixP->fx_r_type = operand->default_reloc;
++      }
 +    }
 +  else if (fixP->fx_done)
 +    {
@@ -4154,52 +5040,78 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +      where = fixP->fx_frag->fr_literal + fixP->fx_where;
 +
 +      if (fixP->tc_fix_data != NULL
-+	  && ((struct v810_operand *) fixP->tc_fix_data)->insert != NULL)
-+	{
-+	  const char * message = NULL;
-+	  struct v810_operand * operand = (struct v810_operand *) fixP->tc_fix_data;
-+	  unsigned long insn;
++          && ((struct v810_operand *) fixP->tc_fix_data)->insert != NULL)
++        {
++          const char * message = NULL;
++          struct v810_operand * operand = (struct v810_operand *) fixP->tc_fix_data;
++          unsigned long insn;
 +
-+	  /* The variable "where" currently points at the exact point inside
-+	     the insn where we need to insert the value.  But we need to
-+	     extract the entire insn so we probably need to move "where"
-+	     back a few bytes.  */
-+	  if (fixP->fx_size == 2)
-+	    where -= 2;
-+	  else if (fixP->fx_size == 1)
-+	    where -= 3;
++          /* The variable "where" currently points at the exact point inside
++             the insn where we need to insert the value.  But we need to
++             extract the entire insn so we probably need to move "where"
++             back a few bytes.  */
 +
-+	  insn = bfd_getl32 ((unsigned char *) where);
++          if (fixP->fx_size == 2)
++            where -= 2;
++          else if (fixP->fx_size == 1)
++            where -= 3;
 +
-+	  /* Use the operand's insertion procedure, if present, in order to
-+	     make sure that the value is correctly stored in the insn.  */
-+	  insn = operand->insert (insn, (offsetT) value, & message);
-+	  /* Ignore message even if it is set.  */
++          insn = bfd_getl32 ((unsigned char *) where);
 +
-+	  bfd_putl32 ((bfd_vma) insn, (unsigned char *) where);
-+	}
++          /* Use the operand's insertion procedure, if present, in order to
++             make sure that the value is correctly stored in the insn.  */
++          insn = operand->insert (insn, (offsetT) value, & message);
++          /* Ignore message even if it is set.  */
++
++          bfd_putl32 ((bfd_vma) insn, (unsigned char *) where);
++        }
 +      else
-+	{
-+	  if (fixP->fx_size == 1)
-+	    *where = value & 0xff;
-+	  else if (fixP->fx_size == 2)
-+	    bfd_putl16 (value & 0xffff, (unsigned char *) where);
-+	  else if (fixP->fx_size == 4)
-+	    bfd_putl32 (value, (unsigned char *) where);
-+	}
++        {
++	  switch (fixP->fx_r_type)
++	    {
++	    case BFD_RELOC_32:
++	      bfd_putl32 (value, (unsigned char *) where);
++	      break;
++
++	    case BFD_RELOC_16:
++	    case BFD_RELOC_HI16:
++	    case BFD_RELOC_HI16_S:
++	    case BFD_RELOC_LO16:
++	    case BFD_RELOC_V810_ZDA_16_16_OFFSET:
++	    case BFD_RELOC_V810_SDA_16_16_OFFSET:
++	      bfd_putl16 (value & 0xffff, (unsigned char *) where);
++	      break;
++
++	    case BFD_RELOC_8:
++	      *where = value & 0xff;
++	      break;
++
++	    case BFD_RELOC_V810_9_PCREL:
++	      bfd_putl16 ((value & 0x1fe)
++			  | (bfd_getl16 (where) & ~0x1fe), where);
++	      break;
++
++	    case BFD_RELOC_V810_26_PCREL:
++	      bfd_putl32 (((value & 0xfffe) << 16) | ((value & 0x3ff0000) >> 16)
++			  | (bfd_getl32 (where) & ~((0xfffe << 16) | (0x3ff0000 >> 16))), where);
++	      break;
++
++	    default:
++	      abort ();
++	    }
++        }
 +    }
 +}
 +
-+
-+
 +/* Parse a cons expression.  We have to handle hi(), lo(), etc
 +   on the v810.  */
 +
 +void
 +parse_cons_expression_v810 (expressionS *exp)
 +{
++  const char *errmsg;
 +  /* See if there's a reloc prefix like hi() we have to handle.  */
-+  hold_cons_reloc = v810_reloc_prefix (NULL);
++  hold_cons_reloc = v810_reloc_prefix (NULL, &errmsg);
 +
 +  /* Do normal expression parsing.  */
 +  expression (exp);
@@ -4254,26 +5166,24 @@ diff -rupN binutils-2.20/gas/config/tc-v810.c binutils-2.20-v810/gas/config/tc-v
 +int
 +v810_force_relocation (struct fix *fixP)
 +{
-+  if (fixP->fx_addsy && S_IS_WEAK (fixP->fx_addsy))
++  if (fixP->fx_r_type == BFD_RELOC_V810_LONGCALL
++      || fixP->fx_r_type == BFD_RELOC_V810_LONGJUMP)
 +    return 1;
-+  
-+  if (   fixP->fx_r_type == BFD_RELOC_VTABLE_INHERIT
-+      || fixP->fx_r_type == BFD_RELOC_VTABLE_ENTRY)
-+    return 1;
-+/*
-+  if (v810_relax && (fixP->fx_pcrel
++
++  if (v810_relax
++      && (fixP->fx_pcrel
 +	  || fixP->fx_r_type == BFD_RELOC_V810_ALIGN
-+	  || fixP->fx_r_type == BFD_RELOC_V810_26_PCREL
 +	  || fixP->fx_r_type == BFD_RELOC_V810_9_PCREL
++	  || fixP->fx_r_type == BFD_RELOC_V810_26_PCREL
 +	  || fixP->fx_r_type >= BFD_RELOC_UNUSED))
 +    return 1;
-+*/
++
 +  return generic_force_reloc (fixP);
 +}
-diff -rupN binutils-2.20/gas/config/tc-v810.h binutils-2.20-v810/gas/config/tc-v810.h
---- binutils-2.20/gas/config/tc-v810.h	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/gas/config/tc-v810.h	2012-10-26 15:32:47 +0100
-@@ -0,0 +1,81 @@
+diff -Nbaur binutils-2.23.1/gas/config/tc-v810.h binutils-2.23.1-v810/gas/config/tc-v810.h
+--- binutils-2.23.1/gas/config/tc-v810.h	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/gas/config/tc-v810.h	2013-03-11 21:07:29 +0000
+@@ -0,0 +1,84 @@
 +/* tc-v810.h -- Header file for tc-v810.c.
 +   Copyright 1996, 1997, 1998, 2000, 2001, 2002, 2003, 2005, 2006, 2007
 +   Free Software Foundation, Inc.
@@ -4343,8 +5253,11 @@ diff -rupN binutils-2.20/gas/config/tc-v810.h binutils-2.20-v810/gas/config/tc-v
 +
 +/* When relaxing, we need to generate
 +   relocations for alignment directives.  */
-+//#define HANDLE_ALIGN(frag) v810_handle_align (frag)
-+//extern void v810_handle_align (fragS *);
++#define HANDLE_ALIGN(frag) v810_handle_align (frag)
++extern void v810_handle_align (fragS *);
++
++/* We need space in a frag's fixed size to allow for alignment when relaxing.  */
++#define TC_FX_SIZE_SLACK(FIX) 2
 +
 +#define MD_PCREL_FROM_SECTION(FIX, SEC) v810_pcrel_from_section (FIX, SEC)
 +extern long v810_pcrel_from_section (struct fix *, asection *);
@@ -4355,30 +5268,30 @@ diff -rupN binutils-2.20/gas/config/tc-v810.h binutils-2.20-v810/gas/config/tc-v
 +   processed so that the resulting value can be inserted correctly.  */
 +#define TC_FIX_TYPE             void *
 +#define TC_INIT_FIX_DATA(fixP)  (fixP)->tc_fix_data = NULL
-diff -rupN binutils-2.20/gas/configure.tgt binutils-2.20-v810/gas/configure.tgt
---- binutils-2.20/gas/configure.tgt	2009-09-09 09:13:28 +0100
-+++ binutils-2.20-v810/gas/configure.tgt	2012-10-26 15:32:47 +0100
-@@ -83,6 +83,7 @@ case ${cpu} in
-   strongarm*be)		cpu_type=arm endian=big ;;
-   strongarm*b)		cpu_type=arm endian=big ;;
-   strongarm*)		cpu_type=arm endian=little ;;
+diff -Nbaur binutils-2.23.1/gas/configure.tgt binutils-2.23.1-v810/gas/configure.tgt
+--- binutils-2.23.1/gas/configure.tgt	2012-09-04 13:53:45 +0100
++++ binutils-2.23.1-v810/gas/configure.tgt	2013-03-09 17:59:21 +0000
+@@ -86,6 +86,7 @@
+   sparc*)		cpu_type=sparc arch=sparclite ;; # ??? See tc-sparc.c.
+   tilegx*be)		cpu_type=tilegx endian=big ;;
+   tilegx*)		cpu_type=tilegx endian=little ;;
 +  v810*)		cpu_type=v810 ;;
    v850*)		cpu_type=v850 ;;
    x86_64*)		cpu_type=i386 arch=x86_64;;
-   xscale*be|xscale*b)	cpu_type=arm endian=big ;;
-@@ -400,6 +401,9 @@ case ${generic_target} in
-   tic4x-*-* | c4x-*-*)			fmt=coff bfd_gas=yes ;;
-   tic54x-*-* | c54x*-*-*)		fmt=coff bfd_gas=yes need_libm=yes;;
+   xgate)		cpu_type=xgate ;;
+@@ -421,6 +422,9 @@
  
-+  v810-*-*)				fmt=elf ;;
-+  v830-*-*)				fmt=elf ;;
+   tilepro-*-* | tilegx*-*-*)		fmt=elf ;;
+ 
++  v810-*-*)					fmt=elf ;;
++  v830-*-*)					fmt=elf ;;
 +
-   v850-*-*)				fmt=elf ;;
-   v850e-*-*)				fmt=elf ;;
-   v850ea-*-*)				fmt=elf ;;
-diff -rupN binutils-2.20/gas/testsuite/gas/v810/arith.s binutils-2.20-v810/gas/testsuite/gas/v810/arith.s
---- binutils-2.20/gas/testsuite/gas/v810/arith.s	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/gas/testsuite/gas/v810/arith.s	2012-10-26 15:32:47 +0100
+   v850*-*-*)				fmt=elf ;;
+ 
+   vax-*-netbsdelf*)			fmt=elf em=nbsd ;;
+diff -Nbaur binutils-2.23.1/gas/testsuite/gas/v810/arith.s binutils-2.23.1-v810/gas/testsuite/gas/v810/arith.s
+--- binutils-2.23.1/gas/testsuite/gas/v810/arith.s	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/gas/testsuite/gas/v810/arith.s	2013-03-09 17:59:21 +0000
 @@ -0,0 +1,24 @@
 +
 +	.text
@@ -4404,9 +5317,9 @@ diff -rupN binutils-2.20/gas/testsuite/gas/v810/arith.s binutils-2.20-v810/gas/t
 +	shr 31,r6
 +	sub r5,r6
 +	subr r5,r6
-diff -rupN binutils-2.20/gas/testsuite/gas/v810/basic.exp binutils-2.20-v810/gas/testsuite/gas/v810/basic.exp
---- binutils-2.20/gas/testsuite/gas/v810/basic.exp	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/gas/testsuite/gas/v810/basic.exp	2012-10-26 15:32:47 +0100
+diff -Nbaur binutils-2.23.1/gas/testsuite/gas/v810/basic.exp binutils-2.23.1-v810/gas/testsuite/gas/v810/basic.exp
+--- binutils-2.23.1/gas/testsuite/gas/v810/basic.exp	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/gas/testsuite/gas/v810/basic.exp	2013-03-09 17:59:21 +0000
 @@ -0,0 +1,438 @@
 +# Copyright (C) 1996 Free Software Foundation, Inc.
 +
@@ -4846,9 +5759,9 @@ diff -rupN binutils-2.20/gas/testsuite/gas/v810/basic.exp binutils-2.20-v810/gas
 +
 +    gas_test_error "range.s" "-mwarn-signed-overflow" "Check for range error on byte load/store"
 +}
-diff -rupN binutils-2.20/gas/testsuite/gas/v810/bit.s binutils-2.20-v810/gas/testsuite/gas/v810/bit.s
---- binutils-2.20/gas/testsuite/gas/v810/bit.s	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/gas/testsuite/gas/v810/bit.s	2012-10-26 15:32:47 +0100
+diff -Nbaur binutils-2.23.1/gas/testsuite/gas/v810/bit.s binutils-2.23.1-v810/gas/testsuite/gas/v810/bit.s
+--- binutils-2.23.1/gas/testsuite/gas/v810/bit.s	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/gas/testsuite/gas/v810/bit.s	2013-03-09 17:59:21 +0000
 @@ -0,0 +1,8 @@
 +
 +	.text
@@ -4858,9 +5771,9 @@ diff -rupN binutils-2.20/gas/testsuite/gas/v810/bit.s binutils-2.20-v810/gas/tes
 +	not1 5,16[r6]
 +	set1 5,16[r6]
 +	tst1 5,16[r6]
-diff -rupN binutils-2.20/gas/testsuite/gas/v810/branch.s binutils-2.20-v810/gas/testsuite/gas/v810/branch.s
---- binutils-2.20/gas/testsuite/gas/v810/branch.s	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/gas/testsuite/gas/v810/branch.s	2012-10-26 15:32:47 +0100
+diff -Nbaur binutils-2.23.1/gas/testsuite/gas/v810/branch.s binutils-2.23.1-v810/gas/testsuite/gas/v810/branch.s
+--- binutils-2.23.1/gas/testsuite/gas/v810/branch.s	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/gas/testsuite/gas/v810/branch.s	2013-03-09 17:59:21 +0000
 @@ -0,0 +1,24 @@
 +
 +	.text
@@ -4886,9 +5799,9 @@ diff -rupN binutils-2.20/gas/testsuite/gas/v810/branch.s binutils-2.20-v810/gas/
 +	bnz bcc
 +	br bcc
 +	bsa bcc
-diff -rupN binutils-2.20/gas/testsuite/gas/v810/compare.s binutils-2.20-v810/gas/testsuite/gas/v810/compare.s
---- binutils-2.20/gas/testsuite/gas/v810/compare.s	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/gas/testsuite/gas/v810/compare.s	2012-10-26 15:32:47 +0100
+diff -Nbaur binutils-2.23.1/gas/testsuite/gas/v810/compare.s binutils-2.23.1-v810/gas/testsuite/gas/v810/compare.s
+--- binutils-2.23.1/gas/testsuite/gas/v810/compare.s	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/gas/testsuite/gas/v810/compare.s	2013-03-09 17:59:21 +0000
 @@ -0,0 +1,28 @@
 +
 +	.text
@@ -4918,32 +5831,32 @@ diff -rupN binutils-2.20/gas/testsuite/gas/v810/compare.s binutils-2.20-v810/gas
 +	setf gt,r5
 +	tst r5,r6
 +	
-diff -rupN binutils-2.20/gas/testsuite/gas/v810/fepsw.s binutils-2.20-v810/gas/testsuite/gas/v810/fepsw.s
---- binutils-2.20/gas/testsuite/gas/v810/fepsw.s	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/gas/testsuite/gas/v810/fepsw.s	2012-10-26 15:32:47 +0100
+diff -Nbaur binutils-2.23.1/gas/testsuite/gas/v810/fepsw.s binutils-2.23.1-v810/gas/testsuite/gas/v810/fepsw.s
+--- binutils-2.23.1/gas/testsuite/gas/v810/fepsw.s	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/gas/testsuite/gas/v810/fepsw.s	2013-03-09 17:59:21 +0000
 @@ -0,0 +1,2 @@
 +	.text
 +	ldsr r17,fepsw
-diff -rupN binutils-2.20/gas/testsuite/gas/v810/hilo.s binutils-2.20-v810/gas/testsuite/gas/v810/hilo.s
---- binutils-2.20/gas/testsuite/gas/v810/hilo.s	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/gas/testsuite/gas/v810/hilo.s	2012-10-26 15:32:47 +0100
+diff -Nbaur binutils-2.23.1/gas/testsuite/gas/v810/hilo.s binutils-2.23.1-v810/gas/testsuite/gas/v810/hilo.s
+--- binutils-2.23.1/gas/testsuite/gas/v810/hilo.s	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/gas/testsuite/gas/v810/hilo.s	2013-03-09 17:59:21 +0000
 @@ -0,0 +1,5 @@
 +
 +	.text
 +	movea lo(0xdeadbeef),r0,r1
 +	movhi hi(0xdeadbeef),r1,r1
 +	movhi hi0(0xdeadbeef),r1,r1
-diff -rupN binutils-2.20/gas/testsuite/gas/v810/hilo2.s binutils-2.20-v810/gas/testsuite/gas/v810/hilo2.s
---- binutils-2.20/gas/testsuite/gas/v810/hilo2.s	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/gas/testsuite/gas/v810/hilo2.s	2012-10-26 15:32:47 +0100
+diff -Nbaur binutils-2.23.1/gas/testsuite/gas/v810/hilo2.s binutils-2.23.1-v810/gas/testsuite/gas/v810/hilo2.s
+--- binutils-2.23.1/gas/testsuite/gas/v810/hilo2.s	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/gas/testsuite/gas/v810/hilo2.s	2013-03-09 17:59:21 +0000
 @@ -0,0 +1,4 @@
 +	.text
 +	.org 0x10000
 +	movea hi(blah),r0,r1
 +blah:
-diff -rupN binutils-2.20/gas/testsuite/gas/v810/jumps.s binutils-2.20-v810/gas/testsuite/gas/v810/jumps.s
---- binutils-2.20/gas/testsuite/gas/v810/jumps.s	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/gas/testsuite/gas/v810/jumps.s	2012-10-26 15:32:47 +0100
+diff -Nbaur binutils-2.23.1/gas/testsuite/gas/v810/jumps.s binutils-2.23.1-v810/gas/testsuite/gas/v810/jumps.s
+--- binutils-2.23.1/gas/testsuite/gas/v810/jumps.s	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/gas/testsuite/gas/v810/jumps.s	2013-03-09 17:59:21 +0000
 @@ -0,0 +1,8 @@
 +
 +	.text
@@ -4953,9 +5866,9 @@ diff -rupN binutils-2.20/gas/testsuite/gas/v810/jumps.s binutils-2.20-v810/gas/t
 +	jmp [r5]
 +	jr jumps
 +	
-diff -rupN binutils-2.20/gas/testsuite/gas/v810/logical.s binutils-2.20-v810/gas/testsuite/gas/v810/logical.s
---- binutils-2.20/gas/testsuite/gas/v810/logical.s	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/gas/testsuite/gas/v810/logical.s	2012-10-26 15:32:47 +0100
+diff -Nbaur binutils-2.23.1/gas/testsuite/gas/v810/logical.s binutils-2.23.1-v810/gas/testsuite/gas/v810/logical.s
+--- binutils-2.23.1/gas/testsuite/gas/v810/logical.s	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/gas/testsuite/gas/v810/logical.s	2013-03-09 17:59:21 +0000
 @@ -0,0 +1,11 @@
 +
 +	.text
@@ -4968,9 +5881,9 @@ diff -rupN binutils-2.20/gas/testsuite/gas/v810/logical.s binutils-2.20-v810/gas
 +	ori 7,r5,r6
 +	xor r5,r6
 +	xori 7,r5,r6
-diff -rupN binutils-2.20/gas/testsuite/gas/v810/mem.s binutils-2.20-v810/gas/testsuite/gas/v810/mem.s
---- binutils-2.20/gas/testsuite/gas/v810/mem.s	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/gas/testsuite/gas/v810/mem.s	2012-10-26 15:32:47 +0100
+diff -Nbaur binutils-2.23.1/gas/testsuite/gas/v810/mem.s binutils-2.23.1-v810/gas/testsuite/gas/v810/mem.s
+--- binutils-2.23.1/gas/testsuite/gas/v810/mem.s	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/gas/testsuite/gas/v810/mem.s	2013-03-09 17:59:21 +0000
 @@ -0,0 +1,16 @@
 +
 +	.text
@@ -4988,9 +5901,9 @@ diff -rupN binutils-2.20/gas/testsuite/gas/v810/mem.s binutils-2.20-v810/gas/tes
 +	sst.b r6,64[ep]
 +	sst.h r6,128[ep]
 +	sst.w r6,128[ep]
-diff -rupN binutils-2.20/gas/testsuite/gas/v810/misc.s binutils-2.20-v810/gas/testsuite/gas/v810/misc.s
---- binutils-2.20/gas/testsuite/gas/v810/misc.s	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/gas/testsuite/gas/v810/misc.s	2012-10-26 15:32:47 +0100
+diff -Nbaur binutils-2.23.1/gas/testsuite/gas/v810/misc.s binutils-2.23.1-v810/gas/testsuite/gas/v810/misc.s
+--- binutils-2.23.1/gas/testsuite/gas/v810/misc.s	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/gas/testsuite/gas/v810/misc.s	2013-03-09 17:59:21 +0000
 @@ -0,0 +1,13 @@
 +
 +	.text
@@ -5005,9 +5918,9 @@ diff -rupN binutils-2.20/gas/testsuite/gas/v810/misc.s binutils-2.20-v810/gas/te
 +	trap 31
 +	ldsr r7,psw
 +	stsr psw,r7
-diff -rupN binutils-2.20/gas/testsuite/gas/v810/move.s binutils-2.20-v810/gas/testsuite/gas/v810/move.s
---- binutils-2.20/gas/testsuite/gas/v810/move.s	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/gas/testsuite/gas/v810/move.s	2012-10-26 15:32:47 +0100
+diff -Nbaur binutils-2.23.1/gas/testsuite/gas/v810/move.s binutils-2.23.1-v810/gas/testsuite/gas/v810/move.s
+--- binutils-2.23.1/gas/testsuite/gas/v810/move.s	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/gas/testsuite/gas/v810/move.s	2013-03-09 17:59:21 +0000
 @@ -0,0 +1,8 @@
 +
 +	.text
@@ -5017,15 +5930,15 @@ diff -rupN binutils-2.20/gas/testsuite/gas/v810/move.s binutils-2.20-v810/gas/te
 +	mov 5,r6
 +	movea 7,r5,r6
 +	movhi 7,r5,r6
-diff -rupN binutils-2.20/gas/testsuite/gas/v810/range.s binutils-2.20-v810/gas/testsuite/gas/v810/range.s
---- binutils-2.20/gas/testsuite/gas/v810/range.s	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/gas/testsuite/gas/v810/range.s	2012-10-26 15:32:47 +0100
+diff -Nbaur binutils-2.23.1/gas/testsuite/gas/v810/range.s binutils-2.23.1-v810/gas/testsuite/gas/v810/range.s
+--- binutils-2.23.1/gas/testsuite/gas/v810/range.s	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/gas/testsuite/gas/v810/range.s	2013-03-09 17:59:21 +0000
 @@ -0,0 +1,2 @@
 +	.text
 +	ld.b 0xff62[r0],r0
-diff -rupN binutils-2.20/gas/testsuite/gas/v810/reloc.s binutils-2.20-v810/gas/testsuite/gas/v810/reloc.s
---- binutils-2.20/gas/testsuite/gas/v810/reloc.s	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/gas/testsuite/gas/v810/reloc.s	2012-10-26 15:32:47 +0100
+diff -Nbaur binutils-2.23.1/gas/testsuite/gas/v810/reloc.s binutils-2.23.1-v810/gas/testsuite/gas/v810/reloc.s
+--- binutils-2.23.1/gas/testsuite/gas/v810/reloc.s	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/gas/testsuite/gas/v810/reloc.s	2013-03-09 17:59:21 +0000
 @@ -0,0 +1,7 @@
 +	.text
 +	movea lo(foo),r0,r1
@@ -5034,36 +5947,36 @@ diff -rupN binutils-2.20/gas/testsuite/gas/v810/reloc.s binutils-2.20-v810/gas/t
 +	movea zdaoff(_foo),r0,r1
 +	movhi tdaoff(_foo),ep,r1
 +	movhi sdaoff(_foo),gp,r1
-diff -rupN binutils-2.20/include/dis-asm.h binutils-2.20-v810/include/dis-asm.h
---- binutils-2.20/include/dis-asm.h	2009-08-06 18:38:03 +0100
-+++ binutils-2.20-v810/include/dis-asm.h	2012-10-26 15:32:47 +0100
-@@ -287,6 +287,7 @@ extern int print_insn_tic30		(bfd_vma, d
- extern int print_insn_tic4x		(bfd_vma, disassemble_info *);
- extern int print_insn_tic54x		(bfd_vma, disassemble_info *);
+diff -Nbaur binutils-2.23.1/include/dis-asm.h binutils-2.23.1-v810/include/dis-asm.h
+--- binutils-2.23.1/include/dis-asm.h	2012-09-04 13:53:46 +0100
++++ binutils-2.23.1-v810/include/dis-asm.h	2013-03-09 17:59:21 +0000
+@@ -292,6 +292,7 @@
  extern int print_insn_tic80		(bfd_vma, disassemble_info *);
+ extern int print_insn_tilegx		(bfd_vma, disassemble_info *);
+ extern int print_insn_tilepro		(bfd_vma, disassemble_info *);
 +extern int print_insn_v810		(bfd_vma, disassemble_info *);
  extern int print_insn_v850		(bfd_vma, disassemble_info *);
  extern int print_insn_vax		(bfd_vma, disassemble_info *);
  extern int print_insn_w65		(bfd_vma, disassemble_info *);
-diff -rupN binutils-2.20/include/elf/common.h binutils-2.20-v810/include/elf/common.h
---- binutils-2.20/include/elf/common.h	2009-08-09 14:42:26 +0100
-+++ binutils-2.20-v810/include/elf/common.h	2012-10-26 15:32:47 +0100
-@@ -365,6 +365,9 @@
+diff -Nbaur binutils-2.23.1/include/elf/common.h binutils-2.23.1-v810/include/elf/common.h
+--- binutils-2.23.1/include/elf/common.h	2012-09-04 13:53:47 +0100
++++ binutils-2.23.1-v810/include/elf/common.h	2013-03-09 17:59:21 +0000
+@@ -372,6 +372,9 @@
  /* V850 backend magic number.  Written in the absense of an ABI.  */
  #define EM_CYGNUS_V850		0x9080
  
-+/* V810 backend magic number - no EABI available.  */
-+#define EM_V810			0x9081
++/* V810 backend magic number.  No EABI available.  */
++#define EM_V810		0x9081
 +
  /* old S/390 backend magic number. Written in the absence of an ABI.  */
  #define EM_S390_OLD		0xa390
  
-diff -rupN binutils-2.20/include/elf/v810.h binutils-2.20-v810/include/elf/v810.h
---- binutils-2.20/include/elf/v810.h	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/include/elf/v810.h	2012-10-26 15:32:47 +0100
-@@ -0,0 +1,99 @@
+diff -Nbaur binutils-2.23.1/include/elf/v810.h binutils-2.23.1-v810/include/elf/v810.h
+--- binutils-2.23.1/include/elf/v810.h	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/include/elf/v810.h	2013-03-10 20:34:38 +0000
+@@ -0,0 +1,96 @@
 +/* V810 ELF support for BFD.
-+   Copyright 1997, 1998, 2000, 2002, 2003, 2004, 2007, 2008
++   Copyright 1997, 1998, 2000, 2002, 2003, 2004, 2007, 2008, 2010
 +   Free Software Foundation, Inc.
 +   Created by Michael Meissner, Cygnus Support <meissner@cygnus.com>
 +
@@ -5071,7 +5984,7 @@ diff -rupN binutils-2.20/include/elf/v810.h binutils-2.20-v810/include/elf/v810.
 +
 +   This program is free software; you can redistribute it and/or modify
 +   it under the terms of the GNU General Public License as published by
-+   the Free Software Foundation; either version 2 of the License, or
++   the Free Software Foundation; either version 3 of the License, or
 +   (at your option) any later version.
 +
 +   This program is distributed in the hope that it will be useful,
@@ -5081,7 +5994,8 @@ diff -rupN binutils-2.20/include/elf/v810.h binutils-2.20-v810/include/elf/v810.
 +
 +   You should have received a copy of the GNU General Public License
 +   along with this program; if not, write to the Free Software
-+   Foundation, Inc., 51 Franklin Street - Fifth Floor, Boston, MA 02110-1301, USA.  */
++   Foundation, Inc., 51 Franklin Street - Fifth Floor, Boston,
++   MA 02110-1301, USA.  */
 +
 +/* This file holds definitions specific to the MIPS ELF ABI.  Note
 +   that most of this is not actually implemented by BFD.  */
@@ -5100,15 +6014,14 @@ diff -rupN binutils-2.20/include/elf/v810.h binutils-2.20-v810/include/elf/v810.
 +/* v830 code.  */
 +#define E_V830_ARCH		0x10000000
 +
-+
-+
 +/* Flags for the st_other field.  */
 +#define V810_OTHER_SDA		0x10	/* Symbol had SDA relocations.  */
 +#define V810_OTHER_ZDA		0x20	/* Symbol had ZDA relocations.  */
-+#define V810_OTHER_ERROR	0x80	/* Symbol had an error reported.  */
++#define V810_OTHER_ERROR	0x40	/* Symbol had an error reported.  */
 +
 +/* V810 relocations.  */
 +#include "elf/reloc-macros.h"
++
 +START_RELOC_NUMBERS (v810_reloc_type)
 +     RELOC_NUMBER (R_V810_NONE, 0)
 +     RELOC_NUMBER (R_V810_9_PCREL, 1)
@@ -5119,17 +6032,17 @@ diff -rupN binutils-2.20/include/elf/v810.h binutils-2.20-v810/include/elf/v810.
 +     RELOC_NUMBER (R_V810_32, 6)
 +     RELOC_NUMBER (R_V810_16, 7)
 +     RELOC_NUMBER (R_V810_8, 8)
-+     RELOC_NUMBER( R_V810_SDA_16_16_OFFSET, 9)		/* For ld.b, st.b, set1, clr1, not1, tst1, movea, movhi */
-+     RELOC_NUMBER( R_V810_SDA_15_16_OFFSET, 10)		/* For ld.w, ld.h, ld.hu, st.w, st.h */
-+     RELOC_NUMBER( R_V810_ZDA_16_16_OFFSET, 11)		/* For ld.b, st.b, set1, clr1, not1, tst1, movea, movhi */
-+     RELOC_NUMBER( R_V810_ZDA_15_16_OFFSET, 12)		/* For ld.w, ld.h, ld.hu, st.w, st.h */
-+     RELOC_NUMBER (R_V810_GNU_VTINHERIT, 13)
-+     RELOC_NUMBER (R_V810_GNU_VTENTRY, 14)
-+//     RELOC_NUMBER (R_V850_ALIGN, 15)
++     RELOC_NUMBER (R_V810_SDA_16_16_OFFSET, 9)		/* For ld.[w,h,b], st.[w,h,b], movea, movhi */
++     RELOC_NUMBER (R_V810_ZDA_16_16_OFFSET, 10)		/* For ld.[w,h,b], st.[w,h,b], movea, movhi */
++     RELOC_NUMBER (R_V810_GNU_VTINHERIT, 11)
++     RELOC_NUMBER (R_V810_GNU_VTENTRY, 12)
++     RELOC_NUMBER (R_V810_LONGCALL, 13)
++     RELOC_NUMBER (R_V810_LONGJUMP, 14)
++     RELOC_NUMBER (R_V810_ALIGN, 15)
++
 +END_RELOC_NUMBERS (R_V810_max)
 +
-+
-+
++
 +/* Processor specific section indices.  These sections do not actually
 +   exist.  Symbols with a st_shndx field corresponding to one of these
 +   values have a special meaning.  */
@@ -5138,52 +6051,50 @@ diff -rupN binutils-2.20/include/elf/v810.h binutils-2.20-v810/include/elf/v810.
 +#define SHN_V810_SCOMMON	SHN_LORESERVE
 +
 +/* Zero data area common symbol.  */
-+#define SHN_V810_ZCOMMON	(SHN_LORESERVE + 2)
++#define SHN_V810_ZCOMMON	(SHN_LORESERVE + 1)
 +
-+
++
 +/* Processor specific section types.  */
 +
 +/* Section contains the .scommon data.  */
 +#define SHT_V810_SCOMMON	0x70000000
 +
 +/* Section contains the .scommon data.  */
-+#define SHT_V810_ZCOMMON	0x70000002
++#define SHT_V810_ZCOMMON	0x70000001
 +
 +/* Processor specific section flags.  */
 +
 +/* This section must be in the small data area (pointed to by GP).  */
 +#define SHF_V810_GPREL		0x10000000
 +
-+/* This section must be in the tiny data area (pointed to by EP).  */
-+#define SHF_V810_EPREL		0x20000000
-+
 +/* This section must be in the zero data area (pointed to by R0).  */
-+#define SHF_V810_R0REL		0x40000000
++#define SHF_V810_R0REL		0x20000000
 +
 +#endif /* _ELF_V810_H */
-diff -rupN binutils-2.20/include/opcode/v810.h binutils-2.20-v810/include/opcode/v810.h
---- binutils-2.20/include/opcode/v810.h	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/include/opcode/v810.h	2012-10-27 11:08:21 +0100
-@@ -0,0 +1,154 @@
+diff -Nbaur binutils-2.23.1/include/opcode/v810.h binutils-2.23.1-v810/include/opcode/v810.h
+--- binutils-2.23.1/include/opcode/v810.h	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/include/opcode/v810.h	2013-03-12 16:10:05 +0000
+@@ -0,0 +1,160 @@
 +/* v810.h -- Header file for NEC V810 opcode table
-+   Copyright 1996, 1997, 2001, 2003 Free Software Foundation, Inc.
++   Copyright 1996, 1997, 2001, 2003, 2010 Free Software Foundation, Inc.
 +   Written by J.T. Conklin, Cygnus Support
 +
-+This file is part of GDB, GAS, and the GNU binutils.
++   This file is part of GDB, GAS, and the GNU binutils.
 +
-+GDB, GAS, and the GNU binutils are free software; you can redistribute
-+them and/or modify them under the terms of the GNU General Public
-+License as published by the Free Software Foundation; either version
-+1, or (at your option) any later version.
++   GDB, GAS, and the GNU binutils are free software; you can redistribute
++   them and/or modify them under the terms of the GNU General Public
++   License as published by the Free Software Foundation; either version 3,
++   or (at your option) any later version.
 +
-+GDB, GAS, and the GNU binutils are distributed in the hope that they
-+will be useful, but WITHOUT ANY WARRANTY; without even the implied
-+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See
-+the GNU General Public License for more details.
++   GDB, GAS, and the GNU binutils are distributed in the hope that they
++   will be useful, but WITHOUT ANY WARRANTY; without even the implied
++   warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See
++   the GNU General Public License for more details.
 +
-+You should have received a copy of the GNU General Public License
-+along with this file; see the file COPYING.  If not, write to the Free
-+Software Foundation, 51 Franklin Street - Fifth Floor, Boston, MA 02110-1301, USA.  */
++   You should have received a copy of the GNU General Public License
++   along with this file; see the file COPYING3.  If not, write to the Free
++   Software Foundation, 51 Franklin Street - Fifth Floor, Boston,
++   MA 02110-1301, USA.  */
 +
 +#ifndef V810_H
 +#define V810_H
@@ -5226,7 +6137,7 @@ diff -rupN binutils-2.20/include/opcode/v810.h binutils-2.20-v810/include/opcode
 +#define PROCESSOR_ALL		PROCESSOR_MASK		/* Any processor.  */
 +#define PROCESSOR_V830		(1 << 1)		/* Just the V830.  */
 +#define PROCESSOR_NOT_V830	(PROCESSOR_ALL & (~ PROCESSOR_V830))	/* Any processor except the V830.  */
-+#define PROCESSOR_NVC		(1 << 2)		/* Just the NVC.  */
++#define SET_PROCESSOR_MASK(mask,set)	((mask) = ((mask) & ~PROCESSOR_MASK) | (set))
 +
 +/* The table itself is sorted by major opcode number, and is otherwise
 +   in the order in which the disassembler should consider
@@ -5240,7 +6151,8 @@ diff -rupN binutils-2.20/include/opcode/v810.h binutils-2.20-v810/include/opcode
 +struct v810_operand
 +{
 +  /* The number of bits in the operand.  */
-+  /* If this value is -1 then the operand's bits are in a discontinous distribution in the instruction. */
++  /* If this value is -1 then the operand's bits are in a discontinous
++     distribution in the instruction. */
 +  int bits;
 +
 +  /* (bits >= 0):  How far the operand is left shifted in the instruction.  */
@@ -5286,6 +6198,8 @@ diff -rupN binutils-2.20/include/opcode/v810.h binutils-2.20-v810/include/opcode
 +
 +  /* One bit syntax flags.  */
 +  int flags;
++
++  int default_reloc;
 +};
 +
 +/* Elements in the table are retrieved by indexing with values from
@@ -5295,72 +6209,99 @@ diff -rupN binutils-2.20/include/opcode/v810.h binutils-2.20-v810/include/opcode
 +
 +/* Values defined for the flags field of a struct v810_operand.  */
 +
-+/* This operand names a general purpose register */
++/* This operand names a general purpose register.  */
 +#define V810_OPERAND_REG	0x01
 +
-+/* This operand names a system register */
++/* This operand names a system register.  */
 +#define V810_OPERAND_SRG	0x02
 +
-+/* This operand names a condition code used in the setf instruction */
++/* This operand names a condition code used in the setf instruction.  */
 +#define V810_OPERAND_CC		0x04
 +
-+/* This operand takes signed values */
-+#define V810_OPERAND_SIGNED	0x08
++/* This is a relaxable operand.   Only used for D9->D26 branch relaxing
++   right now.  We may need others in the future (or maybe handle them like
++   promoted operands on the mn10300?).  */
++#define V810_OPERAND_RELAX	0x08
 +
-+/* This operand is the ep register.  */
-+#define V810_OPERAND_EP		0x10
++/* This operand takes signed values.  */
++#define V810_OPERAND_SIGNED	0x10
 +
-+/* This operand is a PC displacement */
++/* This operand is a displacement.  */
 +#define V810_OPERAND_DISP	0x20
 +
-+/* This is a relaxable operand.   Only used for D9->D22 branch relaxing
-+   right now.  We may need others in the future (or maybe handle them like
-+   promoted operands on the mn10300?)  */
-+#define V810_OPERAND_RELAX	0x40
++/* This operand is a PC displacement.  */
++#define V810_PCREL		0x40
++
++extern int v810_msg_is_out_of_range (const char * msg);
 +
 +#endif /* V810_H */
-diff -rupN binutils-2.20/ld/Makefile.am binutils-2.20-v810/ld/Makefile.am
---- binutils-2.20/ld/Makefile.am	2009-09-01 21:56:51 +0100
-+++ binutils-2.20-v810/ld/Makefile.am	2012-10-26 15:32:47 +0100
-@@ -1815,6 +1815,9 @@ evaxnbsd.c: $(srcdir)/emulparams/vaxnbsd
- evsta.c: $(srcdir)/emulparams/vsta.sh \
-   $(srcdir)/emultempl/generic.em $(srcdir)/scripttempl/aout.sc ${GEN_DEPENDS}
- 	${GENSCRIPTS} vsta "$(tdir_vsta)"
+diff -Nbaur binutils-2.23.1/ld/Makefile.am binutils-2.23.1-v810/ld/Makefile.am
+--- binutils-2.23.1/ld/Makefile.am	2012-09-04 13:53:47 +0100
++++ binutils-2.23.1-v810/ld/Makefile.am	2013-03-09 17:59:22 +0000
+@@ -451,6 +451,7 @@
+ 	etic4xcoff.c \
+ 	etic54xcoff.c \
+ 	etic80coff.c \
++	ev810.c \
+ 	ev850.c \
+ 	evanilla.c \
+ 	evax.c \
+@@ -1914,6 +1915,9 @@
+ etic80coff.c: $(srcdir)/emulparams/tic80coff.sh \
+   $(srcdir)/emultempl/generic.em $(srcdir)/scripttempl/tic80coff.sc ${GEN_DEPENDS}
+ 	${GENSCRIPTS} tic80coff "$(tdir_tic80coff)"
 +ev810.c: $(srcdir)/emulparams/v810.sh \
 +  $(ELF_DEPS) $(srcdir)/scripttempl/v810.sc ${GEN_DEPENDS}
 +	${GENSCRIPTS} v810 "$(tdir_v810)"
  ev850.c: $(srcdir)/emulparams/v850.sh \
    $(ELF_DEPS) $(srcdir)/scripttempl/v850.sc ${GEN_DEPENDS}
  	${GENSCRIPTS} v850 "$(tdir_v850)"
-diff -rupN binutils-2.20/ld/Makefile.in binutils-2.20-v810/ld/Makefile.in
---- binutils-2.20/ld/Makefile.in	2009-09-07 13:10:24 +0100
-+++ binutils-2.20-v810/ld/Makefile.in	2012-10-26 15:32:47 +0100
-@@ -3156,6 +3156,9 @@ evaxnbsd.c: $(srcdir)/emulparams/vaxnbsd
- evsta.c: $(srcdir)/emulparams/vsta.sh \
-   $(srcdir)/emultempl/generic.em $(srcdir)/scripttempl/aout.sc ${GEN_DEPENDS}
- 	${GENSCRIPTS} vsta "$(tdir_vsta)"
+diff -Nbaur binutils-2.23.1/ld/Makefile.in binutils-2.23.1-v810/ld/Makefile.in
+--- binutils-2.23.1/ld/Makefile.in	2012-09-04 13:53:47 +0100
++++ binutils-2.23.1-v810/ld/Makefile.in	2013-03-09 17:59:22 +0000
+@@ -758,6 +758,7 @@
+ 	etic4xcoff.c \
+ 	etic54xcoff.c \
+ 	etic80coff.c \
++	ev810.c \
+ 	ev850.c \
+ 	evanilla.c \
+ 	evax.c \
+@@ -1416,6 +1417,7 @@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/etic4xcoff.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/etic54xcoff.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/etic80coff.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ev810.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ev850.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/evanilla.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/evax.Po@am__quote@
+@@ -3384,6 +3386,9 @@
+ etic80coff.c: $(srcdir)/emulparams/tic80coff.sh \
+   $(srcdir)/emultempl/generic.em $(srcdir)/scripttempl/tic80coff.sc ${GEN_DEPENDS}
+ 	${GENSCRIPTS} tic80coff "$(tdir_tic80coff)"
 +ev810.c: $(srcdir)/emulparams/v810.sh \
 +  $(ELF_DEPS) $(srcdir)/scripttempl/v810.sc ${GEN_DEPENDS}
 +	${GENSCRIPTS} v810 "$(tdir_v810)"
  ev850.c: $(srcdir)/emulparams/v850.sh \
    $(ELF_DEPS) $(srcdir)/scripttempl/v850.sc ${GEN_DEPENDS}
  	${GENSCRIPTS} v850 "$(tdir_v850)"
-diff -rupN binutils-2.20/ld/configure.tgt binutils-2.20-v810/ld/configure.tgt
---- binutils-2.20/ld/configure.tgt	2009-08-06 18:38:03 +0100
-+++ binutils-2.20-v810/ld/configure.tgt	2012-10-26 15:32:47 +0100
-@@ -621,6 +621,9 @@ tic4x-*-* | c4x-*-*)    targ_emul=tic4xc
- tic54x-*-* | c54x*-*-*)	targ_emul=tic54xcoff ;;
- tic80-*-*)		targ_emul=tic80coff
- 			;;
-+v810-*-*)		targ_emul=v810 ;;
+diff -Nbaur binutils-2.23.1/ld/configure.tgt binutils-2.23.1-v810/ld/configure.tgt
+--- binutils-2.23.1/ld/configure.tgt	2012-09-04 13:53:47 +0100
++++ binutils-2.23.1-v810/ld/configure.tgt	2013-03-09 17:59:22 +0000
+@@ -697,6 +697,10 @@
+ 			targ_extra_emuls="elf64tilegx elf32tilegx elf32tilegx_be"
+ 			targ_extra_libpath=$targ_extra_emuls ;;
+ tilepro-*-*)		targ_emul=elf32tilepro ;;
++v810-*-*)		targ_emul=v810
++			;;
 +v830-*-*)		targ_emul=v830
 +			;;
- v850-*-*)		targ_emul=v850 ;;
- v850e-*-*)		targ_emul=v850 ;;
- v850ea-*-*)		targ_emul=v850
-diff -rupN binutils-2.20/ld/emulparams/v810.sh binutils-2.20-v810/ld/emulparams/v810.sh
---- binutils-2.20/ld/emulparams/v810.sh	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/ld/emulparams/v810.sh	2012-10-26 15:32:47 +0100
+ v850*-*-*)		targ_emul=v850
+ 			;;
+ vax-dec-ultrix* | vax-dec-bsd*) targ_emul=vax ;;
+diff -Nbaur binutils-2.23.1/ld/emulparams/v810.sh binutils-2.23.1-v810/ld/emulparams/v810.sh
+--- binutils-2.23.1/ld/emulparams/v810.sh	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/ld/emulparams/v810.sh	2013-03-09 17:59:22 +0000
 @@ -0,0 +1,13 @@
 +MACHINE=
 +SCRIPT_NAME=v810
@@ -5375,9 +6316,9 @@ diff -rupN binutils-2.20/ld/emulparams/v810.sh binutils-2.20-v810/ld/emulparams/
 +ENTRY=_start
 +EMBEDDED=yes
 +TEMPLATE_NAME=elf32
-diff -rupN binutils-2.20/ld/scripttempl/v810.sc binutils-2.20-v810/ld/scripttempl/v810.sc
---- binutils-2.20/ld/scripttempl/v810.sc	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/ld/scripttempl/v810.sc	2012-10-27 11:51:36 +0100
+diff -Nbaur binutils-2.23.1/ld/scripttempl/v810.sc binutils-2.23.1-v810/ld/scripttempl/v810.sc
+--- binutils-2.23.1/ld/scripttempl/v810.sc	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/ld/scripttempl/v810.sc	2013-03-09 17:59:22 +0000
 @@ -0,0 +1,230 @@
 +cat << EOF
 +OUTPUT_FORMAT("elf32-v810", "elf32-v810",
@@ -5609,75 +6550,75 @@ diff -rupN binutils-2.20/ld/scripttempl/v810.sc binutils-2.20-v810/ld/scripttemp
 +  }
 +}
 +EOF
-diff -rupN binutils-2.20/opcodes/Makefile.am binutils-2.20-v810/opcodes/Makefile.am
---- binutils-2.20/opcodes/Makefile.am	2009-09-07 13:07:53 +0100
-+++ binutils-2.20-v810/opcodes/Makefile.am	2012-10-26 15:32:47 +0100
-@@ -205,6 +205,8 @@ TARGET_LIBOPCODES_CFILES = \
- 	tic54x-opc.c \
- 	tic80-dis.c \
- 	tic80-opc.c \
+diff -Nbaur binutils-2.23.1/opcodes/Makefile.am binutils-2.23.1-v810/opcodes/Makefile.am
+--- binutils-2.23.1/opcodes/Makefile.am	2012-09-04 15:21:06 +0100
++++ binutils-2.23.1-v810/opcodes/Makefile.am	2013-03-09 17:59:22 +0000
+@@ -227,6 +227,8 @@
+ 	tilegx-opc.c \
+ 	tilepro-dis.c \
+ 	tilepro-opc.c \
 +	v810-dis.c \
 +	v810-opc.c \
  	v850-dis.c \
  	v850-opc.c \
  	vax-dis.c \
-diff -rupN binutils-2.20/opcodes/Makefile.in binutils-2.20-v810/opcodes/Makefile.in
---- binutils-2.20/opcodes/Makefile.in	2009-09-07 13:08:03 +0100
-+++ binutils-2.20-v810/opcodes/Makefile.in	2012-10-26 15:32:47 +0100
-@@ -475,6 +475,8 @@ TARGET_LIBOPCODES_CFILES = \
- 	tic54x-opc.c \
- 	tic80-dis.c \
- 	tic80-opc.c \
+diff -Nbaur binutils-2.23.1/opcodes/Makefile.in binutils-2.23.1-v810/opcodes/Makefile.in
+--- binutils-2.23.1/opcodes/Makefile.in	2012-09-04 15:21:06 +0100
++++ binutils-2.23.1-v810/opcodes/Makefile.in	2013-03-09 17:59:22 +0000
+@@ -498,6 +498,8 @@
+ 	tilegx-opc.c \
+ 	tilepro-dis.c \
+ 	tilepro-opc.c \
 +	v810-dis.c \
 +	v810-opc.c \
  	v850-dis.c \
  	v850-opc.c \
  	vax-dis.c \
-@@ -841,6 +843,8 @@ distclean-compile:
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tic54x-opc.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tic80-dis.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tic80-opc.Plo@am__quote@
+@@ -894,6 +896,8 @@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tilegx-opc.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tilepro-dis.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tilepro-opc.Plo@am__quote@
 +@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/v810-dis.Plo@am__quote@
 +@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/v810-opc.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/v850-dis.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/v850-opc.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/vax-dis.Plo@am__quote@
-diff -rupN binutils-2.20/opcodes/configure binutils-2.20-v810/opcodes/configure
---- binutils-2.20/opcodes/configure	2009-09-07 13:08:04 +0100
-+++ binutils-2.20-v810/opcodes/configure	2012-10-26 15:32:47 +0100
-@@ -12356,6 +12356,8 @@ if test x${all_targets} = xfalse ; then
-         bfd_tic4x_arch)         ta="$ta tic4x-dis.lo" ;;
- 	bfd_tic54x_arch)	ta="$ta tic54x-dis.lo tic54x-opc.lo" ;;
+diff -Nbaur binutils-2.23.1/opcodes/configure binutils-2.23.1-v810/opcodes/configure
+--- binutils-2.23.1/opcodes/configure	2012-09-04 15:21:07 +0100
++++ binutils-2.23.1-v810/opcodes/configure	2013-03-09 17:59:22 +0000
+@@ -12570,6 +12570,8 @@
  	bfd_tic80_arch)		ta="$ta tic80-dis.lo tic80-opc.lo" ;;
+ 	bfd_tilegx_arch)	ta="$ta tilegx-dis.lo tilegx-opc.lo" ;;
+ 	bfd_tilepro_arch)	ta="$ta tilepro-dis.lo tilepro-opc.lo" ;;
 +	bfd_v810_arch)		ta="$ta v810-opc.lo v810-dis.lo" ;;
 +	bfd_v830_arch)		ta="$ta v810-opc.lo v810-dis.lo" ;;
  	bfd_v850_arch)		ta="$ta v850-opc.lo v850-dis.lo" ;;
  	bfd_v850e_arch)		ta="$ta v850-opc.lo v850-dis.lo" ;;
  	bfd_v850ea_arch)	ta="$ta v850-opc.lo v850-dis.lo" ;;
-diff -rupN binutils-2.20/opcodes/configure.in binutils-2.20-v810/opcodes/configure.in
---- binutils-2.20/opcodes/configure.in	2009-09-07 13:07:53 +0100
-+++ binutils-2.20-v810/opcodes/configure.in	2012-10-26 15:32:47 +0100
-@@ -295,6 +295,8 @@ if test x${all_targets} = xfalse ; then
-         bfd_tic4x_arch)         ta="$ta tic4x-dis.lo" ;;
- 	bfd_tic54x_arch)	ta="$ta tic54x-dis.lo tic54x-opc.lo" ;;
+diff -Nbaur binutils-2.23.1/opcodes/configure.in binutils-2.23.1-v810/opcodes/configure.in
+--- binutils-2.23.1/opcodes/configure.in	2012-11-05 16:29:08 +0000
++++ binutils-2.23.1-v810/opcodes/configure.in	2013-03-09 17:59:22 +0000
+@@ -315,6 +315,8 @@
  	bfd_tic80_arch)		ta="$ta tic80-dis.lo tic80-opc.lo" ;;
+ 	bfd_tilegx_arch)	ta="$ta tilegx-dis.lo tilegx-opc.lo" ;;
+ 	bfd_tilepro_arch)	ta="$ta tilepro-dis.lo tilepro-opc.lo" ;;
 +	bfd_v810_arch)		ta="$ta v810-opc.lo v810-dis.lo" ;;
 +	bfd_v830_arch)		ta="$ta v810-opc.lo v810-dis.lo" ;;
  	bfd_v850_arch)		ta="$ta v850-opc.lo v850-dis.lo" ;;
  	bfd_v850e_arch)		ta="$ta v850-opc.lo v850-dis.lo" ;;
  	bfd_v850ea_arch)	ta="$ta v850-opc.lo v850-dis.lo" ;;
-diff -rupN binutils-2.20/opcodes/disassemble.c binutils-2.20-v810/opcodes/disassemble.c
---- binutils-2.20/opcodes/disassemble.c	2009-09-02 08:20:29 +0100
-+++ binutils-2.20-v810/opcodes/disassemble.c	2012-10-26 15:32:47 +0100
-@@ -80,6 +80,7 @@
- #define ARCH_tic4x
- #define ARCH_tic54x
+diff -Nbaur binutils-2.23.1/opcodes/disassemble.c binutils-2.23.1-v810/opcodes/disassemble.c
+--- binutils-2.23.1/opcodes/disassemble.c	2012-09-04 13:53:50 +0100
++++ binutils-2.23.1-v810/opcodes/disassemble.c	2013-03-09 17:59:22 +0000
+@@ -87,6 +87,7 @@
  #define ARCH_tic80
+ #define ARCH_tilegx
+ #define ARCH_tilepro
 +#define ARCH_v810
  #define ARCH_v850
  #define ARCH_vax
  #define ARCH_w65
-@@ -400,6 +401,11 @@ disassembler (abfd)
+@@ -434,6 +435,11 @@
        disassemble = print_insn_tic80;
        break;
  #endif
@@ -5689,9 +6630,9 @@ diff -rupN binutils-2.20/opcodes/disassemble.c binutils-2.20-v810/opcodes/disass
  #ifdef ARCH_v850
      case bfd_arch_v850:
        disassemble = print_insn_v850;
-diff -rupN binutils-2.20/opcodes/v810-dis.c binutils-2.20-v810/opcodes/v810-dis.c
---- binutils-2.20/opcodes/v810-dis.c	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/opcodes/v810-dis.c	2012-10-26 15:32:47 +0100
+diff -Nbaur binutils-2.23.1/opcodes/v810-dis.c binutils-2.23.1-v810/opcodes/v810-dis.c
+--- binutils-2.23.1/opcodes/v810-dis.c	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/opcodes/v810-dis.c	2013-03-09 17:59:22 +0000
 @@ -0,0 +1,244 @@
 +/* Disassemble V810 instructions.
 +   Copyright 1996, 1997, 1998, 2000, 2001, 2002, 2003, 2005, 2007
@@ -5937,13 +6878,13 @@ diff -rupN binutils-2.20/opcodes/v810-dis.c binutils-2.20-v810/opcodes/v810-dis.
 +  /* Make sure we tell our caller how many bytes we consumed.  */
 +  return disassemble (memaddr, info, insn);
 +}
-diff -rupN binutils-2.20/opcodes/v810-opc.c binutils-2.20-v810/opcodes/v810-opc.c
---- binutils-2.20/opcodes/v810-opc.c	1970-01-01 00:00:00 +0000
-+++ binutils-2.20-v810/opcodes/v810-opc.c	2012-10-27 11:19:20 +0100
-@@ -0,0 +1,425 @@
+diff -Nbaur binutils-2.23.1/opcodes/v810-opc.c binutils-2.23.1-v810/opcodes/v810-opc.c
+--- binutils-2.23.1/opcodes/v810-opc.c	1970-01-01 00:00:00 +0000
++++ binutils-2.23.1-v810/opcodes/v810-opc.c	2013-03-12 16:15:16 +0000
+@@ -0,0 +1,430 @@
 +/* Assemble V810 instructions.
-+   Copyright 1996, 1997, 1998, 2000, 2001, 2002, 2003, 2005, 2007
-+   Free Software Foundation, Inc.
++   Copyright 1996, 1997, 1998, 2000, 2001, 2002, 2003, 2005, 2007, 2010,
++   2012 Free Software Foundation, Inc.
 +
 +   This file is part of the GNU opcodes library.
 +
@@ -5963,8 +6904,9 @@ diff -rupN binutils-2.20/opcodes/v810-opc.c binutils-2.20-v810/opcodes/v810-opc.
 +   MA 02110-1301, USA.  */
 +
 +#include "sysdep.h"
-+#include "opcode/v810.h"
 +#include <stdio.h>
++#include "opcode/v810.h"
++#include "bfd.h"
 +#include "opintl.h"
 +
 +
@@ -5972,10 +6914,10 @@ diff -rupN binutils-2.20/opcodes/v810-opc.c binutils-2.20-v810/opcodes/v810-opc.
 +#define OP(x)		((x & 0x3f) << 10)
 +#define OP_MASK		OP (0x3f)
 +
-+/* one-word opcodes */
++/* One-word opcodes.  */
 +#define one(x)		((unsigned int) (x))
 +
-+/* two-word opcodes */
++/* Two-word opcodes.  */
 +#define two(x,y)	((unsigned int) (x) | ((unsigned int) (y) << 16))
 +
 +
@@ -5986,32 +6928,42 @@ diff -rupN binutils-2.20/opcodes/v810-opc.c binutils-2.20-v810/opcodes/v810-opc.
 +   containing the string 'out of range' will be ignored unless a
 +   specific command line option is given to GAS.  */
 +
-+static const char * immediate_out_of_range = N_ ("immediate value is out of range");
++static const char * branch_out_of_range = N_ ("branch value out of range");
++static const char * branch_out_of_range_and_odd_offset = N_ ("branch value not in range and to odd offset");
++static const char * branch_to_odd_offset = N_ ("branch to odd offset");
++
++
++int
++v810_msg_is_out_of_range (const char* msg)
++{
++  return msg == branch_out_of_range;
++}
 +
 +static unsigned long
-+insert_d9 (unsigned long insn, long value,const char ** errmsg)
++insert_d9 (unsigned long insn, long value, const char ** errmsg)
 +{
 +  if (value > 0xff || value < -0x100)
 +    {
 +      if ((value % 2) != 0)
-+	* errmsg = _("branch value not in range and to odd offset");
++	* errmsg = branch_out_of_range_and_odd_offset;
 +      else
-+	* errmsg = _("branch value out of range");
++	* errmsg = branch_out_of_range;
 +    }
 +  else if ((value % 2) != 0)
-+    * errmsg = _("branch to odd offset");
++    * errmsg = branch_to_odd_offset;
 +
-+  return (insn | (value & 0x1fe));
++  return insn | (value & 0x1fe);
 +}
 +
 +static unsigned long
-+extract_d9 (unsigned long insn, int * invalid ATTRIBUTE_UNUSED)
++extract_d9 (unsigned long insn, int * invalid)
 +{
-+  unsigned long ret = (insn & 0x1fe);
++  signed long ret = (insn & 0x1fe);
 +
-+  if ((insn & 0x100) != 0)
-+    ret |= ~0xFF;
++  ret = (ret ^ 0x100) - 0x100;
 +
++  if (invalid != 0)
++    *invalid = 0;
 +  return ret;
 +}
 +
@@ -6021,100 +6973,86 @@ diff -rupN binutils-2.20/opcodes/v810-opc.c binutils-2.20-v810/opcodes/v810-opc.
 +  if (value > 0x1ffffff || value < -0x2000000)
 +    {
 +      if ((value % 2) != 0)
-+	* errmsg = _("branch value not in range and to an odd offset");
++	* errmsg = branch_out_of_range_and_odd_offset;
 +      else
-+	* errmsg = _("branch value out of range");
++	* errmsg = branch_out_of_range;
 +    }
 +  else if ((value % 2) != 0)
-+    * errmsg = _("branch to odd offset");
++    * errmsg = branch_to_odd_offset;
 +
-+  return (insn | ((value & 0xfffe) << 16) | ((value & 0x3ff0000) >> 16));
++  return insn | ((value & 0xfffe) << 16) | ((value & 0x3ff0000) >> 16);
 +}
 +
 +static unsigned long
-+extract_d26 (unsigned long insn, int * invalid ATTRIBUTE_UNUSED)
++extract_d26 (unsigned long insn, int * invalid)
 +{
-+  signed long ret = ((insn & 0xfffe0000) >> 16) | ((insn & 0x3ff) << 16);
++  signed long ret = ((insn >> 16) & 0xfffe) | ((insn << 16) & 0x3ff0000);
 +
-+  return (unsigned long) ((ret << 6) >> 6);
-+}
++  ret = (ret ^ 0x2000000) - 0x2000000;
 +
-+static unsigned long
-+insert_i5 (unsigned long insn, signed long value, const char ** errmsg)
-+{
-+  if (value > 0xf || value < -0x10)
-+    * errmsg = _(immediate_out_of_range);
-+
-+  return insn | (value & 0x1f);
-+}
-+
-+static unsigned long
-+extract_i5 (unsigned long insn, int * invalid ATTRIBUTE_UNUSED)
-+{
-+  signed long ret = insn & 0x001f;
-+  if(ret & 0x10) ret |= ~0x0f;
-+  return ret;
-+}
-+
-+static unsigned long
-+insert_i5u (unsigned long insn, long v, const char ** errmsg)
-+{
-+  unsigned long value = (unsigned long) v;
-+  if (value > 0x1f)
-+    * errmsg = _(immediate_out_of_range);
-+
-+  return insn | (value & 0x1f);
-+}
-+
-+static unsigned long
-+extract_i5u (unsigned long insn, int * invalid ATTRIBUTE_UNUSED)
-+{
-+  return insn & 0x001f;
++  if (invalid != 0)
++    *invalid = 0;
++  return (unsigned long) ret;
 +}
 +
 +/* Warning: code in gas/config/tc-v810.c examines the contents of this array.
 +   If you change any of the values here, be sure to look for side effects in
-+   that code. */
++   that code.  */
 +const struct v810_operand v810_operands[] =
 +{
 +#define UNUSED	0
-+  { 0, 0, NULL, NULL, 0 }, 
++  { 0, 0, NULL, NULL, 0, BFD_RELOC_NONE },
 +
++/* The R1 field in a format 1, 5, 6, 7 insn.  */
 +#define R1	(UNUSED + 1)
-+  { 5, 0, NULL, NULL, V810_OPERAND_REG }, 
++  { 5, 0, NULL, NULL, V810_OPERAND_REG, BFD_RELOC_NONE },
 +
-+#define R2	(R1 + 1)
-+  { 5, 5, NULL, NULL, V810_OPERAND_REG },
++/* The R2 field in a format 1, 2, 5, 6, 7 insn.  */
++#define R2 (R1 + 1)
++  { 5, 5, NULL, NULL, V810_OPERAND_REG, BFD_RELOC_NONE },
 +
++/* The R3 field in a format 8 insn.  */
 +#define R3	(R2 + 1)
-+  { 5, 16, NULL, NULL, V810_OPERAND_REG },
++  { 5, 16, NULL, NULL, V810_OPERAND_REG, BFD_RELOC_NONE },
 +
-+#define I5	(R3 + 1)
-+  { 5, 0, insert_i5, extract_i5, V810_OPERAND_SIGNED }, 
++/* System register operands.  */
++#define SR	(R3 + 1)
++  { 5, 0, NULL, NULL, V810_OPERAND_SRG, BFD_RELOC_NONE },
 +
-+#define I5U	(I5 + 1)
-+  { 5, 0, insert_i5u, extract_i5u, 0 }, 
-+
-+#define I16	(I5U + 1)
-+  { 16, 16, NULL, NULL, V810_OPERAND_SIGNED }, 
-+
-+#define I16U	(I16 + 1)
-+  { 16, 16, NULL, NULL, 0 },
-+
-+#define D16		(I16U + 1)
-+  { 16, 16, NULL, NULL, V810_OPERAND_SIGNED },
-+
-+#define D9	(D16 + 1)
-+  { 9, 0, insert_d9, extract_d9, V810_OPERAND_RELAX | V810_OPERAND_SIGNED | V810_OPERAND_DISP },
-+
-+#define D26	(D9 + 1)
-+  { 26, 0, insert_d26, extract_d26, V810_OPERAND_SIGNED | V810_OPERAND_DISP },
-+
-+#define SR	(D26 + 1)
-+  { 5, 0, NULL, NULL, V810_OPERAND_SRG },
-+
++/* The 4 bit condition code in a setf instruction.  */
 +#define CCCC	(SR + 1)
-+  { 4, 0, NULL, NULL, V810_OPERAND_CC },
++  { 4, 0, NULL, NULL, V810_OPERAND_CC, BFD_RELOC_NONE },
++
++/* The imm5 field in a format 2 insn.  */
++#define I5	(CCCC + 1)
++  { 5, 0, NULL, NULL, V810_OPERAND_SIGNED, BFD_RELOC_NONE },
++
++/* The unsigned imm5 field in a format 2 insn.  */
++#define I5U	(I5 + 1)
++  { 5, 0, NULL, NULL, 0, BFD_RELOC_NONE },
++
++/* The imm16 field in a format 5 insn.  */
++#define I16	(I5U + 1)
++  { 16, 16, NULL, NULL, V810_OPERAND_SIGNED, BFD_RELOC_16 },
++
++/* The unsigned imm16 in a format 5 insn.  */
++#define I16U	(I16 + 1)
++  { 16, 16, NULL, NULL, 0, BFD_RELOC_16 },
++
++/* The disp16 field in a format 6 insn.  */
++#define D16	(I16U + 1)
++  { 16, 16, NULL, NULL, V810_OPERAND_SIGNED | V810_OPERAND_DISP, BFD_RELOC_16 },
++
++/* The DISP9 field in a format 3 insn, relaxable.  */
++#define D9_RELAX	(D16 + 1)
++  { 9, 0, insert_d9, extract_d9, V810_OPERAND_RELAX | V810_OPERAND_SIGNED | V810_OPERAND_DISP | V810_PCREL, BFD_RELOC_V810_9_PCREL },
++
++/* The DISP26 field in a format 4 insn, relaxable.
++   This _must_ follow D9_RELAX; the assembler assumes that the longer
++   version immediately follows the shorter version for relaxing.  */
++#define D26	(D9_RELAX + 1)
++  { 26, 0, insert_d26, extract_d26, V810_OPERAND_SIGNED | V810_OPERAND_DISP | V810_PCREL, BFD_RELOC_V810_26_PCREL },
++
 +};
 +
 +
@@ -6123,6 +7061,9 @@ diff -rupN binutils-2.20/opcodes/v810-opc.c binutils-2.20-v810/opcodes/v810-opc.
 +
 +/* Imm - Reg instruction format (Format II).  */
 +#define IF2	{I5, R2}
++
++/* Conditional branch instruction format (Format III).  */
++#define IF3	{D9_RELAX}
 +
 +/* 3 operand instruction (Format V).  */
 +#define IF5	{I16, R1, R2}
@@ -6144,7 +7085,7 @@ diff -rupN binutils-2.20/opcodes/v810-opc.c binutils-2.20-v810/opcodes/v810-opc.
 +   OPERANDS is the list of operands.
 +   MEMOP specifies which operand (if any) is a memory operand.
 +   PROCESSORS specifies which CPU(s) support the opcode.
-+   
++
 +   The disassembler reads the table in order and prints the first
 +   instruction which matches, so this table is sorted to put more
 +   specific instructions before more general instructions.  It is also
@@ -6166,41 +7107,44 @@ diff -rupN binutils-2.20/opcodes/v810-opc.c binutils-2.20-v810/opcodes/v810-opc.
 +/* Standard instructions.  */
 +{ "add",	OP (0x01),		OP_MASK,		IF1, 			0, PROCESSOR_ALL },
 +{ "add",	OP (0x11),		OP_MASK,		IF2, 			0, PROCESSOR_ALL },
++
 +{ "addi",	OP (0x29),		OP_MASK,		IF5,			0, PROCESSOR_ALL },
 +
 +{ "and",	OP (0x0d),		OP_MASK,		IF1, 			0, PROCESSOR_ALL },
++
 +{ "andi",	OP (0x2d),		OP_MASK,		IF5U, 			0, PROCESSOR_ALL },
 +
 +	/* Signed integer.  */
-+{ "bge",	one (0x9c00),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
-+{ "bgt",	one (0x9e00),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
-+{ "ble",	one (0x8e00),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
-+{ "blt",	one (0x8c00),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
++{ "bge",	one (0x9c00),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
++{ "bgt",	one (0x9e00),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
++{ "ble",	one (0x8e00),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
++{ "blt",	one (0x8c00),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
 +	/* Unsigned integer.  */
-+{ "bh",		one (0x9600),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
-+{ "bl",		one (0x8200),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
-+{ "bnh",	one (0x8600),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
-+{ "bnl",	one (0x9200),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
++{ "bh",		one (0x9600),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
++{ "bl",		one (0x8200),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
++{ "bnh",	one (0x8600),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
++{ "bnl",	one (0x9200),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
 +	/* Common.  */
-+{ "be",		one (0x8400),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
-+{ "bne",	one (0x9400),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
++{ "be",		one (0x8400),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
++{ "bne",	one (0x9400),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
 +	/* Others.  */
-+{ "bc",		one (0x8200),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
-+{ "bn",		one (0x8800),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
-+{ "bnc",	one (0x9200),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
-+{ "bnv",	one (0x9000),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
-+{ "bnz",	one (0x9400),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
-+{ "bp",		one (0x9800),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
-+{ "br",		one (0x8a00),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
-+{ "bv",		one (0x8000),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
-+{ "bz",		one (0x8400),		one (0xfe01),		{D9},			0, PROCESSOR_ALL },
++{ "bc",		one (0x8200),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
++{ "bn",		one (0x8800),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
++{ "bnc",	one (0x9200),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
++{ "bnv",	one (0x9000),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
++{ "bnz",	one (0x9400),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
++{ "bp",		one (0x9800),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
++{ "br",		one (0x8a00),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
++{ "bv",		one (0x8000),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
++{ "bz",		one (0x8400),		one (0xfe01),		IF3,			0, PROCESSOR_ALL },
 +
-+{ "caxi",	two (0xe800, 0x0000),	two (0xfc00, 0x0000),	{D16, R1, R2},		0, PROCESSOR_ALL },
++{ "caxi",	two (0xe800, 0x0000),	two (0xfc00, 0x0000),	{D16, R1, R2},		1, PROCESSOR_ALL },
 +
 +{ "cmp",	OP (0x03),		OP_MASK,		IF1, 			0, PROCESSOR_ALL },
 +{ "cmp",	OP (0x13),		OP_MASK,		IF2, 			0, PROCESSOR_ALL },
 +
 +{ "div",	OP (0x09),		OP_MASK,		IF1, 			0, PROCESSOR_ALL },
++
 +{ "divu",	OP (0x0b),		OP_MASK,		IF1, 			0, PROCESSOR_ALL },
 +
 +{ "halt",	one (0x6800),		one (0xffff),		{0}, 			0, PROCESSOR_ALL },
@@ -6229,6 +7173,7 @@ diff -rupN binutils-2.20/opcodes/v810-opc.c binutils-2.20-v810/opcodes/v810-opc.
 +{ "movhi",	OP (0x2f),		OP_MASK,		{I16, R1, R2},		0, PROCESSOR_ALL },
 +
 +{ "mul",	OP (0x08),		OP_MASK, 		IF1, 			0, PROCESSOR_ALL },
++
 +{ "mulu",	OP (0x0a),		OP_MASK,		IF1, 			0, PROCESSOR_ALL },
 +
 +{ "nop",	one (0x9a00),		one (0xffff),		{0}, 			0, PROCESSOR_ALL },
@@ -6266,6 +7211,7 @@ diff -rupN binutils-2.20/opcodes/v810-opc.c binutils-2.20-v810/opcodes/v810-opc.
 +{ "trap",	one (0x6000),		one (0xfc00),		{I5U}, 			0, PROCESSOR_ALL },
 +
 +{ "xor",	OP (0x0e),		OP_MASK,		IF1, 			0, PROCESSOR_ALL },
++
 +{ "xori",	OP (0x2e),		OP_MASK,		IF5U, 			0, PROCESSOR_ALL },
 +
 +/* NVC custom commands.  */
@@ -6309,25 +7255,25 @@ diff -rupN binutils-2.20/opcodes/v810-opc.c binutils-2.20-v810/opcodes/v810-opc.
 +{ "xornbsu",	one (0x7c0e),		one (0xffff),		{0},			0, PROCESSOR_NOT_V830 },
 +
 +/* V830 instructions.  */
-+{ "abc",	one (0x8201),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
-+{ "abe",	one (0x8401),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
-+{ "abge",	one (0x9c01),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
-+{ "abgt",	one (0x9e01),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
-+{ "abh",	one (0x9601),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
-+{ "abl",	one (0x8201),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
-+{ "able",	one (0x8e01),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
-+{ "ablt",	one (0x8c01),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
-+{ "abn",	one (0x8801),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
-+{ "abnc",	one (0x9201),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
-+{ "abne",	one (0x9401),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
-+{ "abnh",	one (0x8601),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
-+{ "abnl",	one (0x9201),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
-+{ "abnv",	one (0x9001),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
-+{ "abnz",	one (0x9401),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
-+{ "abp",	one (0x9801),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
-+{ "abr",	one (0x8a01),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
-+{ "abv",	one (0x8001),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
-+{ "abz",	one (0x8401),		one (0xfe01),		{D9},			0, PROCESSOR_V830 },
++{ "abc",	one (0x8201),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
++{ "abe",	one (0x8401),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
++{ "abge",	one (0x9c01),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
++{ "abgt",	one (0x9e01),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
++{ "abh",	one (0x9601),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
++{ "abl",	one (0x8201),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
++{ "able",	one (0x8e01),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
++{ "ablt",	one (0x8c01),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
++{ "abn",	one (0x8801),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
++{ "abnc",	one (0x9201),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
++{ "abne",	one (0x9401),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
++{ "abnh",	one (0x8601),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
++{ "abnl",	one (0x9201),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
++{ "abnv",	one (0x9001),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
++{ "abnz",	one (0x9401),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
++{ "abp",	one (0x9801),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
++{ "abr",	one (0x8a01),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
++{ "abv",	one (0x8001),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
++{ "abz",	one (0x8401),		one (0xfe01),		IF3,			0, PROCESSOR_V830 },
 +
 +{ "bdld",	two (0xf800, 0x8400),	two (0xfc00, 0xfc00),	{R1, R2}, 		0, PROCESSOR_V830 },
 +{ "bdst",	two (0xf800, 0x8c00),	two (0xfc00, 0xfc00),	{R2, R1}, 		0, PROCESSOR_V830 },
