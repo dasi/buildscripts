@@ -12,7 +12,7 @@ then
 	CFLAGS=$cflags LDFLAGS=$ldflags ../../binutils-$BINUTILS_VER/configure \
 	--prefix=$prefix --target=$target --disable-nls --disable-debug \
 	--enable-poison-system-directories \
-	--disable-dependency-tracking  --disable-werror \
+	--disable-dependency-tracking --disable-werror \
 	$CROSS_PARAMS \
 	|| { echo "Error configuring binutils"; exit 1; }
 	touch configured-binutils
@@ -43,13 +43,14 @@ if [ ! -f configured-gcc ]
 then
 	CFLAGS="$cflags" LDFLAGS="$ldflags" CFLAGS_FOR_TARGET="-O2" LDFLAGS_FOR_TARGET="" ../../gcc-$GCC_VER/configure \
 	--enable-languages=c \
-	--disable-multilib\
-	--disable-shared --disable-win32-registry --disable-nls\
-	--target=$target \
+	--disable-multilib \
+	--disable-dependency-tracking \
+	--disable-threads --disable-win32-registry --disable-debug \
+	--disable-libmudflap --disable-libssp --disable-libgomp \
 	--with-newlib \
 	--with-headers=../../newlib-$NEWLIB_VER/newlib/libc/include \
+	--target=$target \
 	--prefix=$prefix \
-	--disable-dependency-tracking \
 	--with-bugurl="http://wiki.devkitpro.org/index.php/Bug_Reports" \
 	--with-pkgversion="devkitV810 release 0" \
 	$CROSS_PARAMS \
@@ -86,7 +87,6 @@ then
 	../../newlib-$NEWLIB_VER/configure \
 	--target=$target \
 	--prefix=$prefix \
-	--enable-newlib-hw-fp \
 	--disable-dependency-tracking \
 	|| { echo "Error configuring newlib"; exit 1; }
 	touch configured-newlib
